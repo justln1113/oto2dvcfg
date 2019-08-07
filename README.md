@@ -3,9 +3,9 @@
 一支可以把UTAU音源設定檔轉成DeepVocal音源設定檔的程式。
 
 **目錄 - Table of Contents**
-* 中文
+* [中文](#中文)
   * [使用教學](#使用教學)
-    * [前置準備]()
+    * [前置準備](#前置準備)
     * [進入正題]()
     * [後續修正]()
     * [注意事項]()
@@ -13,7 +13,7 @@
      * issues
      * 其他
 * English
-  * [User's guide](#User's%20guide)
+  * [User's guide](#User's-guide)
 ## 中文
 ### 使用教學
 #### 前置準備
