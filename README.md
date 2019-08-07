@@ -1,4 +1,8 @@
 # oto2dvcfg
  A program for UTAU oto config to DeepVocal dvcfg config conversion.
 
-[Wiki - 詳細資料頁面](https://github.com/justln1113/oto2dvcfg/wiki)
+
+
+## 使用教學(繁體中文)
+### 前置準備
+請先將欲轉換之音源複製出來，"可選：確保音源所有(單音階音色)wav檔和oto.ini在同一個資料夾下"
