@@ -351,13 +351,15 @@ namespace oto2dvcfg
         private void Button1_Click(object sender, EventArgs e)
         {
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-            saveFileDialog1.Filter = "DeepVocal Config file|voice.dvcfg";
+            saveFileDialog1.Filter = "DeepVocal Config file|*.dvcfg";
             saveFileDialog1.Title = "Save DVCFG file";
+            saveFileDialog1.FileName = "voice.dvcfg";
             saveFileDialog1.ShowDialog();
             if (saveFileDialog1.FileName != "")
             {
                 StreamWriter streamWriter = new StreamWriter(saveFileDialog1.FileName);
                 streamWriter.WriteLine(richTextBox1.Text);
+                streamWriter.Close();
             }
         }
     }
