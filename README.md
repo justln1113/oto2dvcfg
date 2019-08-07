@@ -17,7 +17,10 @@
 ## 中文
 ### 使用教學
 #### 前置準備
-請先將欲轉換之音源複製出來，"可選：確保音源所有(單音階音色)wav檔和oto.ini在同一個資料夾下"
+請先將欲轉換之音源複製出來，雖然可以在要生成的時候選擇資料夾(未來功能)，但還是建議(目前必須)確保音源所有(單音階音色)wav檔和oto.ini在同一個資料夾下。  
+![image](https://github.com/justln1113/oto2dvcfg/blob/master/Resource/wav_and_oto_in_same_dir.png)
+之後用notepad++或visual code之類的軟體打開(要用windows記事本也是可以)打開oto.ini，並刪除不需要的設定，
+如長音(_L)、純子音......等等
 
 
 
