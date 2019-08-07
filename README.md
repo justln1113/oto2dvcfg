@@ -12,8 +12,8 @@
    * [開發教學]()
      * issues
      * 其他
-* English
-  * [User's guide](#User's-guide)
+* [English](#English)
+  * [User's guide](#User-guide)
 ## 中文
 ### 使用教學
 #### 前置準備
@@ -25,7 +25,7 @@
 
 
 ## English
-### User's guide
+### User guide
 #### Preparation
 Please copy out your voicebank first. 
 Although you can select the folder (future function) when you want to generate config file. 
