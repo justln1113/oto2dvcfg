@@ -90,7 +90,7 @@ namespace oto2dvcfg
                 wavNameList.Add(listView1.Items[counter].SubItems[1].Text);
                 wavName = wavNameList.ToArray();
 
-                aliasList.Add(listView1.Items[counter].SubItems[2].Text.Replace("\n", ""));
+                aliasList.Add(listView1.Items[counter].SubItems[2].Text.Replace("\n", "").Replace("\t", "").Replace("\r", ""));
                 alias = aliasList.ToArray();
 
                 offsetList.Add(listView1.Items[counter].SubItems[3].Text);
