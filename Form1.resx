@@ -118,6 +118,597 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="RedefineEndNote.Size" type="System.Drawing.Size, System.Drawing">
+    <value>147, 20</value>
+  </data>
+  <data name="&gt;&gt;offsetColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="EndNote.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 20</value>
+  </data>
+  <data name="columnNo.Text" xml:space="preserve">
+    <value>No.</value>
+  </data>
+  <data name="textOTOpath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>190, 87</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Title.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;textEndNote.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="Pitch.Text" xml:space="preserve">
+    <value>Pitch</value>
+  </data>
+  <data name="textEndNote.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;labelOTOint.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="EndNote.Text" xml:space="preserve">
+    <value>End note</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="&gt;&gt;textOTOpath.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="Title.Size" type="System.Drawing.Size, System.Drawing">
+    <value>814, 31</value>
+  </data>
+  <data name="RedefineEndNote.Text" xml:space="preserve">
+    <value>Redefine end note</value>
+  </data>
+  <data name="&gt;&gt;labelOTOint.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="textPitch.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="textBreNote.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;textOTOpath.Name" xml:space="preserve">
+    <value>textOTOpath</value>
+  </data>
+  <data name="lableOTOLines.Location" type="System.Drawing.Point, System.Drawing">
+    <value>832, 87</value>
+  </data>
+  <data name="&gt;&gt;overlapColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RedefineEndNote.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="EndNote.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="Pitch.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox1.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="&gt;&gt;aliasColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;aliasTypeColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1200, 593</value>
+  </data>
+  <data name="Pitch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>840, 370</value>
+  </data>
+  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft JhengHei, 12pt</value>
+  </data>
+  <data name="openOTO.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 52</value>
+  </data>
+  <data name="&gt;&gt;RedefineEndNote.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;RedefineEndNote.Name" xml:space="preserve">
+    <value>RedefineEndNote</value>
+  </data>
+  <data name="checkBox1.Text" xml:space="preserve">
+    <value>JPN HIRA OTO</value>
+  </data>
+  <data name="Pitch.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="textEndNote.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 22</value>
+  </data>
+  <data name="Close.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1148, 12</value>
+  </data>
+  <data name="&gt;&gt;EndNote.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;textBox2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="buttonGenerate.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="textEndNote.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1020, 398</value>
+  </data>
+  <data name="textBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="RedifineBrethEndNote.Location" type="System.Drawing.Point, System.Drawing">
+    <value>840, 482</value>
+  </data>
+  <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 22</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAAAAAAAEAIABGCAAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAEAAAABAAgCAAAA0xA/MQAAAAlw
+        SFlzAAAOxAAADsQBlSsOGwAAB/hJREFUeJzt3U1rE2sYh/FbOFQtUaFGsUZBwSQQfOlCCiK6qYKbFlwV
+        /Ex+jS5cFwSFLlqEUHVThUJTioLia1qoLVW78SxunRPT03SmmWcy6f/6LWQGp8mzufLMTDIzh0qlkgGq
+        /un1AIBeIgBIIwBIIwBIIwBIIwBIIwBIIwBIIwBIIwBIIwBIIwBIIwBIIwBISxZAuVwONA4gLcvLy/E3
+        ZgaANAKANAKANAKANAKANAKANAKANAKANAKANAKANAKANAKANAKANAKANAKANAKANAKAtJQDKBaLZjY0
+        NBRn40ajke67d1CpVOJstra2ZmbNZjPwcJAXzACQRgCQlnIAtVrNzEZHR+Ns/PDhw3TfvYOJiYk4mz1/
+        /tzM5ubmAg8HecEMAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkE
+        AGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkE
+        AGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkpB/Dp
+        06d0XzBj/T5+JMUMAGkEAGm9DKBYLPpCs9kM9Bbnz58P9Mo4GJgBIC3lABqNRvyNa7WaL8zNzaU7jMjF
+        ixfjbLa9ve0LicaPA4AZANIIANKCBLC0tOQL1Wq1w2ZBd4EGBwfNbGRkJM7Gb968SX0A6AvMAJDWyxmg
+        UCj4wvj4uJlNT0+nOIaxsTEzGxgYiLNxvV5P8a1TtLy83OF/y+VyZiM5qJgBII0AIC1IANHZ9FevXpnZ
+        1atXO2/ve0rHjx/3VT8mfvfuXaI3rVQqZnbz5k1fPXny5J5/4sOzkF9FI+eYASCNACAtbADPnj0zs1Kp
+        5Kudd0uGh4d9YXJy0sw2Nzd9dWNjw1r2iI4cOWJmp06d8tVjx475QnROKY7V1VUze/r0afw/2enXr1++
+        8OXLF/vzzUPrkJB/zACQFjaAra0tM3v06JGv3r9/31o+6TuLPtF9IeZfdRZ9QTEzM7PvF4k++D9//uwL
+        Pkd9+/atdTPmgb7ADABpBABpWQTgO0JmNjU1ZWa3b9/21eiXajF/sLAP0ZG0/9hhYWGh+9f0Q177s+ez
+        U9uV9ewL5RkzAKT1IIDox88vX770hStXrljL9btnz5615NOCX9X14cMHX/XTpvPz8ymM+G/R6c62o942
+        zAN9gRkA0ggA0noZQHRw7Dsqbbsr0Z7GuXPnOrzI+/fv214ttJ07M53vJ8e+UJ4xA0BafgOIPtFze6uS
+        ts9y5oF+lN8AgAwQAKQRQArYF+pfBABpBJCabuaBnX+ObBAApBEApBFA+jgm7iMEAGkEAGkEEEqiHaGd
+        G7AvlA0CgDQCCK7L7wcQFAFAGgFAGgFkpMtj4v3x+wwcPXq0+5eK+CV4mV1/FxoBQBoBZC3pVNANvwdZ
+        KrdV3Y3fZ9v+PGRkfX3dVxcXF60fnjxCAJBGAJBGAL2R9N4quRU99KTt6Sejo6Nm9vHjR1998eKF5fL+
+        BgQAaQSwt85Pq0YH0fH3xMSEtUwIT548sXwcIhMApBEApBEAfu+ZJHoyeXQv++jYN87t7KM9ogcPHpjZ
+        7Oysr6by4JL9IQBIIwD8/uyPHlyyP9euXTOzy5cv+2rnr599urh7966vfv/+3ReyP09KAJBGAJBGAEiH
+        H8hGh7P+Ozz/PnhP9+7d84Xsf2tNAJBGAJBGAHsrl8u9HkL/8XNKP3/+9NVbt2512Dj6DmFsbMzMpqen
+        A4/uPwQAaQSAgKInf166dMliXJtWrVbNrF6v+2oGv5YjAEgjAEgjAGTBj4knJyfjbHzjxg1fyOBomAAg
+        jQCQBf+9XXQPlbYLiNuUSqUsxmRmBABxBABpBIDsrKys+ELnXaBCoeALft1ZokvVkiIASCMAZCfpzb+G
+        hoaMGQAIhwAgjQCQnbW1tUTbnzhxItBIIgQAaQQAaQSA7OThbrhtCADSCAD5dfr06dBvQQCQRgCQRgDI
+        r8OHD4d+CwKANAKANAKANAKANAJAfn39+jX0WxAApBEA8uvHjx+h34IAII0AII0AkJ1KpdLrIbQjAEgj
+        AGTnzJkzibZPehuVfSAASCMASCMAZCfpFV6NRiPQSCIEAGkEAGkEgCwMDg6a2YULF+Js/Pbt26CDaUUA
+        kEYAyML169fjbxz0fuhtCADSCADSCAABFYtFXxgZGYmz/ebmppnNz88HHNPfCADSCABB+HnP8fFxXx0Y
+        GIjzV/V6PeCY/g8BQBoBQBoBIE3+aGszu3Pnju31QOzI0tKSLywsLAQa2G4IANIIAF2JPvL9RGe1Wo3/
+        t6urq74wMzOT+sBiIgBIIwBIIwBYrVazlp2ZOIaHh7t5R//B8+PHj311a2urm1frBgFAGgHACoVC9G8g
+        29vbZjY7O+ur2Z/u3A0BQBoBQBoBIAg/x7+4uOirr1+/tp4e7O6GACCNACCNAJCMX7S1sbHhq9FjvNbX
+        181sZWXFV5vNZi9GlxgBQBoBHGRTU1O9HkLeEQCkEQCkEQCkEQCkEQCkEQCkEQCkEQCkEQCkEQCkEQCk
+        EQCkEQCkEQCkEQCkEQCkEQCkEQCkEQCkEQCkHSqVSr0eA9AzzACQRgCQRgCQRgCQRgCQRgCQRgCQRgCQ
+        RgCQRgCQRgCQRgCQRgCQRgCQ9i/FIco8cnWw6gAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="openOTO.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="&gt;&gt;offsetColumn.Name" xml:space="preserve">
+    <value>offsetColumn</value>
+  </data>
+  <data name="BreathEndNote.Text" xml:space="preserve">
+    <value>Breath end note</value>
+  </data>
+  <data name="&gt;&gt;buttonGenerate.Name" xml:space="preserve">
+    <value>buttonGenerate</value>
+  </data>
+  <data name="lableOTOLines.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 20</value>
+  </data>
+  <data name="&gt;&gt;textEndNote.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="textBox1.Text" xml:space="preserve">
+    <value>(undone)</value>
+  </data>
+  <data name="RedefineEndNote.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;preutteranceColumn.Name" xml:space="preserve">
+    <value>preutteranceColumn</value>
+  </data>
+  <data name="RedifineBrethEndNote.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 20</value>
+  </data>
+  <data name="overlapColumn.Width" type="System.Int32, mscorlib">
+    <value>85</value>
+  </data>
+  <data name="cutoffColumn.Text" xml:space="preserve">
+    <value>Cutoff</value>
+  </data>
+  <data name="buttonGenerate.Text" xml:space="preserve">
+    <value>Generate!!</value>
+  </data>
+  <data name="&gt;&gt;BreathEndNote.Name" xml:space="preserve">
+    <value>BreathEndNote</value>
+  </data>
+  <data name="aliasColumn.Text" xml:space="preserve">
+    <value>Alias</value>
+  </data>
+  <data name="&gt;&gt;lableOTOLines.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="preutteranceColumn.Width" type="System.Int32, mscorlib">
+    <value>123</value>
+  </data>
+  <data name="&gt;&gt;cutoffColumn.Name" xml:space="preserve">
+    <value>cutoffColumn</value>
+  </data>
+  <data name="offsetColumn.Width" type="System.Int32, mscorlib">
+    <value>101</value>
+  </data>
+  <data name="&gt;&gt;textBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Close.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="&gt;&gt;openOTO.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RedifineBrethEndNote.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>10, 20</value>
+  </data>
+  <data name="Close.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="&gt;&gt;listView1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="checkBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1020, 426</value>
+  </data>
+  <data name="&gt;&gt;checkBox1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;checkBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Close.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="checkBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>135, 24</value>
+  </data>
+  <data name="Title.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft JhengHei, 18pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Form1</value>
+  </data>
+  <data name="EndNote.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;columnNo.Name" xml:space="preserve">
+    <value>columnNo</value>
+  </data>
+  <data name="&gt;&gt;Title.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Close.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="checkBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="RedefineEndNote.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;Title.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="overlapColumn.Text" xml:space="preserve">
+    <value>Overlap</value>
+  </data>
+  <data name="openOTO.Text" xml:space="preserve">
+    <value>Open OTO file...</value>
+  </data>
+  <data name="lableOTOLines.Text" xml:space="preserve">
+    <value>OTO lines count :</value>
+  </data>
+  <data name="&gt;&gt;aliasColumn.Name" xml:space="preserve">
+    <value>aliasColumn</value>
+  </data>
+  <data name="&gt;&gt;textBreNote.Name" xml:space="preserve">
+    <value>textBreNote</value>
+  </data>
+  <data name="aliasTypeColumn.Width" type="System.Int32, mscorlib">
+    <value>86</value>
+  </data>
+  <data name="&gt;&gt;checkBox1.Name" xml:space="preserve">
+    <value>checkBox1</value>
+  </data>
+  <data name="labelOTOint.Location" type="System.Drawing.Point, System.Drawing">
+    <value>971, 87</value>
+  </data>
+  <data name="listView1.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;Pitch.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;textPitch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Close.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 40</value>
+  </data>
+  <data name="&gt;&gt;RedifineBrethEndNote.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;Pitch.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textPitch.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="labelOTOint.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 20</value>
+  </data>
+  <data name="&gt;&gt;wavNameColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="textBox2.Text" xml:space="preserve">
+    <value>(undone)</value>
+  </data>
+  <data name="textBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1020, 482</value>
+  </data>
+  <data name="BreathEndNote.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;overlapColumn.Name" xml:space="preserve">
+    <value>overlapColumn</value>
+  </data>
+  <data name="&gt;&gt;Title.Name" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="&gt;&gt;listView1.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;buttonGenerate.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="Title.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 18</value>
+  </data>
+  <data name="lableOTOLines.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;EndNote.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="checkBox1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;Pitch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Pitch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 20</value>
+  </data>
+  <data name="&gt;&gt;openFileDialog1.Name" xml:space="preserve">
+    <value>openFileDialog1</value>
+  </data>
+  <data name="preutteranceColumn.Text" xml:space="preserve">
+    <value>Preutterance</value>
+  </data>
+  <data name="RedefineEndNote.Location" type="System.Drawing.Point, System.Drawing">
+    <value>840, 426</value>
+  </data>
+  <data name="&gt;&gt;textEndNote.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;folderBrowserDialog1.Name" xml:space="preserve">
+    <value>folderBrowserDialog1</value>
+  </data>
+  <data name="&gt;&gt;openOTO.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBreNote.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;consonantColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBreNote.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="offsetColumn.Text" xml:space="preserve">
+    <value>Offset</value>
+  </data>
+  <data name="BreathEndNote.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 20</value>
+  </data>
+  <data name="&gt;&gt;labelOTOint.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EndNote.Name" xml:space="preserve">
+    <value>EndNote</value>
+  </data>
+  <data name="&gt;&gt;folderBrowserDialog1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FolderBrowserDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="listView1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>814, 452</value>
+  </data>
+  <data name="&gt;&gt;Close.Name" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="textPitch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 22</value>
+  </data>
+  <data name="&gt;&gt;lableOTOLines.Name" xml:space="preserve">
+    <value>lableOTOLines</value>
+  </data>
+  <data name="wavNameColumn.Text" xml:space="preserve">
+    <value>Wav Name</value>
+  </data>
+  <data name="Title.Text" xml:space="preserve">
+    <value>UTAU Voicebank configuration to DeepVocal configuration converter</value>
+  </data>
+  <data name="&gt;&gt;RedifineBrethEndNote.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="openOTO.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 57</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
+    <value>textBox1</value>
+  </data>
+  <data name="&gt;&gt;BreathEndNote.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;listView1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="RedifineBrethEndNote.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="RedifineBrethEndNote.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelOTOint.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;cutoffColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lableOTOLines.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="EndNote.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textEndNote.Name" xml:space="preserve">
+    <value>textEndNote</value>
+  </data>
+  <data name="&gt;&gt;buttonGenerate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="checkBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>190, 57</value>
+  </data>
+  <data name="RedefineEndNote.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;BreathEndNote.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lableOTOLines.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBreNote.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Close.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;preutteranceColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Title.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="textPitch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1020, 370</value>
+  </data>
+  <data name="textOTOpath.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;Title.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;RedifineBrethEndNote.Name" xml:space="preserve">
+    <value>RedifineBrethEndNote</value>
+  </data>
+  <data name="cutoffColumn.Width" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="&gt;&gt;EndNote.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="aliasTypeColumn.Text" xml:space="preserve">
+    <value>Alias type</value>
+  </data>
+  <data name="consonantColumn.Width" type="System.Int32, mscorlib">
+    <value>106</value>
+  </data>
+  <data name="&gt;&gt;checkBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textOTOpath.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="buttonGenerate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1020, 539</value>
+  </data>
+  <data name="&gt;&gt;columnNo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="openFileDialog1.Title" xml:space="preserve">
+    <value>Open OTO file...</value>
+  </data>
+  <data name="RedifineBrethEndNote.Text" xml:space="preserve">
+    <value>Redifine bre end note</value>
+  </data>
+  <data name="listView1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 125</value>
+  </data>
+  <data name="RedifineBrethEndNote.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;aliasTypeColumn.Name" xml:space="preserve">
+    <value>aliasTypeColumn</value>
+  </data>
+  <data name="&gt;&gt;openFileDialog1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="BreathEndNote.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listView1.Name" xml:space="preserve">
+    <value>listView1</value>
+  </data>
+  <data name="columnNo.Width" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <data name="&gt;&gt;Close.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="EndNote.Location" type="System.Drawing.Point, System.Drawing">
+    <value>840, 398</value>
+  </data>
   <data name="Close.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEwAAABMCAYAAADHl1ErAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -129,543 +720,109 @@
         EwAAAAAAAAAAAO7aNJ0Bv2Mltfrot+UAAAAASUVORK5CYII=
 </value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Close.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Zoom</value>
-  </data>
-  <data name="Close.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="Close.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1148, 12</value>
-  </data>
-  <data name="Close.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 40</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Close.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;Close.Name" xml:space="preserve">
-    <value>Close</value>
-  </data>
-  <data name="&gt;&gt;Close.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Close.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Close.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="openOTO.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="openOTO.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 52</value>
-  </data>
-  <data name="openOTO.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 57</value>
-  </data>
-  <data name="openOTO.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="openOTO.Text" xml:space="preserve">
-    <value>Open OTO file...</value>
-  </data>
-  <data name="&gt;&gt;openOTO.Name" xml:space="preserve">
-    <value>openOTO</value>
-  </data>
-  <data name="&gt;&gt;openOTO.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;openOTO.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;openOTO.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="openFileDialog1.Title" xml:space="preserve">
-    <value>Open OTO file...</value>
-  </data>
-  <data name="textOTOpath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>190, 87</value>
-  </data>
-  <data name="textOTOpath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>681, 22</value>
-  </data>
-  <data name="textOTOpath.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;textOTOpath.Name" xml:space="preserve">
-    <value>textOTOpath</value>
-  </data>
-  <data name="&gt;&gt;textOTOpath.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textOTOpath.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;textOTOpath.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="Pitch.AutoSize" type="System.Boolean, mscorlib">
+  <data name="BreathEndNote.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="Pitch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>885, 429</value>
-  </data>
-  <data name="Pitch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 20</value>
-  </data>
-  <data name="Pitch.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="Pitch.Text" xml:space="preserve">
-    <value>Pitch</value>
-  </data>
-  <data name="&gt;&gt;Pitch.Name" xml:space="preserve">
-    <value>Pitch</value>
-  </data>
-  <data name="&gt;&gt;Pitch.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Pitch.Parent" xml:space="preserve">
+  <data name="&gt;&gt;RedefineEndNote.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;Pitch.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="textPitch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1020, 429</value>
-  </data>
-  <data name="textPitch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 22</value>
-  </data>
-  <data name="textPitch.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;textPitch.Name" xml:space="preserve">
-    <value>textPitch</value>
-  </data>
-  <data name="&gt;&gt;textPitch.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textPitch.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;textPitch.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="Title.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Title.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft JhengHei, 18pt, style=Bold</value>
-  </data>
-  <data name="Title.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 18</value>
-  </data>
-  <data name="Title.Size" type="System.Drawing.Size, System.Drawing">
-    <value>814, 31</value>
-  </data>
-  <data name="Title.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="Title.Text" xml:space="preserve">
-    <value>UTAU Voicebank configuration to DeepVocal configuration converter</value>
-  </data>
-  <data name="&gt;&gt;Title.Name" xml:space="preserve">
-    <value>Title</value>
-  </data>
-  <data name="&gt;&gt;Title.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Title.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Title.ZOrder" xml:space="preserve">
-    <value>9</value>
+  <data name="textBreNote.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1020, 454</value>
   </data>
   <data name="buttonGenerate.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="buttonGenerate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1020, 539</value>
-  </data>
-  <data name="buttonGenerate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 38</value>
-  </data>
-  <data name="buttonGenerate.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="buttonGenerate.Text" xml:space="preserve">
-    <value>Generate!!</value>
-  </data>
-  <data name="&gt;&gt;buttonGenerate.Name" xml:space="preserve">
-    <value>buttonGenerate</value>
-  </data>
-  <data name="&gt;&gt;buttonGenerate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonGenerate.Parent" xml:space="preserve">
+  <data name="&gt;&gt;textPitch.Parent" xml:space="preserve">
     <value>$this</value>
-  </data>
-  <data name="&gt;&gt;buttonGenerate.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="columnNo.Text" xml:space="preserve">
-    <value>No.</value>
-  </data>
-  <data name="columnNo.Width" type="System.Int32, mscorlib">
-    <value>65</value>
-  </data>
-  <data name="wavNameColumn.Text" xml:space="preserve">
-    <value>Wav Name</value>
   </data>
   <data name="wavNameColumn.Width" type="System.Int32, mscorlib">
     <value>169</value>
   </data>
-  <data name="aliasColumn.Text" xml:space="preserve">
-    <value>Alias</value>
-  </data>
   <data name="aliasColumn.Width" type="System.Int32, mscorlib">
     <value>96</value>
   </data>
-  <data name="offsetColumn.Text" xml:space="preserve">
-    <value>Offset</value>
-  </data>
-  <data name="offsetColumn.Width" type="System.Int32, mscorlib">
-    <value>101</value>
-  </data>
-  <data name="consonantColumn.Text" xml:space="preserve">
-    <value>Consonant</value>
-  </data>
-  <data name="consonantColumn.Width" type="System.Int32, mscorlib">
-    <value>106</value>
-  </data>
-  <data name="cutoffColumn.Text" xml:space="preserve">
-    <value>Cutoff</value>
-  </data>
-  <data name="cutoffColumn.Width" type="System.Int32, mscorlib">
-    <value>70</value>
-  </data>
-  <data name="preutteranceColumn.Text" xml:space="preserve">
-    <value>Preutterance</value>
-  </data>
-  <data name="preutteranceColumn.Width" type="System.Int32, mscorlib">
-    <value>123</value>
-  </data>
-  <data name="overlapColumn.Text" xml:space="preserve">
-    <value>Overlap</value>
-  </data>
-  <data name="overlapColumn.Width" type="System.Int32, mscorlib">
-    <value>85</value>
-  </data>
-  <data name="aliasTypeColumn.Text" xml:space="preserve">
-    <value>Alias type</value>
-  </data>
-  <data name="aliasTypeColumn.Width" type="System.Int32, mscorlib">
-    <value>86</value>
-  </data>
-  <data name="listView1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 125</value>
-  </data>
-  <data name="listView1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>859, 452</value>
-  </data>
-  <data name="listView1.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;listView1.Name" xml:space="preserve">
-    <value>listView1</value>
-  </data>
-  <data name="&gt;&gt;listView1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;listView1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;listView1.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="lableOTOLines.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lableOTOLines.Location" type="System.Drawing.Point, System.Drawing">
-    <value>877, 89</value>
-  </data>
-  <data name="lableOTOLines.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 20</value>
-  </data>
-  <data name="lableOTOLines.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="lableOTOLines.Text" xml:space="preserve">
-    <value>OTO lines count :</value>
-  </data>
-  <data name="&gt;&gt;lableOTOLines.Name" xml:space="preserve">
-    <value>lableOTOLines</value>
-  </data>
-  <data name="&gt;&gt;lableOTOLines.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lableOTOLines.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lableOTOLines.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="labelOTOint.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelOTOint.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1016, 89</value>
-  </data>
-  <data name="labelOTOint.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 20</value>
-  </data>
-  <data name="labelOTOint.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
+  <data name="&gt;&gt;openOTO.Name" xml:space="preserve">
+    <value>openOTO</value>
   </data>
   <data name="&gt;&gt;labelOTOint.Name" xml:space="preserve">
     <value>labelOTOint</value>
   </data>
-  <data name="&gt;&gt;labelOTOint.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelOTOint.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;labelOTOint.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1020, 454</value>
-  </data>
-  <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 22</value>
-  </data>
-  <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
-    <value>textBox1</value>
-  </data>
-  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>885, 454</value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 20</value>
-  </data>
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>End note</value>
-  </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="textBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1020, 479</value>
+  <data name="buttonGenerate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 38</value>
   </data>
   <data name="textBox2.Size" type="System.Drawing.Size, System.Drawing">
     <value>157, 22</value>
   </data>
-  <data name="textBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
+  <data name="textBreNote.Text" xml:space="preserve">
+    <value>(undone)</value>
   </data>
-  <data name="&gt;&gt;textBox2.Name" xml:space="preserve">
-    <value>textBox2</value>
+  <data name="BreathEndNote.Location" type="System.Drawing.Point, System.Drawing">
+    <value>840, 454</value>
   </data>
-  <data name="&gt;&gt;textBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBox2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;buttonGenerate.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;textBox2.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="labelOTOint.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
   </data>
-  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;textPitch.Name" xml:space="preserve">
+    <value>textPitch</value>
   </data>
-  <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>885, 479</value>
-  </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>131, 20</value>
-  </data>
-  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;openOTO.ZOrder" xml:space="preserve">
     <value>17</value>
   </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Breath end note</value>
+  <data name="&gt;&gt;textOTOpath.ZOrder" xml:space="preserve">
+    <value>16</value>
   </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
+  <data name="textBreNote.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 22</value>
   </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;BreathEndNote.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+  <data name="textOTOpath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>636, 22</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
     <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="checkBox1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="checkBox1.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="checkBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="checkBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>190, 57</value>
-  </data>
-  <data name="checkBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>135, 24</value>
-  </data>
-  <data name="checkBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="checkBox1.Text" xml:space="preserve">
-    <value>JPN HIRA OTO</value>
-  </data>
-  <data name="&gt;&gt;checkBox1.Name" xml:space="preserve">
-    <value>checkBox1</value>
-  </data>
-  <data name="&gt;&gt;checkBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkBox1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;checkBox1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <metadata name="folderBrowserDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>164, 17</value>
-  </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>10, 20</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1200, 593</value>
-  </data>
-  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft JhengHei, 12pt</value>
-  </data>
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="&gt;&gt;openFileDialog1.Name" xml:space="preserve">
-    <value>openFileDialog1</value>
-  </data>
-  <data name="&gt;&gt;openFileDialog1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;columnNo.Name" xml:space="preserve">
-    <value>columnNo</value>
-  </data>
-  <data name="&gt;&gt;columnNo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;wavNameColumn.Name" xml:space="preserve">
     <value>wavNameColumn</value>
   </data>
-  <data name="&gt;&gt;wavNameColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;Pitch.Name" xml:space="preserve">
+    <value>Pitch</value>
   </data>
-  <data name="&gt;&gt;aliasColumn.Name" xml:space="preserve">
-    <value>aliasColumn</value>
+  <data name="consonantColumn.Text" xml:space="preserve">
+    <value>Consonant</value>
   </data>
-  <data name="&gt;&gt;aliasColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="openOTO.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
-  <data name="&gt;&gt;offsetColumn.Name" xml:space="preserve">
-    <value>offsetColumn</value>
+  <data name="&gt;&gt;textBox2.Name" xml:space="preserve">
+    <value>textBox2</value>
   </data>
-  <data name="&gt;&gt;offsetColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="lableOTOLines.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="textEndNote.Text" xml:space="preserve">
+    <value>(undone)</value>
   </data>
   <data name="&gt;&gt;consonantColumn.Name" xml:space="preserve">
     <value>consonantColumn</value>
   </data>
-  <data name="&gt;&gt;consonantColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cutoffColumn.Name" xml:space="preserve">
-    <value>cutoffColumn</value>
-  </data>
-  <data name="&gt;&gt;cutoffColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;preutteranceColumn.Name" xml:space="preserve">
-    <value>preutteranceColumn</value>
-  </data>
-  <data name="&gt;&gt;preutteranceColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;overlapColumn.Name" xml:space="preserve">
-    <value>overlapColumn</value>
-  </data>
-  <data name="&gt;&gt;overlapColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;aliasTypeColumn.Name" xml:space="preserve">
-    <value>aliasTypeColumn</value>
-  </data>
-  <data name="&gt;&gt;aliasTypeColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;folderBrowserDialog1.Name" xml:space="preserve">
-    <value>folderBrowserDialog1</value>
-  </data>
-  <data name="&gt;&gt;folderBrowserDialog1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FolderBrowserDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Form1</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>zh-TW</value>
+  </metadata>
+  <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="folderBrowserDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>164, 17</value>
+  </metadata>
 </root>

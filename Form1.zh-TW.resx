@@ -133,7 +133,7 @@
     <value>開啟oto.ini</value>
   </data>
   <data name="Pitch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>877, 421</value>
+    <value>846, 377</value>
   </data>
   <data name="Pitch.Size" type="System.Drawing.Size, System.Drawing">
     <value>41, 20</value>
@@ -142,13 +142,16 @@
     <value>音高</value>
   </data>
   <data name="textPitch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>956, 421</value>
+    <value>1026, 377</value>
   </data>
   <data name="Title.Size" type="System.Drawing.Size, System.Drawing">
     <value>424, 31</value>
   </data>
   <data name="Title.Text" xml:space="preserve">
     <value>UTAU轉DeepVocal音源設定檔轉換器</value>
+  </data>
+  <data name="buttonGenerate.Text" xml:space="preserve">
+    <value>生成!!</value>
   </data>
   <data name="wavNameColumn.Text" xml:space="preserve">
     <value>音檔名稱</value>
@@ -175,37 +178,98 @@
   <data name="preutteranceColumn.Width" type="System.Int32, mscorlib">
     <value>100</value>
   </data>
-  <data name="aliasType.Text" xml:space="preserve">
-    <value>資料種類</value>
-  </data>
   <data name="lableOTOLines.Size" type="System.Drawing.Size, System.Drawing">
     <value>108, 20</value>
   </data>
   <data name="lableOTOLines.Text" xml:space="preserve">
     <value>OTO設定行數</value>
   </data>
-  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>956, 446</value>
+  <data name="textEndNote.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1027, 405</value>
   </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>877, 446</value>
+  <data name="EndNote.Location" type="System.Drawing.Point, System.Drawing">
+    <value>846, 405</value>
   </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="EndNote.Size" type="System.Drawing.Size, System.Drawing">
     <value>41, 20</value>
   </data>
-  <data name="label2.Text" xml:space="preserve">
+  <data name="EndNote.Text" xml:space="preserve">
     <value>尾音</value>
   </data>
-  <data name="textBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>956, 471</value>
+  <data name="textBreNote.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1027, 461</value>
   </data>
-  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>877, 471</value>
+  <data name="BreathEndNote.Location" type="System.Drawing.Point, System.Drawing">
+    <value>846, 461</value>
   </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="BreathEndNote.Size" type="System.Drawing.Size, System.Drawing">
     <value>73, 20</value>
   </data>
-  <data name="label3.Text" xml:space="preserve">
+  <data name="BreathEndNote.Text" xml:space="preserve">
     <value>氣息尾音</value>
+  </data>
+  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1027, 433</value>
+  </data>
+  <data name="RedefineEndNote.Location" type="System.Drawing.Point, System.Drawing">
+    <value>846, 433</value>
+  </data>
+  <data name="RedefineEndNote.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 20</value>
+  </data>
+  <data name="RedefineEndNote.Text" xml:space="preserve">
+    <value>重新定義尾音</value>
+  </data>
+  <data name="textBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1026, 487</value>
+  </data>
+  <data name="RedifineBrethEndNote.Location" type="System.Drawing.Point, System.Drawing">
+    <value>846, 487</value>
+  </data>
+  <data name="RedifineBrethEndNote.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 20</value>
+  </data>
+  <data name="RedifineBrethEndNote.Text" xml:space="preserve">
+    <value>重新定義氣息尾音</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAAAAAAAEAIABGCAAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAEAAAABAAgCAAAA0xA/MQAAAAlw
+        SFlzAAAOxAAADsQBlSsOGwAAB/hJREFUeJzt3U1rE2sYh/FbOFQtUaFGsUZBwSQQfOlCCiK6qYKbFlwV
+        /Ex+jS5cFwSFLlqEUHVThUJTioLia1qoLVW78SxunRPT03SmmWcy6f/6LWQGp8mzufLMTDIzh0qlkgGq
+        /un1AIBeIgBIIwBIIwBIIwBIIwBIIwBIIwBIIwBIIwBIIwBIIwBIIwBIIwBISxZAuVwONA4gLcvLy/E3
+        ZgaANAKANAKANAKANAKANAKANAKANAKANAKANAKANAKANAKANAKANAKANAKANAKANAKAtJQDKBaLZjY0
+        NBRn40ajke67d1CpVOJstra2ZmbNZjPwcJAXzACQRgCQlnIAtVrNzEZHR+Ns/PDhw3TfvYOJiYk4mz1/
+        /tzM5ubmAg8HecEMAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkE
+        AGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkE
+        AGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkEAGkpB/Dp
+        06d0XzBj/T5+JMUMAGkEAGm9DKBYLPpCs9kM9Bbnz58P9Mo4GJgBIC3lABqNRvyNa7WaL8zNzaU7jMjF
+        ixfjbLa9ve0LicaPA4AZANIIANKCBLC0tOQL1Wq1w2ZBd4EGBwfNbGRkJM7Gb968SX0A6AvMAJDWyxmg
+        UCj4wvj4uJlNT0+nOIaxsTEzGxgYiLNxvV5P8a1TtLy83OF/y+VyZiM5qJgBII0AIC1IANHZ9FevXpnZ
+        1atXO2/ve0rHjx/3VT8mfvfuXaI3rVQqZnbz5k1fPXny5J5/4sOzkF9FI+eYASCNACAtbADPnj0zs1Kp
+        5Kudd0uGh4d9YXJy0sw2Nzd9dWNjw1r2iI4cOWJmp06d8tVjx475QnROKY7V1VUze/r0afw/2enXr1++
+        8OXLF/vzzUPrkJB/zACQFjaAra0tM3v06JGv3r9/31o+6TuLPtF9IeZfdRZ9QTEzM7PvF4k++D9//uwL
+        Pkd9+/atdTPmgb7ADABpBABpWQTgO0JmNjU1ZWa3b9/21eiXajF/sLAP0ZG0/9hhYWGh+9f0Q177s+ez
+        U9uV9ewL5RkzAKT1IIDox88vX770hStXrljL9btnz5615NOCX9X14cMHX/XTpvPz8ymM+G/R6c62o942
+        zAN9gRkA0ggA0noZQHRw7Dsqbbsr0Z7GuXPnOrzI+/fv214ttJ07M53vJ8e+UJ4xA0BafgOIPtFze6uS
+        ts9y5oF+lN8AgAwQAKQRQArYF+pfBABpBJCabuaBnX+ObBAApBEApBFA+jgm7iMEAGkEAGkEEEqiHaGd
+        G7AvlA0CgDQCCK7L7wcQFAFAGgFAGgFkpMtj4v3x+wwcPXq0+5eK+CV4mV1/FxoBQBoBZC3pVNANvwdZ
+        KrdV3Y3fZ9v+PGRkfX3dVxcXF60fnjxCAJBGAJBGAL2R9N4quRU99KTt6Sejo6Nm9vHjR1998eKF5fL+
+        BgQAaQSwt85Pq0YH0fH3xMSEtUwIT548sXwcIhMApBEApBEAfu+ZJHoyeXQv++jYN87t7KM9ogcPHpjZ
+        7Oysr6by4JL9IQBIIwD8/uyPHlyyP9euXTOzy5cv+2rnr599urh7966vfv/+3ReyP09KAJBGAJBGAEiH
+        H8hGh7P+Ozz/PnhP9+7d84Xsf2tNAJBGAJBGAHsrl8u9HkL/8XNKP3/+9NVbt2512Dj6DmFsbMzMpqen
+        A4/uPwQAaQSAgKInf166dMliXJtWrVbNrF6v+2oGv5YjAEgjAEgjAGTBj4knJyfjbHzjxg1fyOBomAAg
+        jQCQBf+9XXQPlbYLiNuUSqUsxmRmBABxBABpBIDsrKys+ELnXaBCoeALft1ZokvVkiIASCMAZCfpzb+G
+        hoaMGQAIhwAgjQCQnbW1tUTbnzhxItBIIgQAaQQAaQSA7OThbrhtCADSCAD5dfr06dBvQQCQRgCQRgDI
+        r8OHD4d+CwKANAKANAKANAKANAJAfn39+jX0WxAApBEA8uvHjx+h34IAII0AII0AkJ1KpdLrIbQjAEgj
+        AGTnzJkzibZPehuVfSAASCMASCMAZCfpFV6NRiPQSCIEAGkEAGkEgCwMDg6a2YULF+Js/Pbt26CDaUUA
+        kEYAyML169fjbxz0fuhtCADSCADSCAABFYtFXxgZGYmz/ebmppnNz88HHNPfCADSCABB+HnP8fFxXx0Y
+        GIjzV/V6PeCY/g8BQBoBQBoBIE3+aGszu3Pnju31QOzI0tKSLywsLAQa2G4IANIIAF2JPvL9RGe1Wo3/
+        t6urq74wMzOT+sBiIgBIIwBIIwBYrVazlp2ZOIaHh7t5R//B8+PHj311a2urm1frBgFAGgHACoVC9G8g
+        29vbZjY7O+ur2Z/u3A0BQBoBQBoBIAg/x7+4uOirr1+/tp4e7O6GACCNACCNAJCMX7S1sbHhq9FjvNbX
+        181sZWXFV5vNZi9GlxgBQBoBHGRTU1O9HkLeEQCkEQCkEQCkEQCkEQCkEQCkEQCkEQCkEQCkEQCkEQCk
+        EQCkEQCkEQCkEQCkEQCkEQCkEQCkEQCkEQCkHSqVSr0eA9AzzACQRgCQRgCQRgCQRgCQRgCQRgCQRgCQ
+        RgCQRgCQRgCQRgCQRgCQRgCQ9i/FIco8cnWw6gAAAABJRU5ErkJggg==
+</value>
   </data>
 </root>

@@ -49,12 +49,16 @@
             this.aliasTypeColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lableOTOLines = new System.Windows.Forms.Label();
             this.labelOTOint = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.textEndNote = new System.Windows.Forms.TextBox();
+            this.EndNote = new System.Windows.Forms.Label();
+            this.textBreNote = new System.Windows.Forms.TextBox();
+            this.BreathEndNote = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.RedefineEndNote = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.RedifineBrethEndNote = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Close
@@ -85,10 +89,10 @@
             // 
             // textOTOpath
             // 
+            resources.ApplyResources(this.textOTOpath, "textOTOpath");
             this.textOTOpath.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.textOTOpath.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textOTOpath.ForeColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.textOTOpath, "textOTOpath");
             this.textOTOpath.Name = "textOTOpath";
             // 
             // Pitch
@@ -99,10 +103,10 @@
             // 
             // textPitch
             // 
+            resources.ApplyResources(this.textPitch, "textPitch");
             this.textPitch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.textPitch.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textPitch.ForeColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.textPitch, "textPitch");
             this.textPitch.Name = "textPitch";
             // 
             // Title
@@ -124,6 +128,7 @@
             // 
             // listView1
             // 
+            resources.ApplyResources(this.listView1, "listView1");
             this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listView1.CheckBoxes = true;
@@ -139,7 +144,6 @@
             this.aliasTypeColumn});
             this.listView1.ForeColor = System.Drawing.Color.White;
             this.listView1.HideSelection = false;
-            resources.ApplyResources(this.listView1, "listView1");
             this.listView1.Name = "listView1";
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -193,33 +197,33 @@
             this.labelOTOint.ForeColor = System.Drawing.Color.White;
             this.labelOTOint.Name = "labelOTOint";
             // 
-            // textBox1
+            // textEndNote
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.textBox1, "textBox1");
-            this.textBox1.Name = "textBox1";
+            resources.ApplyResources(this.textEndNote, "textEndNote");
+            this.textEndNote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textEndNote.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textEndNote.ForeColor = System.Drawing.Color.White;
+            this.textEndNote.Name = "textEndNote";
             // 
-            // label2
+            // EndNote
             // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Name = "label2";
+            resources.ApplyResources(this.EndNote, "EndNote");
+            this.EndNote.ForeColor = System.Drawing.Color.White;
+            this.EndNote.Name = "EndNote";
             // 
-            // textBox2
+            // textBreNote
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.ForeColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.textBox2, "textBox2");
-            this.textBox2.Name = "textBox2";
+            resources.ApplyResources(this.textBreNote, "textBreNote");
+            this.textBreNote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBreNote.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBreNote.ForeColor = System.Drawing.Color.White;
+            this.textBreNote.Name = "textBreNote";
             // 
-            // label3
+            // BreathEndNote
             // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Name = "label3";
+            resources.ApplyResources(this.BreathEndNote, "BreathEndNote");
+            this.BreathEndNote.ForeColor = System.Drawing.Color.White;
+            this.BreathEndNote.Name = "BreathEndNote";
             // 
             // checkBox1
             // 
@@ -229,17 +233,53 @@
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.CheckBox1_CheckedChanged);
             // 
+            // folderBrowserDialog1
+            // 
+            resources.ApplyResources(this.folderBrowserDialog1, "folderBrowserDialog1");
+            // 
+            // textBox1
+            // 
+            resources.ApplyResources(this.textBox1, "textBox1");
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.ForeColor = System.Drawing.Color.White;
+            this.textBox1.Name = "textBox1";
+            // 
+            // RedefineEndNote
+            // 
+            resources.ApplyResources(this.RedefineEndNote, "RedefineEndNote");
+            this.RedefineEndNote.ForeColor = System.Drawing.Color.White;
+            this.RedefineEndNote.Name = "RedefineEndNote";
+            // 
+            // textBox2
+            // 
+            resources.ApplyResources(this.textBox2, "textBox2");
+            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.ForeColor = System.Drawing.Color.White;
+            this.textBox2.Name = "textBox2";
+            // 
+            // RedifineBrethEndNote
+            // 
+            resources.ApplyResources(this.RedifineBrethEndNote, "RedifineBrethEndNote");
+            this.RedifineBrethEndNote.ForeColor = System.Drawing.Color.White;
+            this.RedifineBrethEndNote.Name = "RedifineBrethEndNote";
+            // 
             // Form1
             // 
-            this.AllowDrop = true;
             resources.ApplyResources(this, "$this");
+            this.AllowDrop = true;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
-            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.RedifineBrethEndNote);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.RedefineEndNote);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.textBreNote);
+            this.Controls.Add(this.BreathEndNote);
+            this.Controls.Add(this.textEndNote);
+            this.Controls.Add(this.EndNote);
             this.Controls.Add(this.labelOTOint);
             this.Controls.Add(this.lableOTOLines);
             this.Controls.Add(this.listView1);
@@ -283,13 +323,17 @@
         private System.Windows.Forms.Label lableOTOLines;
         private System.Windows.Forms.Label labelOTOint;
         private System.Windows.Forms.ColumnHeader aliasTypeColumn;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textEndNote;
+        private System.Windows.Forms.Label EndNote;
+        private System.Windows.Forms.TextBox textBreNote;
+        private System.Windows.Forms.Label BreathEndNote;
         private System.Windows.Forms.ColumnHeader columnNo;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label RedefineEndNote;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label RedifineBrethEndNote;
     }
 }
 
