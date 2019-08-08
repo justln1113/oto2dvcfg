@@ -141,9 +141,13 @@ namespace oto2dvcfg
             Application.Exit();
         }
 
+        public string[] OtoInput(string Input)
+        {
+            string[] otoInputs = Input.Replace("=", ",").Split(',');
+            return otoInputs;
+        }
 
-      
-            public void OpenOTO_Click(object sender, EventArgs e)
+        public void OpenOTO_Click(object sender, EventArgs e)
             {
             using (OpenFileDialog openFileDialog1 = new OpenFileDialog())
             {
@@ -173,7 +177,7 @@ namespace oto2dvcfg
                     otoSRE.Close();
                     while ((line = otoSR.ReadLine()) != null)
                     {
-                        string[] otoInputer = otoSpliter.OtoInput(line); //輸入一條oto設定進otoSpliter方法
+                        string[] otoInputer = OtoInput(line); //輸入一條oto設定進otoSpliter方法
                         string counterST = Convert.ToString(counter + 1);
 
                         if (otoInputer[1].IndexOf(" ") < 0)

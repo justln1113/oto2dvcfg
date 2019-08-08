@@ -84,7 +84,6 @@
       <DependentUpon>FormPreview.cs</DependentUpon>
     </Compile>
     <Compile Include="otoInputer.cs" />
-    <Compile Include="otoSpliter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">

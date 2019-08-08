@@ -9,11 +9,7 @@ namespace oto2dvcfg
 {
     class otoSpliter
     {
-        public static string[] OtoInput(string Input)
-        {
-            string[] otoInputs = Input.Replace("=", ",").Split(',');
-            return otoInputs;
-        }
+
 
         
     }
