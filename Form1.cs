@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Reflection;
+using System.Globalization;
 
 namespace oto2dvcfg
 {
@@ -56,7 +57,9 @@ namespace oto2dvcfg
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            CultureInfo TheCulture = new CultureInfo("en-US", false);
+            NumberFormatInfo NumFmtInf = TheCulture.NumberFormat;
+            NumFmtInf.NumberDecimalSeparator = ".";
         }
 
         private void ListView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -119,11 +122,20 @@ namespace oto2dvcfg
             else
             {
                 FolderBrowserDialog folderBrowserDialog1 = new FolderBrowserDialog();
+                folderBrowserDialog1.Description = "Please select your wav file folder.";
                 //this.folderBrowserDialog1.SelectedPath = Directory.GetCurrentDirectory();
                 folderBrowserDialog1.ShowDialog();
                 if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
                 {
+                    wavPath = folderBrowserDialog1.SelectedPath + "\\";
+                    if (File.Exists(wavPath + wavName[6]))
+                    {
 
+                    }
+                    else
+                    {
+                        MessageBox.Show("Wav file does not exist.", "(╯°□°）╯︵ ┻━┻", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
             string[] output = FormPreview.dvcfgWriter(wavPath, langType, aliasType, wavName, alias, offset, consonant, cutoff, preutterance, overlap, otoLinesCount - 1, textPitch.Text);

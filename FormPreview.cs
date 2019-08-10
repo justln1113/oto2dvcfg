@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using NAudio;
+using System.Globalization;
 
 namespace oto2dvcfg
 {
@@ -22,9 +23,17 @@ namespace oto2dvcfg
         {
             InitializeComponent();
         }
-        private void FormPreview_Load(object sender, EventArgs e)
+        public void FormPreview_Load(object sender, EventArgs e)
         {
-            string settings = Form1.sendtext.Remove(Form1.sendtext.Length - 1);
+            string settings = String.Empty;
+            if (Form1.sendtext.Length > 0)
+            {
+                settings = Form1.sendtext.Remove(Form1.sendtext.Length - 1);
+            }
+            else
+            {
+                MessageBox.Show("Read error", "(╯°□°）╯︵ ┻━┻", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } 
             richTextBox1.Text = "{" + settings + "\n" + "}";
         }
 
@@ -71,6 +80,9 @@ namespace oto2dvcfg
             string pitch
             )
         {
+            CultureInfo TheCulture = new CultureInfo("en-US", false);
+            NumberFormatInfo NumFmtInf = TheCulture.NumberFormat;
+            NumFmtInf.NumberDecimalSeparator = ".";
             int counter;
             string tailPoint;
             string vowelEnd;
@@ -79,6 +91,14 @@ namespace oto2dvcfg
             {
                 for (counter = 0; counter < otoLinesCount; counter++)
                 {
+                    if (File.Exists(wavPath + wavName[counter]))
+                    {
+
+                    }
+                    else
+                    {
+                        continue;
+                    }
                     NAudio.Wave.WaveFileReader waveFileReader = new NAudio.Wave.WaveFileReader(wavPath + wavName[counter]);
                     TimeSpan wavTimeSpan = waveFileReader.TotalTime;
                     double wavTime = Convert.ToDouble(wavTimeSpan.TotalSeconds) * 1000;
@@ -111,7 +131,7 @@ namespace oto2dvcfg
                                 "\n" +
                                 "   \"" + pitch + "->" + symbol[counter].Replace("\n", "").Replace("\t", "").Replace("\r", "") + "\" : {\n" +
                                 "      \"connectPoint\" : " + connectPoint + ",\n" +
-                                "      \"endTime\" : " + endTime + ",\n" +
+                                "      \"endTime\" : " + String.Format(TheCulture, endTime) + ",\n" +
                                 "      \"pitch\" : \"" + pitch + "\",\n" +
                                 "      \"preutterance\" : " + preutterance + ",\n" +
                                 "      \"srcType\" : \"" + srcType[counter].Replace("\n", "").Replace("\t", "").Replace("\r", "") + "\",\n" +
@@ -127,20 +147,20 @@ namespace oto2dvcfg
                     }
                     else if (srcType[counter] == "-CV")
                     {
+                        double connectPoint = 0.05999999865889549;
                         if (Convert.ToDouble(cutoff[counter]) < 0)
                         {
-                            tailPoint = cfgProcess.AddDigit(-Convert.ToDouble(cutoff[counter]) / 1000 - Convert.ToDouble(Overlap[counter]) / 1000 + 0.115);
-                            vowelEnd = cfgProcess.AddDigit(-Convert.ToDouble(cutoff[counter]) / 1000 - Convert.ToDouble(Overlap[counter]) / 1000 + 0.06);
+                            tailPoint = cfgProcess.AddDigit(-Convert.ToDouble(cutoff[counter]) / 1000 - Convert.ToDouble(Overlap[counter]) / 1000 + 0.115 + connectPoint);
+                            vowelEnd = cfgProcess.AddDigit(-Convert.ToDouble(cutoff[counter]) / 1000 - Convert.ToDouble(Overlap[counter]) / 1000 + 0.06 + connectPoint);
                         }
                         else
                         {
-                            tailPoint = cfgProcess.AddDigit(wavTime / 1000 - Convert.ToDouble(offset[counter]) / 1000 - Convert.ToDouble(cutoff[counter]) / 1000 + 0.115);
-                            vowelEnd = cfgProcess.AddDigit(wavTime / 1000 - Convert.ToDouble(offset[counter]) / 1000 - Convert.ToDouble(cutoff[counter]) / 1000 + 0.06);
+                            tailPoint = cfgProcess.AddDigit(wavTime / 1000 - Convert.ToDouble(offset[counter]) / 1000 - Convert.ToDouble(cutoff[counter]) / 1000 + 0.115 + connectPoint);
+                            vowelEnd = cfgProcess.AddDigit(wavTime / 1000 - Convert.ToDouble(offset[counter]) / 1000 - Convert.ToDouble(cutoff[counter]) / 1000 + 0.06 + connectPoint);
                         }
-                        double connectPoint = 0.05999999865889549;
-                        string endTime = cfgProcess.AddDigit(Convert.ToDouble(offset[counter]) / 1000 + Convert.ToDouble(cutoff[counter]) / 1000 + 0.06);
+                        string endTime = cfgProcess.AddDigit(Convert.ToDouble(offset[counter]) / 1000 + Convert.ToDouble(cutoff[counter]) / 1000 + 0.06 + connectPoint);
                         //pitch
-                        string preutterance = cfgProcess.AddDigit(Convert.ToDouble(Upreutterance[counter]) / 1000 + 0.06);
+                        string preutterance = cfgProcess.AddDigit(Convert.ToDouble(Upreutterance[counter]) / 1000 + 0.06 + connectPoint);
                         //srcType
                         string startTime = cfgProcess.AddDigit(Convert.ToDouble(offset[counter]) / 1000 - 0.06 - connectPoint);
                         //symbol
@@ -170,6 +190,14 @@ namespace oto2dvcfg
                     }
                     else if (srcType[counter] == "VX")
                     {
+                        if (File.Exists(wavPath + wavName[counter]))
+                        {
+
+                        }
+                        else
+                        {
+                            continue;
+                        }
                         double connectPoint = 0.05999999865889549;
                         string endTime = String.Empty;
                         if (Convert.ToDouble(cutoff[counter]) < 0)
