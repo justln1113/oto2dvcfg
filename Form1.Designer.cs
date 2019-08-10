@@ -60,6 +60,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.RedifineBrethEndNote = new System.Windows.Forms.Label();
             this.comboLang = new System.Windows.Forms.ComboBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // Close
@@ -148,6 +149,7 @@
             this.listView1.Name = "listView1";
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.ItemChecked += new System.Windows.Forms.ItemCheckedEventHandler(this.optionChangedList);
             this.listView1.SelectedIndexChanged += new System.EventHandler(this.ListView1_SelectedIndexChanged);
             // 
             // columnNo
@@ -232,7 +234,7 @@
             this.checkBox1.ForeColor = System.Drawing.Color.White;
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.CheckBox1_CheckedChanged);
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.optionChanged);
             // 
             // textBox1
             // 
@@ -270,12 +272,21 @@
             this.comboLang.FormattingEnabled = true;
             this.comboLang.Name = "comboLang";
             // 
+            // checkBox2
+            // 
+            resources.ApplyResources(this.checkBox2, "checkBox2");
+            this.checkBox2.ForeColor = System.Drawing.Color.White;
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.optionChanged);
+            // 
             // Form1
             // 
             this.AllowDrop = true;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.comboLang);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.RedifineBrethEndNote);
@@ -341,6 +352,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label RedifineBrethEndNote;
         private System.Windows.Forms.ComboBox comboLang;
+        private System.Windows.Forms.CheckBox checkBox2;
     }
 }
 

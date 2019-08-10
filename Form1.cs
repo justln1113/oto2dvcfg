@@ -13,12 +13,11 @@ using System.Globalization;
 
 namespace oto2dvcfg
 {
-
     public partial class Form1 : Form
     {
+       
         private bool mouseDown;
         private Point lastLocation;
-        //public string wavname, alias, offsets;
         public string[] wavName, consonant, alias, offset, cutoff, preutterance, overlap, aliasType;
         private void Form1_MouseDown(object sender, MouseEventArgs e)
         {
@@ -42,18 +41,19 @@ namespace oto2dvcfg
             mouseDown = false;
         }
 
-        private void CheckBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
         public Form1()
         {
             InitializeComponent();
             this.listView1.FullRowSelect = true;
             this.listView1.Scrollable = true;
+            this.listView1.MultiSelect = true;
         }
         public static string sendtext = "";
+
+        private void optionChangedList(object sender, ItemCheckedEventArgs e)
+        {
+
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -68,7 +68,7 @@ namespace oto2dvcfg
         }
 
 
-        private void ButtonGenerate_Click(object sender, EventArgs e)
+        public void ButtonGenerate_Click(object sender, EventArgs e)
         {
             int counter;
             string wavPath = String.Empty;
@@ -160,15 +160,14 @@ namespace oto2dvcfg
         }
 
         public void OpenOTO_Click(object sender, EventArgs e)
-            {
+         {
+            
             using (OpenFileDialog openFileDialog1 = new OpenFileDialog())
             {
                 openFileDialog1.Filter = "UTAU voicebank config file (oto.ini)|oto.ini|All files(*.*)|*.*"; //新增開啟檔案視窗
 
                 this.listView1.Items.Clear();
                 this.labelOTOint.Text = "";
-
-
 
                 if (openFileDialog1.ShowDialog() == DialogResult.OK) //若開啟檔案成功
                 {
@@ -276,5 +275,90 @@ namespace oto2dvcfg
             }
 
         }
+
+        public void optionChanged(object sender, EventArgs e)
+        {
+            listView1.Items.Clear();
+            List<string> lines = new List<string>();
+            string line;
+            int counter = 0;
+            bool AliasHasSpace;
+            string aliasType;
+
+            StreamReader otoSRE = new StreamReader(textOTOpath.Text, System.Text.Encoding.Default); //給ReadToEnd使用的Reader
+            StreamReader otoSR = new StreamReader(textOTOpath.Text, System.Text.Encoding.Default); //給ReadLine使用的Reader
+            StreamReader hi2roRead = new StreamReader("hi-ro.txt", System.Text.Encoding.Default); //讀取假名轉羅馬字典檔
+            string[] hi2roLines = hi2roRead.ReadToEnd().Split('\n');
+            hi2roRead.Close();
+            int otoLinesCount = otoSRE.ReadToEnd().Split('\n').Length; //計算oto行數
+            otoSRE.Close();
+            while ((line = otoSR.ReadLine()) != null)
+            {
+                string[] otoInputer = OtoInput(line); //輸入一條oto設定進otoSpliter方法
+                string counterST = Convert.ToString(counter + 1);
+
+                if (otoInputer[1].IndexOf(" ") < 0)
+                {
+                    AliasHasSpace = false;
+                }
+                else
+                {
+                    AliasHasSpace = true;
+                }
+                if (AliasHasSpace == true)
+                {
+                    if (otoInputer[1].IndexOf("-") < 0)
+                    {
+                        aliasType = "VX";
+                    }
+                    else
+                    {
+                        if (otoInputer[1].IndexOf("-") > 1)
+                        {
+                            aliasType = "VX";
+                        }
+                        else
+                        {
+                            aliasType = "-CV";
+                        }
+                    }
+                }
+                else
+                {
+                    aliasType = "CV";
+                }
+                if (listView1.CheckBoxes)
+                {
+                    aliasType = "INDLE";
+                }
+                if (checkBox1.Checked)
+                {
+                    foreach (string lineDict in hi2roLines)
+                    {
+                        string[] D = lineDict.Split('=');
+                        otoInputer[1] = otoInputer[1].Replace(D[0].ToString(), D[1].ToString());
+                    }
+                }
+                else
+                {
+
+                }
+                ListViewItem[] lvs = new ListViewItem[1];
+                lvs[0] = new ListViewItem(new string[]
+                {
+                            counterST , //行數
+                            otoInputer[0], //Wav Name
+                            otoInputer[1], //Alias
+                            otoInputer[2], //Offsest
+                            otoInputer[3], //Consonant
+                            otoInputer[4], //Cutoff
+                            otoInputer[5], //Preutterance
+                            otoInputer[6], //Overlap
+                            aliasType //DV需要設定種類
+                }
+                );
+                this.listView1.Items.AddRange(lvs);
+            }
+            }
     }
 }
