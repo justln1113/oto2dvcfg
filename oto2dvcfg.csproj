@@ -127,7 +127,6 @@
   <ItemGroup>
     <Content Include="hi-ro.txt" />
     <Content Include="Logo.ico" />
-    <Content Include="那些暫時沒用到的註解.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
