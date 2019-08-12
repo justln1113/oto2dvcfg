@@ -33,6 +33,7 @@ namespace oto2dvcfg
             else
             {
                 MessageBox.Show("Read error", "(╯°□°）╯︵ ┻━┻", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             } 
             richTextBox1.Text = "{" + settings + "\n" + "}";
         }
@@ -97,7 +98,7 @@ namespace oto2dvcfg
                     }
                     else
                     {
-                        continue;
+                        break;
                     }
                     NAudio.Wave.WaveFileReader waveFileReader = new NAudio.Wave.WaveFileReader(wavPath + wavName[counter]);
                     TimeSpan wavTimeSpan = waveFileReader.TotalTime;
@@ -130,17 +131,17 @@ namespace oto2dvcfg
                             (
                                 "\n" +
                                 "   \"" + pitch + "->" + symbol[counter].Replace("\n", "").Replace("\t", "").Replace("\r", "") + "\" : {\n" +
-                                "      \"connectPoint\" : " + connectPoint + ",\n" +
-                                "      \"endTime\" : " + String.Format(TheCulture, endTime) + ",\n" +
+                                "      \"connectPoint\" : " + Convert.ToString(connectPoint).Replace(",", ".") + ",\n" +
+                                "      \"endTime\" : " + String.Format(TheCulture, endTime).Replace(",", ".") + ",\n" +
                                 "      \"pitch\" : \"" + pitch + "\",\n" +
-                                "      \"preutterance\" : " + preutterance + ",\n" +
+                                "      \"preutterance\" : " + preutterance.Replace(",", ".") + ",\n" +
                                 "      \"srcType\" : \"" + srcType[counter].Replace("\n", "").Replace("\t", "").Replace("\r", "") + "\",\n" +
-                                "      \"startTime\" : " + startTime + ",\n" +
+                                "      \"startTime\" : " + startTime.Replace(",", ".") + ",\n" +
                                 "      \"symbol\" : \"" + symbol[counter] + "\",\n" +
-                                "      \"tailPoint\" : " + tailPoint + ",\n" +
+                                "      \"tailPoint\" : " + tailPoint.Replace(",", ".") + ",\n" +
                                 "      \"updateTime\" : \"" + updateTime.ToString("yyyy-MM-dd HH:mm:ss") + "\",\n" +
-                                "      \"vowelEnd\" : " + vowelEnd + ",\n" +
-                                "      \"vowelStart\" : " + vowelStart + ",\n" +
+                                "      \"vowelEnd\" : " + vowelEnd.Replace(",", ".") + ",\n" +
+                                "      \"vowelStart\" : " + vowelStart.Replace(",", ".") + ",\n" +
                                 "      \"wavName\" : \"" + wavName[counter] + "\"\n" +
                                 "   },"
                             );
@@ -173,17 +174,17 @@ namespace oto2dvcfg
                             (
                                 "\n" +
                                 "   \"" + pitch + "->" + symbol[counter].Replace(" ", "").Replace("\n", "").Replace("\t", "").Replace("\r", "") + "\" : {\n" +
-                                "      \"connectPoint\" : " + connectPoint + ",\n" +
-                                "      \"endTime\" : " + endTime + ",\n" +
+                                "      \"connectPoint\" : " + Convert.ToString(connectPoint).Replace(",", ".") + ",\n" +
+                                "      \"endTime\" : " + endTime.Replace(",", ".") + ",\n" +
                                 "      \"pitch\" : \"" + pitch + "\",\n" +
-                                "      \"preutterance\" : " + preutterance + ",\n" +
+                                "      \"preutterance\" : " + preutterance.Replace(",", ".") + ",\n" +
                                 "      \"srcType\" : \"" + srcType[counter].Replace("-", "") + "\",\n" +
-                                "      \"startTime\" : " + startTime + ",\n" +
+                                "      \"startTime\" : " + startTime.Replace(",", ".") + ",\n" +
                                 "      \"symbol\" : \"" + symbol[counter].Replace(" ", "").Replace("\n", "").Replace("\t", "").Replace("\r", "") + "\",\n" +
-                                "      \"tailPoint\" : " + tailPoint + ",\n" +
+                                "      \"tailPoint\" : " + tailPoint.Replace(",", ".") + ",\n" +
                                 "      \"updateTime\" : \"" + updateTime.ToString("yyyy-MM-dd HH:mm:ss") + "\",\n" +
-                                "      \"vowelEnd\" : " + vowelEnd + ",\n" +
-                                "      \"vowelStart\" : " + vowelStart + ",\n" +
+                                "      \"vowelEnd\" : " + vowelEnd.Replace(",", ".") + ",\n" +
+                                "      \"vowelStart\" : " + vowelStart.Replace(",", ".") + ",\n" +
                                 "      \"wavName\" : \"" + wavName[counter] + "\"\n" +
                                 "   },"
                             );
@@ -215,13 +216,13 @@ namespace oto2dvcfg
                             (
                                 "\n" +
                                 "   \"" + pitch + "->" + symbol[counter].Replace(" ", "_").Replace("\n", "").Replace("\t", "").Replace("\r", "").Replace("_R", "_-") + "\" : {\n" +
-                                "      \"connectPoint\" : " + connectPoint + ",\n" +
-                                "      \"endTime\" : " + endTime + ",\n" +
+                                "      \"connectPoint\" : " + Convert.ToString(connectPoint).Replace(",", ".") + ",\n" +
+                                "      \"endTime\" : " + endTime.Replace(",", ".") + ",\n" +
                                 "      \"pitch\" : \"" + pitch + "\",\n" +
                                 "      \"srcType\" : \"" + srcType[counter] + "\",\n" +
-                                "      \"startTime\" : " + startTime + ",\n" +
+                                "      \"startTime\" : " + startTime.Replace(",", ".") + ",\n" +
                                 "      \"symbol\" : \"" + symbol[counter].Replace(" ", "_").Replace("\n", "").Replace("\t", "").Replace("\r", "").Replace("_R", "_-") + "\",\n" +
-                                "      \"tailPoint\" : " + tailPoint + ",\n" +
+                                "      \"tailPoint\" : " + tailPoint.Replace(",", ".") + ",\n" +
                                 "      \"updateTime\" : \"" + updateTime.ToString("yyyy-MM-dd HH:mm:ss") + "\",\n" +
                                 "      \"wavName\" : \"" + wavName[counter] + "\"\n" +
                                 "   },"
@@ -245,6 +246,14 @@ namespace oto2dvcfg
             {
                 for (counter = 0; counter < otoLinesCount; counter++)
                 {
+                    if (File.Exists(wavPath + wavName[counter]))
+                    {
+
+                    }
+                    else
+                    {
+                        continue;
+                    }
                     NAudio.Wave.WaveFileReader waveFileReader = new NAudio.Wave.WaveFileReader(wavPath + wavName[counter]);
                     TimeSpan wavTimeSpan = waveFileReader.TotalTime;
                     double wavTime = Convert.ToDouble(wavTimeSpan.TotalSeconds) * 1000;
@@ -276,17 +285,17 @@ namespace oto2dvcfg
                             (
                                 "\n" +
                                 "   \"" + pitch + "->" + symbol[counter].Replace("\n", "").Replace("\t", "").Replace("\r", "") + "\" : {\n" +
-                                "      \"connectPoint\" : " + connectPoint + ",\n" +
-                                "      \"endTime\" : " + endTime + ",\n" +
+                                "      \"connectPoint\" : " + Convert.ToString(connectPoint).Replace(",", ".") + ",\n" +
+                                "      \"endTime\" : " + endTime.Replace(",", ".") + ",\n" +
                                 "      \"pitch\" : \"" + pitch + "\",\n" +
-                                "      \"preutterance\" : " + preutterance + ",\n" +
+                                "      \"preutterance\" : " + preutterance.Replace(",", ".") + ",\n" +
                                 "      \"srcType\" : \"" + srcType[counter].Replace("\n", "").Replace("\t", "").Replace("\r", "") + "\",\n" +
-                                "      \"startTime\" : " + startTime + ",\n" +
+                                "      \"startTime\" : " + startTime.Replace(",", ".") + ",\n" +
                                 "      \"symbol\" : \"" + symbol[counter] + "\",\n" +
-                                "      \"tailPoint\" : " + tailPoint + ",\n" +
+                                "      \"tailPoint\" : " + tailPoint.Replace(",", ".") + ",\n" +
                                 "      \"updateTime\" : \"" + updateTime.ToString("yyyy-MM-dd HH:mm:ss") + "\",\n" +
-                                "      \"vowelEnd\" : " + vowelEnd + ",\n" +
-                                "      \"vowelStart\" : " + vowelStart + ",\n" +
+                                "      \"vowelEnd\" : " + vowelEnd.Replace(",", ".") + ",\n" +
+                                "      \"vowelStart\" : " + vowelStart.Replace(",", ".") + ",\n" +
                                 "      \"wavName\" : \"" + wavName[counter] + "\"\n" +
                                 "   },"
                             );
@@ -319,17 +328,17 @@ namespace oto2dvcfg
                             (
                                 "\n" +
                                 "   \"" + pitch + "->" + symbol[counter].Replace(" ", "").Replace("\n", "").Replace("\t", "").Replace("\r", "") + "\" : {\n" +
-                                "      \"connectPoint\" : " + connectPoint + ",\n" +
-                                "      \"endTime\" : " + endTime + ",\n" +
+                                "      \"connectPoint\" : " + Convert.ToString(connectPoint).Replace(",", ".") + ",\n" +
+                                "      \"endTime\" : " + endTime.Replace(",", ".") + ",\n" +
                                 "      \"pitch\" : \"" + pitch + "\",\n" +
-                                "      \"preutterance\" : " + preutterance + ",\n" +
+                                "      \"preutterance\" : " + preutterance.Replace(",", ".") + ",\n" +
                                 "      \"srcType\" : \"" + srcType[counter].Replace("-", "") + "\",\n" +
-                                "      \"startTime\" : " + startTime + ",\n" +
+                                "      \"startTime\" : " + startTime.Replace(",", ".") + ",\n" +
                                 "      \"symbol\" : \"" + symbol[counter].Replace(" ", "").Replace("\n", "").Replace("\t", "").Replace("\r", "") + "\",\n" +
-                                "      \"tailPoint\" : " + tailPoint + ",\n" +
+                                "      \"tailPoint\" : " + tailPoint.Replace(",", ".") + ",\n" +
                                 "      \"updateTime\" : \"" + updateTime.ToString("yyyy-MM-dd HH:mm:ss") + "\",\n" +
-                                "      \"vowelEnd\" : " + vowelEnd + ",\n" +
-                                "      \"vowelStart\" : " + vowelStart + ",\n" +
+                                "      \"vowelEnd\" : " + vowelEnd.Replace(",", ".") + ",\n" +
+                                "      \"vowelStart\" : " + vowelStart.Replace(",", ".") + ",\n" +
                                 "      \"wavName\" : \"" + wavName[counter] + "\"\n" +
                                 "   },"
                             );
@@ -353,13 +362,13 @@ namespace oto2dvcfg
                             (
                                 "\n" +
                                 "   \"" + pitch + "->" + symbol[counter].Replace(" ", "_").Replace("\n", "").Replace("\t", "").Replace("\r", "").Replace("_R", "_-") + "\" : {\n" +
-                                "      \"connectPoint\" : " + connectPoint + ",\n" +
-                                "      \"endTime\" : " + endTime + ",\n" +
+                                "      \"connectPoint\" : " + Convert.ToString(connectPoint).Replace(",", ".") + ",\n" +
+                                "      \"endTime\" : " + endTime.Replace(",", ".") + ",\n" +
                                 "      \"pitch\" : \"" + pitch + "\",\n" +
                                 "      \"srcType\" : \"" + srcType[counter] + "\",\n" +
-                                "      \"startTime\" : " + startTime + ",\n" +
+                                "      \"startTime\" : " + startTime.Replace(",", ".") + ",\n" +
                                 "      \"symbol\" : \"" + symbol[counter].Replace(" ", "_").Replace("\n", "").Replace("\t", "").Replace("\r", "").Replace("_R", "_-") + "\",\n" +
-                                "      \"tailPoint\" : " + tailPoint + ",\n" +
+                                "      \"tailPoint\" : " + tailPoint.Replace(",", ".") + ",\n" +
                                 "      \"updateTime\" : \"" + updateTime.ToString("yyyy-MM-dd HH:mm:ss") + "\",\n" +
                                 "      \"wavName\" : \"" + wavName[counter] + "\"\n" +
                                 "   },"

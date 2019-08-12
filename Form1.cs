@@ -171,91 +171,90 @@ namespace oto2dvcfg
 
                 if (openFileDialog1.ShowDialog() == DialogResult.OK) //若開啟檔案成功
                 {
-                    textOTOpath.Text = openFileDialog1.FileName; //取得開啟的檔案路徑
-
-                    List<string> lines = new List<string>();
-                    string line;
-                    int counter = 0;
-                    bool AliasHasSpace;
-                    string aliasType;
-
-                    StreamReader otoSRE = new StreamReader(textOTOpath.Text, System.Text.Encoding.Default); //給ReadToEnd使用的Reader
-                    StreamReader otoSR = new StreamReader(textOTOpath.Text, System.Text.Encoding.Default); //給ReadLine使用的Reader
-                    StreamReader hi2roRead = new StreamReader("hi-ro.txt", System.Text.Encoding.Default); //讀取假名轉羅馬字典檔
-                    string[] hi2roLines = hi2roRead.ReadToEnd().Split('\n');
-                    hi2roRead.Close();
-                    int otoLinesCount = otoSRE.ReadToEnd().Split('\n').Length; //計算oto行數
-                    otoSRE.Close();
-                    while ((line = otoSR.ReadLine()) != null)
+                    if (File.Exists(openFileDialog1.FileName))
                     {
-                        string[] otoInputer = OtoInput(line); //輸入一條oto設定進otoSpliter方法
-                        string counterST = Convert.ToString(counter + 1);
 
-                        if (otoInputer[1].IndexOf(" ") < 0)
+                        textOTOpath.Text = openFileDialog1.FileName; //取得開啟的檔案路徑
+                        string otoPath = textOTOpath.Text;
+                        if (otoReader.lineCount(otoPath) - 2 < 0)
                         {
-                            AliasHasSpace = false;
+                            MessageBox.Show("oto file is empty.", "(╯°□°）╯︵ ┻━┻", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                         else
                         {
-                            AliasHasSpace = true;
-                        }
-                        if (AliasHasSpace == true)
-                        {
-                            if (otoInputer[1].IndexOf("-") < 0)
+                            List<string> lines = new List<string>();
+                            string line;
+                            int counter = 0;
+                            string aliasType;
+
+                            StreamReader otoSR = new StreamReader(textOTOpath.Text, System.Text.Encoding.Default); //給ReadLine使用的Reader
+                            while ((line = otoSR.ReadLine()) != null)
                             {
-                                aliasType = "VX";
-                            }
-                            else
-                            {
-                                if (otoInputer[1].IndexOf("-") > 1)
+                                string[] otoInputer = OtoInput(line); //輸入一條oto設定進otoSpliter方法
+                                if (otoInputer.Length < 7)
                                 {
-                                    aliasType = "VX";
+                                    MessageBox.Show("Wrong oto format.", "(╯°□°）╯︵ ┻━┻", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    return;
                                 }
                                 else
                                 {
-                                    aliasType = "-CV";
+                                    if (checkBox1.Checked)
+                                    {
+                                        foreach (string lineDict in otoReader.ReadDict())
+                                        {
+                                            string[] D = lineDict.Split('=');
+                                            otoInputer[1] = otoInputer[1].Replace(D[0].ToString(), D[1].ToString());
+                                        }
+                                    }
+                                    else
+                                    {
+
+                                    }
+                                    aliasType = otoReader.get_aliasType(otoInputer[1]);
+                                    ListViewItem[] lvs = new ListViewItem[1];
+                                    lvs[0] = new ListViewItem(new string[]
+                                    {
+                                        Convert.ToString(counter + 1) , //行數
+                                        otoInputer[0], //Wav Name
+                                        otoInputer[1], //Alias
+                                        otoInputer[2], //Offsest
+                                        otoInputer[3], //Consonant
+                                        otoInputer[4], //Cutoff
+                                        otoInputer[5], //Preutterance
+                                        otoInputer[6], //Overlap
+                                        aliasType //DV需要設定種類
+                                    }
+                                    );
+                                    this.listView1.Items.AddRange(lvs);
+                                    counter++;
                                 }
                             }
+                            otoSR.Close();
+                            string otoLinesCountST = Convert.ToString(otoReader.lineCount(otoPath) - 2);
+                            labelOTOint.Text = (otoLinesCountST);
                         }
-                        else
-                        {
-                            aliasType = "CV";
-                        }
-                        if(checkBox1.Checked)
-                        {
-                            foreach (string lineDict in hi2roLines)
-                            {
-                                string[] D = lineDict.Split('=');
-                                otoInputer[1] = otoInputer[1].Replace(D[0].ToString(), D[1].ToString());
-                            }
-                        }
-                        else
-                        {
-
-                        }
-                        ListViewItem[] lvs = new ListViewItem[1];
-                        lvs[0] = new ListViewItem(new string[]
-                        {
-                            counterST , //行數
-                            otoInputer[0], //Wav Name
-                            otoInputer[1], //Alias
-                            otoInputer[2], //Offsest
-                            otoInputer[3], //Consonant
-                            otoInputer[4], //Cutoff
-                            otoInputer[5], //Preutterance
-                            otoInputer[6], //Overlap
-                            aliasType //DV需要設定種類
-                        }
-                        );
-                        this.listView1.Items.AddRange(lvs);
-                        counter++;
                     }
-                    otoSR.Close();
-                    string otoLinesCountST = Convert.ToString(otoLinesCount - 2);
-                    labelOTOint.Text = (otoLinesCountST);
+                    else
+                    {
+                        ListViewItem[] lvs = new ListViewItem[5];
+                        lvs[0] = new ListViewItem(new string[] { "", "放棄啦！" });
+                        lvs[1] = new ListViewItem(new string[] { "", "不幹啦！ " });
+                        lvs[2] = new ListViewItem(new string[] { "", "讀個oto累死啦～" });
+                        lvs[3] = new ListViewItem(new string[] { "", "跟你要了檔案你又不給" });
+                        lvs[4] = new ListViewItem(new string[] { "", "是要列個啥(╯°□°）╯︵ ┻━┻" });
+
+                        this.listView1.Items.AddRange(lvs);
+
+                        //listView1.Items.Add("", "放棄啦！");
+                        //listView1.Items.Add("", "不幹啦！ ");
+                        //listView1.Items.Add("", "讀個oto累死啦～");
+                        //listView1.Items.Add("", "跟你要了檔案你又不給");
+                        //listView1.Items.Add("", "是要列個啥(╯°□°）╯︵ ┻━┻");
+                    }
                 }
                 else
                 {
+                    MessageBox.Show("OTO file not exists.", "(╯°□°）╯︵ ┻━┻", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     ListViewItem[] lvs = new ListViewItem[5];
                     lvs[0] = new ListViewItem(new string[] { "", "放棄啦！" });
                     lvs[1] = new ListViewItem(new string[] { "", "不幹啦！ " });
@@ -263,15 +262,8 @@ namespace oto2dvcfg
                     lvs[3] = new ListViewItem(new string[] { "", "跟你要了檔案你又不給" });
                     lvs[4] = new ListViewItem(new string[] { "", "是要列個啥(╯°□°）╯︵ ┻━┻" });
 
-                this.listView1.Items.AddRange(lvs);
-
-                //listView1.Items.Add("", "放棄啦！");
-                //listView1.Items.Add("", "不幹啦！ ");
-                //listView1.Items.Add("", "讀個oto累死啦～");
-                //listView1.Items.Add("", "跟你要了檔案你又不給");
-                //listView1.Items.Add("", "是要列個啥(╯°□°）╯︵ ┻━┻");
-            }
-
+                    this.listView1.Items.AddRange(lvs);
+                }
             }
 
         }
@@ -282,58 +274,21 @@ namespace oto2dvcfg
             List<string> lines = new List<string>();
             string line;
             int counter = 0;
-            bool AliasHasSpace;
             string aliasType;
 
-            StreamReader otoSRE = new StreamReader(textOTOpath.Text, System.Text.Encoding.Default); //給ReadToEnd使用的Reader
             StreamReader otoSR = new StreamReader(textOTOpath.Text, System.Text.Encoding.Default); //給ReadLine使用的Reader
-            StreamReader hi2roRead = new StreamReader("hi-ro.txt", System.Text.Encoding.Default); //讀取假名轉羅馬字典檔
-            string[] hi2roLines = hi2roRead.ReadToEnd().Split('\n');
-            hi2roRead.Close();
-            int otoLinesCount = otoSRE.ReadToEnd().Split('\n').Length; //計算oto行數
-            otoSRE.Close();
             while ((line = otoSR.ReadLine()) != null)
             {
                 string[] otoInputer = OtoInput(line); //輸入一條oto設定進otoSpliter方法
-                string counterST = Convert.ToString(counter + 1);
+                
 
-                if (otoInputer[1].IndexOf(" ") < 0)
-                {
-                    AliasHasSpace = false;
-                }
-                else
-                {
-                    AliasHasSpace = true;
-                }
-                if (AliasHasSpace == true)
-                {
-                    if (otoInputer[1].IndexOf("-") < 0)
-                    {
-                        aliasType = "VX";
-                    }
-                    else
-                    {
-                        if (otoInputer[1].IndexOf("-") > 1)
-                        {
-                            aliasType = "VX";
-                        }
-                        else
-                        {
-                            aliasType = "-CV";
-                        }
-                    }
-                }
-                else
-                {
-                    aliasType = "CV";
-                }
-                if (listView1.CheckBoxes)
-                {
-                    aliasType = "INDLE";
-                }
+                //if (listView1.CheckBoxes)
+                //{
+                //    aliasType = "INDLE";
+                //}
                 if (checkBox1.Checked)
                 {
-                    foreach (string lineDict in hi2roLines)
+                    foreach (string lineDict in otoReader.ReadDict())
                     {
                         string[] D = lineDict.Split('=');
                         otoInputer[1] = otoInputer[1].Replace(D[0].ToString(), D[1].ToString());
@@ -343,10 +298,11 @@ namespace oto2dvcfg
                 {
 
                 }
+                aliasType = otoReader.get_aliasType(otoInputer[1]);
                 ListViewItem[] lvs = new ListViewItem[1];
                 lvs[0] = new ListViewItem(new string[]
                 {
-                            counterST , //行數
+                            Convert.ToString(counter + 1) , //行數
                             otoInputer[0], //Wav Name
                             otoInputer[1], //Alias
                             otoInputer[2], //Offsest
@@ -358,6 +314,7 @@ namespace oto2dvcfg
                 }
                 );
                 this.listView1.Items.AddRange(lvs);
+                counter++;
             }
             }
     }

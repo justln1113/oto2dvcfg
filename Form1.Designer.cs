@@ -93,9 +93,11 @@
             // 
             this.textOTOpath.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.textOTOpath.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textOTOpath.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.textOTOpath.ForeColor = System.Drawing.Color.White;
             resources.ApplyResources(this.textOTOpath, "textOTOpath");
             this.textOTOpath.Name = "textOTOpath";
+            this.textOTOpath.ReadOnly = true;
             // 
             // Pitch
             // 
