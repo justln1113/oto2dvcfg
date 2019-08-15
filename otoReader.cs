@@ -51,6 +51,7 @@ namespace oto2dvcfg
         {
             StreamReader hi2roRead = new StreamReader("hi-ro.txt", System.Text.Encoding.Default); //讀取假名轉羅馬字典檔
             string[] output = hi2roRead.ReadToEnd().Split('\n');
+            hi2roRead.Close();
             return output;
         }
 

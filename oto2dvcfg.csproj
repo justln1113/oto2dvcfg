@@ -59,11 +59,14 @@
     <ApplicationIcon>Logo.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="NAudio">
-      <HintPath>..\NAudio.dll</HintPath>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="NAudio, Version=1.8.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\NAudio.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -75,6 +78,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="cfgProcess.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -88,10 +94,22 @@
     <Compile Include="FormPreview.Designer.cs">
       <DependentUpon>FormPreview.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NFCButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="otoInputer.cs" />
     <Compile Include="otoReader.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TransparentTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="Form1.en.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -109,6 +127,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -127,6 +146,18 @@
   <ItemGroup>
     <Content Include="hi-ro.txt" />
     <Content Include="Logo.ico" />
+    <None Include="UI resource\checkHI2RONormal.png" />
+    <None Include="UI resource\buttonCloseNormal.png" />
+    <None Include="UI resource\buttonCloseActive.png" />
+    <None Include="UI resource\Language.png" />
+    <None Include="UI resource\otoPathBack.png" />
+    <None Include="UI resource\buttonAddActive.png" />
+    <None Include="Resources\buttonAddActive.bmp" />
+    <None Include="UI resource\formBack.png" />
+    <None Include="UI resource\buttonAddNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

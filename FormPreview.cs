@@ -32,7 +32,8 @@ namespace oto2dvcfg
             }
             else
             {
-                MessageBox.Show("Read error", "(╯°□°）╯︵ ┻━┻", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Failed to generate.", "(╯°□°）╯︵ ┻━┻", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                this.Close();
                 return;
             } 
             richTextBox1.Text = "{" + settings + "\n" + "}";
@@ -68,7 +69,7 @@ namespace oto2dvcfg
         public static string[] dvcfgWriter
             (
             string wavPath,
-            string langType,
+            string calcType,
             string[] srcType,
             string[] wavName,
             string[] symbol,
@@ -88,7 +89,7 @@ namespace oto2dvcfg
             string tailPoint;
             string vowelEnd;
             List<string> settings = new List<string>();
-            if (langType == "JPN")
+            if (calcType == "JPN")
             {
                 for (counter = 0; counter < otoLinesCount; counter++)
                 {
@@ -397,6 +398,8 @@ namespace oto2dvcfg
                 StreamWriter streamWriter = new StreamWriter(saveFileDialog1.FileName);
                 streamWriter.WriteLine(richTextBox1.Text);
                 streamWriter.Close();
+                MessageBox.Show("Save success", "^_^", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+                this.Close();
             }
         }
     }
