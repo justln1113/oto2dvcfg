@@ -61,6 +61,21 @@ namespace oto2dvcfg
             int otoLinesCount = counter.ReadToEnd().Split('\n').Length; //計算oto行數
             return otoLinesCount;
         }
-        
+
+        public static string FindAndReplace(string input)
+        {
+            if (File.Exists("FindAndReplace.tmp"))
+            {
+                string line = String.Empty;
+                StreamReader readTMP = new StreamReader("FindAndReplace.tmp", Encoding.Default);
+                while ((line = readTMP.ReadLine()) != null && line != String.Empty)
+                {
+                    string[] D = line.Split(',');
+                    input = input.Replace(D[1], D[2]);
+                }
+                readTMP.Close();
+            }
+            return input;
+        }
     }
 }

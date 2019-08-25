@@ -392,14 +392,21 @@ namespace oto2dvcfg
             saveFileDialog1.Filter = "DeepVocal Config file|*.dvcfg";
             saveFileDialog1.Title = "Save DVCFG file";
             saveFileDialog1.FileName = "voice.dvcfg";
-            saveFileDialog1.ShowDialog();
-            if (saveFileDialog1.FileName != "")
+            if (saveFileDialog1.FileName != String.Empty)
             {
-                StreamWriter streamWriter = new StreamWriter(saveFileDialog1.FileName);
-                streamWriter.WriteLine(richTextBox1.Text);
-                streamWriter.Close();
-                MessageBox.Show("Save success", "^_^", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
-                this.Close();
+                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    StreamWriter streamWriter = new StreamWriter(saveFileDialog1.FileName);
+                    streamWriter.WriteLine(richTextBox1.Text);
+                    streamWriter.Flush();
+                    streamWriter.Close();
+                    MessageBox.Show("Save success", "^_^", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+                    this.Close();
+                }
+                else
+                {
+
+                }
             }
         }
     }
