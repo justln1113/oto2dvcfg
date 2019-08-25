@@ -421,7 +421,7 @@ namespace oto2dvcfg
                         }
                     }
                 }
-                #endregion //
+                #endregion 
 
                 string[] output = FormPreview.dvcfgWriter
                     (
