@@ -205,6 +205,7 @@ namespace oto2dvcfg
             foreach (ListViewItem eachItem in listView1.Items)
             {
                 eachItem.SubItems[10].Text = otoReader.FindAndReplace(eachItem.SubItems[2].Text);
+                eachItem.SubItems[9].Text = otoReader.FindAndReplace(eachItem.SubItems[9].Text);
             }
         }
 
