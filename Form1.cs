@@ -399,8 +399,9 @@ namespace oto2dvcfg
                         }
                         else
                         {
-                            MessageBox.Show("\"" + wavName + "\" " + "does not exists, do you want to continue?", "＞︿＜", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                            //MessageBox.Show("\"" + wavName + "\" " + "does not exists, do you want to continue?", "＞︿＜", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                         }
+                        MessageBox.Show("Some wav file does not exists, do you want to continue?", "＞︿＜", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                     }
                 }
                 else
@@ -539,12 +540,6 @@ namespace oto2dvcfg
                         lvs[4] = new ListViewItem(new string[] { "", "是要列個啥(╯°□°）╯︵ ┻━┻" });
 
                         this.listView1.Items.AddRange(lvs);
-
-                        //listView1.Items.Add("", "放棄啦！");
-                        //listView1.Items.Add("", "不幹啦！ ");
-                        //listView1.Items.Add("", "讀個oto累死啦～");
-                        //listView1.Items.Add("", "跟你要了檔案你又不給");
-                        //listView1.Items.Add("", "是要列個啥(╯°□°）╯︵ ┻━┻");
                     }
                 }
                 else
@@ -565,54 +560,7 @@ namespace oto2dvcfg
 
         public void optionChanged(object sender, EventArgs e)
         {
-            //listView1.Items.Clear();
-            //List<string> lines = new List<string>();
-            //string line;
-            //int counter = 0;
-            //string aliasType;
-            //if (textOTOpath.Text.Length < 1)
-            //{
-            //    MessageBox.Show("OTO path is empty!", "(╯°□°）╯︵ ┻━┻", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    return;
-            //}
-            //else
-            //{
-            //    StreamReader otoSR = new StreamReader(textOTOpath.Text, System.Text.Encoding.Default); //給ReadLine使用的Reader
-            //    while ((line = otoSR.ReadLine()) != null)
-            //    {
-            //        string[] otoInputer = OtoInput(line); //輸入一條oto設定進otoSpliter方法
 
-            //        if (checkHI2RO.Checked)
-            //        {
-            //            foreach (string lineDict in otoReader.ReadDict())
-            //            {
-            //                string[] D = lineDict.Split('=');
-            //                otoInputer[1] = otoInputer[1].Replace(D[0].ToString(), D[1].ToString());
-            //            }
-            //        }
-            //        else
-            //        {
-
-            //        }
-            //        aliasType = otoReader.get_aliasType(otoInputer[1]);
-            //        ListViewItem[] lvs = new ListViewItem[1];
-            //        lvs[0] = new ListViewItem(new string[]
-            //        {
-            //                Convert.ToString(counter + 1) , //行數
-            //                otoInputer[0], //Wav Name
-            //                otoInputer[1], //Alias
-            //                otoInputer[2], //Offsest
-            //                otoInputer[3], //Consonant
-            //                otoInputer[4], //Cutoff
-            //                otoInputer[5], //Preutterance
-            //                otoInputer[6], //Overlap
-            //                aliasType //DV需要設定種類
-            //        }
-            //        );
-            //        this.listView1.Items.AddRange(lvs);
-            //        counter++;
-            //    }
-            //}
         }
 
         public void listRefresh(object sender, EventArgs e)
