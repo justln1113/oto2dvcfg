@@ -11,6 +11,8 @@ using System.IO;
 using System.Reflection;
 using System.Globalization;
 using System.Drawing.Drawing2D;
+using NAudio;
+using NAudio.Wave;
 
 namespace oto2dvcfg
 {
@@ -19,9 +21,16 @@ namespace oto2dvcfg
         public static bool _ChangeLanguage = false; //This will indicate if the void needs to be called
         public static string _Language = ""; //This will indicate our new language
         public static string sendtext = String.Empty; //This variable will be sent to formPreview when buttonGenerate click
+        public static Double LoadingPerCentSend = 0;
         private bool mouseDown; //For draggble form
-        private Point lastLocation;
+        private Point lastLocation;//For draggble form
+        public bool hiroChecked = false;
         public NFCButton openOTO;
+        public static FormLoading formLoading = new FormLoading();
+        #region For undo redo function
+        private List<object> StateList = new List<object>();
+        private int Index = 0;
+        #endregion
         public string[] wavName, consonant, alias, offset, cutoff, preutterance, overlap, aliasType;
         private void Form1_MouseDown(object sender, MouseEventArgs e)
         {
@@ -47,9 +56,13 @@ namespace oto2dvcfg
         public Form1()
         {
             InitializeComponent();
-            this.listView1.FullRowSelect = true;
-            this.listView1.Scrollable = true;
-            this.listView1.MultiSelect = true;
+            listView1.FullRowSelect = true;
+            listView1.Scrollable = true;
+            listView1.MultiSelect = true;
+            #region undo redo setup
+            var InitialState = new object();
+            StateList.Add(InitialState);
+            #endregion
 
             #region Add button "open OTO"
             openOTO = new NFCButton();
@@ -178,6 +191,14 @@ namespace oto2dvcfg
             foreach (ListViewItem selectItem in listView1.SelectedItems)
             {
                 selectItem.SubItems[8].Text = "INDLE";
+                if (checkHI2RON.Checked == true)
+                {
+                    selectItem.SubItems[11].Text = otoReader.hi2ron(otoReader.FindAndReplace(selectItem.SubItems[12].Text), selectItem.SubItems[8].Text);
+                    if (!String.IsNullOrEmpty(selectItem.SubItems[11].Text))
+                    {
+                        selectItem.SubItems[2].Text = selectItem.SubItems[11].Text;
+                    }
+                }
             }
         }
 
@@ -186,6 +207,14 @@ namespace oto2dvcfg
             foreach (ListViewItem selectItem in listView1.SelectedItems)
             {
                 selectItem.SubItems[8].Text = "CV";
+                if (checkHI2RON.Checked == true)
+                {
+                    selectItem.SubItems[11].Text = otoReader.hi2ron(otoReader.FindAndReplace(selectItem.SubItems[12].Text), selectItem.SubItems[8].Text);
+                    if (!String.IsNullOrEmpty(selectItem.SubItems[11].Text))
+                    {
+                        selectItem.SubItems[2].Text = selectItem.SubItems[11].Text;
+                    }
+                }
             }
         }
 
@@ -194,6 +223,14 @@ namespace oto2dvcfg
             foreach (ListViewItem selectItem in listView1.SelectedItems)
             {
                 selectItem.SubItems[8].Text = "VX";
+                if (checkHI2RON.Checked == true)
+                {
+                    selectItem.SubItems[11].Text = otoReader.hi2ron(otoReader.FindAndReplace(selectItem.SubItems[12].Text), "VX");
+                    if (!String.IsNullOrEmpty(selectItem.SubItems[11].Text))
+                    {
+                        selectItem.SubItems[2].Text = selectItem.SubItems[11].Text;
+                    }
+                }
             }
         }
         #endregion
@@ -211,42 +248,108 @@ namespace oto2dvcfg
 
         private void CheckHI2RO_CheckedChanged(object sender, EventArgs e)
         {
-            foreach (ListViewItem eachItem in listView1.Items)
+            if (checkHI2RO.Checked == true && checkHI2RON.Checked == true)
             {
-                if (!String.IsNullOrEmpty(eachItem.SubItems[9].Text))
-                {
-                    string changerA = eachItem.SubItems[2].Text;
-                    string changerB = eachItem.SubItems[9].Text;
-                    eachItem.SubItems[9].Text = changerA;
-                    eachItem.SubItems[2].Text = changerB;
-                    changerA = String.Empty; changerB = String.Empty;
-                }
-                else
-                {
+                checkHI2RON.Checked = false;
+                hiroChecked = true;
+            }
 
+            if (checkHI2RO.Checked == true && checkFARpreview.Checked == true)
+            {
+                hiroChecked = true;
+                foreach (ListViewItem eachItem in listView1.Items)
+                {
+                    eachItem.SubItems[9].Text = otoReader.hi2ro(otoReader.FindAndReplace(eachItem.SubItems[12].Text));
+                    if (!String.IsNullOrEmpty(eachItem.SubItems[9].Text))
+                    {
+                        eachItem.SubItems[2].Text = eachItem.SubItems[9].Text;
+                    }
+                }
+            }
+            else if (checkHI2RO.Checked == true && checkFARpreview.Checked == false)
+            {
+                hiroChecked = true;
+                foreach (ListViewItem eachItem in listView1.Items)
+                {
+                    eachItem.SubItems[9].Text = otoReader.hi2ro(eachItem.SubItems[12].Text);
+                    if (!String.IsNullOrEmpty(eachItem.SubItems[9].Text))
+                    {
+                        eachItem.SubItems[2].Text = eachItem.SubItems[9].Text;
+                    }
+                }
+            }
+            else if (checkHI2RO.Checked == false && checkFARpreview.Checked == true)
+            {
+                hiroChecked = false;
+                foreach (ListViewItem eachItem in listView1.Items)
+                {
+                    eachItem.SubItems[2].Text = otoReader.FindAndReplace(eachItem.SubItems[12].Text);
+                }
+            }
+            else if (checkHI2RO.Checked == false && checkFARpreview.Checked == false)
+            {
+                hiroChecked = false;
+                foreach (ListViewItem eachItem in listView1.Items)
+                {
+                    eachItem.SubItems[2].Text = eachItem.SubItems[12].Text;
                 }
             }
         }
 
         private void CheckFARpreview_CheckedChanged(object sender, EventArgs e)
         {
-            foreach (ListViewItem eachItem in listView1.Items)
+            if (checkFARpreview.Checked == true && hiroChecked == false)
             {
-                eachItem.SubItems[10].Text = otoReader.FindAndReplace(eachItem.SubItems[2].Text);
-            }
-            foreach (ListViewItem eachItem in listView1.Items)
-            {
-                if (!String.IsNullOrEmpty(eachItem.SubItems[10].Text))
+                foreach (ListViewItem eachItem in listView1.Items)
                 {
-                    string changerA = eachItem.SubItems[2].Text;
-                    string changerB = eachItem.SubItems[10].Text;
-                    eachItem.SubItems[10].Text = changerA;
-                    eachItem.SubItems[2].Text = changerB;
-                    changerA = String.Empty; changerB = String.Empty;
+                    eachItem.SubItems[10].Text = otoReader.FindAndReplace(eachItem.SubItems[12].Text);
+                    if (!String.IsNullOrEmpty(eachItem.SubItems[10].Text))
+                    {
+                        eachItem.SubItems[2].Text = eachItem.SubItems[10].Text;
+                    }
                 }
-                else
+            }
+            else if (checkFARpreview.Checked == true && checkHI2RO.Checked == true)
+            {
+                foreach (ListViewItem eachItem in listView1.Items)
                 {
-
+                    eachItem.SubItems[10].Text = otoReader.FindAndReplace(otoReader.hi2ro(eachItem.SubItems[12].Text));
+                    if (!String.IsNullOrEmpty(eachItem.SubItems[10].Text))
+                    {
+                        eachItem.SubItems[2].Text = eachItem.SubItems[10].Text;
+                    }
+                }
+            }
+            else if (checkFARpreview.Checked == true && checkHI2RON.Checked == true)
+            {
+                foreach (ListViewItem eachItem in listView1.Items)
+                {
+                    eachItem.SubItems[10].Text = otoReader.FindAndReplace(otoReader.hi2ron(eachItem.SubItems[12].Text, eachItem.SubItems[8].Text));
+                    if (!String.IsNullOrEmpty(eachItem.SubItems[10].Text))
+                    {
+                        eachItem.SubItems[2].Text = eachItem.SubItems[10].Text;
+                    }
+                }
+            }
+            else if (checkFARpreview.Checked == false && hiroChecked == false)
+            {
+                foreach (ListViewItem eachItem in listView1.Items)
+                {
+                    eachItem.SubItems[2].Text = eachItem.SubItems[12].Text;
+                }
+            }
+            else if (checkFARpreview.Checked == false && checkHI2RO.Checked == true)
+            {
+                foreach (ListViewItem eachItem in listView1.Items)
+                {
+                    eachItem.SubItems[2].Text = eachItem.SubItems[9].Text;
+                }
+            }
+            else if (checkFARpreview.Checked == false && checkHI2RON.Checked == true)
+            {
+                foreach (ListViewItem eachItem in listView1.Items)
+                {
+                    eachItem.SubItems[2].Text = eachItem.SubItems[11].Text;
                 }
             }
         }
@@ -273,17 +376,68 @@ namespace oto2dvcfg
             }
         }
 
+        private void CheckHI2ROn_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkHI2RON.Checked == true && checkHI2RO.Checked == true)
+            {
+                checkHI2RO.Checked = false;
+            }
+            if (checkHI2RON.Checked == true && checkFARpreview.Checked == true)
+            {
+                hiroChecked = true;
+                foreach (ListViewItem eachItem in listView1.Items)
+                {
+                    eachItem.SubItems[11].Text = otoReader.hi2ron(otoReader.FindAndReplace(eachItem.SubItems[12].Text), eachItem.SubItems[8].Text);
+                    if (!String.IsNullOrEmpty(eachItem.SubItems[11].Text))
+                    {
+                        eachItem.SubItems[2].Text = eachItem.SubItems[11].Text;
+                    }
+                }
+            }
+            else if (checkHI2RON.Checked == true && checkFARpreview.Checked == false)
+            {
+                hiroChecked = true;
+                foreach (ListViewItem eachItem in listView1.Items)
+                {
+                    eachItem.SubItems[11].Text = otoReader.hi2ron(eachItem.SubItems[12].Text, eachItem.SubItems[8].Text);
+                    if (!String.IsNullOrEmpty(eachItem.SubItems[9].Text))
+                    {
+                        eachItem.SubItems[2].Text = eachItem.SubItems[11].Text;
+                    }
+                }
+            }
+            else if (checkHI2RON.Checked == false && checkFARpreview.Checked == true)
+            {
+                hiroChecked = false;
+                foreach (ListViewItem eachItem in listView1.Items)
+                {
+                    eachItem.SubItems[2].Text = otoReader.FindAndReplace(eachItem.SubItems[12].Text);
+                }
+            }
+            else if (checkHI2RON.Checked == false && checkFARpreview.Checked == false)
+            {
+                hiroChecked = false;
+                foreach (ListViewItem eachItem in listView1.Items)
+                {
+                    eachItem.SubItems[2].Text = eachItem.SubItems[12].Text;
+                }
+            }
+        }
+
         private void ButtonClose_Click(object sender, EventArgs e)
         {
             if (File.Exists("FindAndReplace.tmp"))
             {
                 File.Delete("FindAndReplace.tmp");
             }
+            formLoading.Close();
             this.Close();
         }
 
         public void ButtonGenerate_Click(object sender, EventArgs e)
         {
+            formLoading.Show();
+            formLoading.Update();
             if (listView1.Items.Count > 1)
             {
 
@@ -369,67 +523,15 @@ namespace oto2dvcfg
                     aliasType = aliasTypeList.ToArray();
                 }
                 #endregion
-
-
-                //Attention
-                #region Does file exists?
-                int ExistsFileCount = new int();
-                int fileCount = new int();
-                //Exists files count
-                foreach (string wavName in wavName)
-                {
-                    if (File.Exists(wavFolder + wavName))
-                    {
-                        ExistsFileCount++;
-                    }
-                    else
-                    {
-
-                    }
-                    fileCount++;
-                }
-                if (ExistsFileCount > fileCount / 2)
-                {
-                    wavPath = wavFolder;
-                    foreach (string wavName in wavName)
-                    {
-                        if (File.Exists(wavFolder + wavName))
-                        {
-
-                        }
-                        else
-                        {
-                            //MessageBox.Show("\"" + wavName + "\" " + "does not exists, do you want to continue?", "＞︿＜", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-                        }
-                        MessageBox.Show("Some wav file does not exists, do you want to continue?", "＞︿＜", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-                    }
-                }
-                else
-                {
-                    FolderBrowserDialog folderBrowserDialog1 = new FolderBrowserDialog();
-                    folderBrowserDialog1.Description = "Please select your wav file folder.";
-                    if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
-                    {
-                        wavPath = folderBrowserDialog1.SelectedPath + "\\";
-                        if (File.Exists(wavPath + wavName[6]))
-                        {
-
-                        }
-                        else
-                        {
-                            MessageBox.Show("Wav file does not exist.", "(╯°□°）╯︵ ┻━┻", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
-                        }
-                    }
-                }
-                #endregion 
-
+                wavPath = wavFolder;
                 string[] output = FormPreview.dvcfgWriter
                     (
                         wavPath, 
                         calcType, 
                         aliasType, 
                         wavName, 
-                        alias, offset, 
+                        alias, 
+                        offset, 
                         consonant, 
                         cutoff, 
                         preutterance, 
@@ -437,7 +539,6 @@ namespace oto2dvcfg
                         listView1.Items.Count - 1, 
                         textPitch.Text
                     );
-
                 sendtext = String.Empty;
                 foreach (string s in output)
                 {
@@ -452,7 +553,6 @@ namespace oto2dvcfg
                 return;
             }
         }
-
 
         public string[] OtoInput(string Input)
         {
@@ -474,6 +574,8 @@ namespace oto2dvcfg
                 {
                     if (File.Exists(openFileDialog1.FileName))
                     {
+                        formLoading.Show();
+                        formLoading.Update();
                         textOTOpath.Text = openFileDialog1.FileName; //取得開啟的檔案路徑
                         string otoPath = textOTOpath.Text;
                         if (otoReader.lineCount(otoPath) - 2 < 0)
@@ -483,10 +585,14 @@ namespace oto2dvcfg
                         else
                         {
                             List<string> lines = new List<string>();
+                            List<string> wavNameList = new List<string>();
                             string line;
                             int counter = 0;
                             string aliasType;
+                            float LoadingLine = 0;
+                            float LoadingPerCent = 0;
 
+                            labelOTOint.Text = Convert.ToString(otoReader.lineCount(otoPath));
                             StreamReader otoSR = new StreamReader(textOTOpath.Text, System.Text.Encoding.Default); //給ReadLine使用的Reader
                             while ((line = otoSR.ReadLine()) != null)
                             {
@@ -498,65 +604,159 @@ namespace oto2dvcfg
                                 }
                                 else
                                 {
+                                    LoadingPerCent = LoadingLine / (otoReader.lineCount(otoPath));
                                     string hi2ro = string.Empty;
                                     aliasType = otoReader.get_aliasType(otoInputer[1]);
-                                    foreach (string lineDict in otoReader.ReadDict())
-                                    {
-                                        string[] D = lineDict.Split('=');
-                                        otoInputer[1] = otoInputer[1].Replace(D[0], D[1]);
-                                    }
-
                                     ListViewItem[] lvs = new ListViewItem[1];
                                     lvs[0] = new ListViewItem(new string[]
                                     {
                                         Convert.ToString(counter + 1) , //行數
                                         otoInputer[0], //Wav Name
-                                        OtoInput(line)[1], //Alias
+                                        otoInputer[1], //Alias
                                         otoInputer[2], //Offsest
                                         otoInputer[3], //Consonant
                                         otoInputer[4], //Cutoff
                                         otoInputer[5], //Preutterance
                                         otoInputer[6], //Overlap
                                         aliasType, //DV需要設定種類
-                                        otoInputer[1],
-                                        otoReader.FindAndReplace(OtoInput(line)[1])
+                                        otoReader.hi2ro(otoInputer[1]),
+                                        otoReader.FindAndReplace(otoInputer[1]),
+                                        otoReader.hi2ron(otoInputer[1], aliasType),
+                                        otoInputer[1]
                                     }
                                     );
-                                    this.listView1.Items.AddRange(lvs);
+                                    listView1.Items.AddRange(lvs);
                                     counter++;
+                                    LoadingLine++;
+                                    Console.WriteLine(System.Math.Round(LoadingPerCent, 2, MidpointRounding.AwayFromZero) * 100 + "%");
+                                    LoadingPerCentSend = Math.Round(LoadingPerCent, 2, MidpointRounding.AwayFromZero);
+                                    FormLoading.PCrefresh();
+                                    formLoading.Refresh();
+                                    formLoading.Update();
                                 }
                             }
                             otoSR.Close();
-                            labelOTOint.Text = Convert.ToString(otoReader.lineCount(otoPath) - 1);
+
+                            for (counter = 0; counter < listView1.Items.Count; counter++)
+                            {
+                                wavNameList.Add(listView1.Items[counter].SubItems[1].Text);
+                                wavName = wavNameList.Distinct().ToArray();
+                            }
+
+                            #region Does wav file exists?
+                            string wavFolder = string.Empty;
+                            string wavPath = string.Empty;
+                            bool WavDoesnotExists = false;
+                            FormWavDoesnotExists formWavDoesnotExists = new FormWavDoesnotExists();
+                            if (!string.IsNullOrEmpty(textOTOpath.Text))
+                            {
+                                wavFolder = textOTOpath.Text.Remove(textOTOpath.Text.LastIndexOf(@"\") + 1); //For detaction
+                            }
+                            wavPath = wavFolder;
+                            foreach (string wavName in wavName)
+                            {
+                                if (File.Exists(wavFolder + wavName))
+                                {
+
+                                }
+                                else
+                                {
+                                    WavDoesnotExists = true;
+                                    FormWavDoesnotExists.notExistsList.Add(wavName);
+                                }
+                            }
+                            if (WavDoesnotExists == true)
+                            {
+                                formWavDoesnotExists.ShowDialog();
+                                listView1.Items.Clear();
+                                errorMessageInListView();
+                            }
+                            #endregion
                         }
+                        formLoading.Hide();
                     }
                     else
                     {
-                        ListViewItem[] lvs = new ListViewItem[5];
-                        lvs[0] = new ListViewItem(new string[] { "", "放棄啦！" });
-                        lvs[1] = new ListViewItem(new string[] { "", "不幹啦！ " });
-                        lvs[2] = new ListViewItem(new string[] { "", "讀個oto累死啦～" });
-                        lvs[3] = new ListViewItem(new string[] { "", "跟你要了檔案你又不給" });
-                        lvs[4] = new ListViewItem(new string[] { "", "是要列個啥(╯°□°）╯︵ ┻━┻" });
-
-                        this.listView1.Items.AddRange(lvs);
+                        errorMessageInListView();
                     }
                 }
                 else
                 {
                     MessageBox.Show("OTO file not exists.", "(╯°□°）╯︵ ┻━┻", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
-                    ListViewItem[] lvs = new ListViewItem[5];
-                    lvs[0] = new ListViewItem(new string[] { "", "放棄啦！" });
-                    lvs[1] = new ListViewItem(new string[] { "", "不幹啦！ " });
-                    lvs[2] = new ListViewItem(new string[] { "", "讀個oto累死啦～" });
-                    lvs[3] = new ListViewItem(new string[] { "", "跟你要了檔案你又不給" });
-                    lvs[4] = new ListViewItem(new string[] { "", "是要列個啥(╯°□°）╯︵ ┻━┻" });
-
-                    this.listView1.Items.AddRange(lvs);
+                    errorMessageInListView();
                 }
             }
 
         }
+
+        private void Button1_Click(object sender, EventArgs e) //Undo Redo test
+        {
+            Edit();
+            string output = String.Empty;
+            string checkHI2RObool = String.Empty;
+            string checkHI2RONbool = String.Empty;
+            string FARbool = String.Empty;
+            if (checkHI2RO.Checked == true)
+            {
+                checkHI2RObool = "true";
+            }
+            else if (checkHI2RON.Checked == true)
+            {
+                checkHI2RONbool = "true";
+            }
+            else if (hiroChecked == false)
+            {
+                checkHI2RObool = "false";
+                checkHI2RONbool = "false";
+            }
+            if (checkFARpreview.Checked == true)
+            {
+                FARbool = "true";
+            }
+            else
+            {
+                FARbool = "false";
+            }
+            foreach (ListViewItem item in listView1.Items)
+            {
+                StateList[Index] += 
+                    item.SubItems[0].Text.Replace("\n", "").Replace("\t", "").Replace("\r", "") + "," + 
+                    item.SubItems[1].Text.Replace("\n", "").Replace("\t", "").Replace("\r", "") + "," +
+                    item.SubItems[2].Text.Replace("\n", "").Replace("\t", "").Replace("\r", "") + "," +
+                    item.SubItems[3].Text.Replace("\n", "").Replace("\t", "").Replace("\r", "") + "," +
+                    item.SubItems[4].Text.Replace("\n", "").Replace("\t", "").Replace("\r", "") + "," +
+                    item.SubItems[5].Text.Replace("\n", "").Replace("\t", "").Replace("\r", "") + "," +
+                    item.SubItems[6].Text.Replace("\n", "").Replace("\t", "").Replace("\r", "") + "," +
+                    item.SubItems[7].Text.Replace("\n", "").Replace("\t", "").Replace("\r", "") + "," +
+                    item.SubItems[8].Text.Replace("\n", "").Replace("\t", "").Replace("\r", "") + "," +
+                    item.SubItems[9].Text.Replace("\n", "").Replace("\t", "").Replace("\r", "") + "," +
+                    item.SubItems[10].Text.Replace("\n", "").Replace("\t", "").Replace("\r", "") + "," +
+                    item.SubItems[11].Text.Replace("\n", "").Replace("\t", "").Replace("\r", "") + "\n";
+            }
+            Console.WriteLine(StateList[Index]);
+            Console.WriteLine(checkHI2RObool + "," + checkHI2RONbool + "," + FARbool);
+        }
+
+        private void ListView1_DoubleClick(object sender, EventArgs e)
+        {
+            string wavPath = textOTOpath.Text.Remove(textOTOpath.Text.LastIndexOf(@"\") + 1);
+            WaveOutEvent waveOut = new WaveOutEvent();
+            WaveFileReader waveFileReader = new WaveFileReader(wavPath + listView1.SelectedItems[0].SubItems[1].Text);
+            waveOut.Init(waveFileReader);
+            waveOut.Play();
+        }
+        private void errorMessageInListView()
+        {
+            ListViewItem[] lvs = new ListViewItem[5];
+            lvs[0] = new ListViewItem(new string[] { "", "放棄啦！" });
+            lvs[1] = new ListViewItem(new string[] { "", "不幹啦！ " });
+            lvs[2] = new ListViewItem(new string[] { "", "讀個oto累死啦～" });
+            lvs[3] = new ListViewItem(new string[] { "", "跟你要了檔案你又不給" });
+            lvs[4] = new ListViewItem(new string[] { "", "是要列個啥(╯°□°）╯︵ ┻━┻" });
+
+            this.listView1.Items.AddRange(lvs);
+        }
+
 
         public void optionChanged(object sender, EventArgs e)
         {
@@ -580,6 +780,43 @@ namespace oto2dvcfg
                 _Language = lang; //Sets the language to lang
                 _ChangeLanguage = true; //Indicates that the void needs to be called through the TWO other forms as well
             }
+        }
+
+        private object State
+        {
+            get
+            {
+                return StateList[Index];
+            }
+            set
+            {
+                StateList[Index] = value;
+            }
+        }
+
+        private void Redo()
+        {
+            if (Index < StateList.Count - 1)
+            {
+                Index++;
+            }
+        }
+
+        private void Undo()
+        {
+            if (Index > 0)
+            {
+                Index--;
+            }
+        }
+
+        private void Edit()
+        {
+            var NewState = new object();
+
+            StateList.RemoveRange(Index + 1, StateList.Count - Index - 1);
+            StateList.Add(NewState);
+            Index++;
         }
     }
 }

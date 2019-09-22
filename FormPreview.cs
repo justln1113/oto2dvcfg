@@ -37,6 +37,7 @@ namespace oto2dvcfg
                 return;
             } 
             richTextBox1.Text = "{" + settings + "\n" + "}";
+            Form1.formLoading.Hide();
         }
 
         private void FormPreview_MouseDown(object sender, MouseEventArgs e)
@@ -236,13 +237,6 @@ namespace oto2dvcfg
                     }
                 }
             }
-
-
-
-
-
-
-
             else
             {
                 for (counter = 0; counter < otoLinesCount; counter++)

@@ -42,6 +42,7 @@
             this.buttonDel = new oto2dvcfg.NFCButton();
             this.buttonEdit = new oto2dvcfg.NFCButton();
             this.buttonAdd = new oto2dvcfg.NFCButton();
+            this.comboPR = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // listView1
@@ -165,12 +166,25 @@
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.ButtonAdd_Click);
             // 
+            // comboPR
+            // 
+            this.comboPR.FormattingEnabled = true;
+            this.comboPR.Items.AddRange(new object[] {
+            "R to -",
+            "息R to H"});
+            this.comboPR.Location = new System.Drawing.Point(513, 124);
+            this.comboPR.Name = "comboPR";
+            this.comboPR.Size = new System.Drawing.Size(168, 28);
+            this.comboPR.TabIndex = 39;
+            this.comboPR.Text = "Preset rules...";
+            // 
             // FormFAR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
-            this.ClientSize = new System.Drawing.Size(738, 568);
+            this.ClientSize = new System.Drawing.Size(696, 568);
+            this.Controls.Add(this.comboPR);
             this.Controls.Add(this.nfcButton2);
             this.Controls.Add(this.nfcButton1);
             this.Controls.Add(this.buttonLoad);
@@ -208,5 +222,6 @@
         private NFCButton nfcButton2;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.ComboBox comboPR;
     }
 }

@@ -117,275 +117,758 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Zoom</value>
+  <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="openFileDialog1.Title" xml:space="preserve">
+    <value>Open OTO file...</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Pitch.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="Pitch.Font" type="System.Drawing.Font, System.Drawing">
     <value>Adobe Fan Heiti Std B, 12pt, style=Bold</value>
   </data>
-  <data name="&gt;&gt;offsetColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkRemoveL.Name" xml:space="preserve">
-    <value>checkRemoveL</value>
-  </data>
-  <data name="&gt;&gt;buttonClose.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;toolStripMenuItemTurn2CV.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="textOTOpath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>222, 50</value>
-  </data>
-  <data name="&gt;&gt;overlapColumn.Name" xml:space="preserve">
-    <value>overlapColumn</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Title.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="textOTOpath.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Pitch.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
-  </data>
-  <data name="Pitch.Text" xml:space="preserve">
-    <value>Pitch</value>
-  </data>
-  <data name="toolStripMenuItemTurn2VX.Size" type="System.Drawing.Size, System.Drawing">
-    <value>316, 22</value>
-  </data>
-  <data name="radioButtonJCVVC.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="radioButtonDefault.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 28</value>
-  </data>
-  <data name="radioButtonJCVVC.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 24</value>
-  </data>
-  <data name="Pitch.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="toolStripMenuItemTurn2CV.Text" xml:space="preserve">
-    <value>Change select setting alias type to CV</value>
-  </data>
-  <data name="checkRemoveL.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <data name="Title.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1206, 24</value>
-  </data>
-  <data name="&gt;&gt;radioButtonJCVVC.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>28</value>
-  </data>
-  <data name="&gt;&gt;radioButtonCCVVC.Name" xml:space="preserve">
-    <value>radioButtonCCVVC</value>
-  </data>
-  <data name="radioButtonCCVVC.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="&gt;&gt;openFileDialog1.Name" xml:space="preserve">
-    <value>openFileDialog1</value>
-  </data>
-  <data name="&gt;&gt;radioButtonJCVVC.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lableOTOLines.Location" type="System.Drawing.Point, System.Drawing">
-    <value>833, 107</value>
-  </data>
-  <data name="&gt;&gt;radioButtonJCVVC.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="toolStripMenuItemTurn2VX.Text" xml:space="preserve">
-    <value>Change select setting alias type to VX</value>
-  </data>
-  <data name="&gt;&gt;textOTOpath.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripMenuItemTurn2VX.Name" xml:space="preserve">
-    <value>toolStripMenuItemTurn2VX</value>
-  </data>
-  <data name="Pitch.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="checkFARpreview.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;listView1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;aliasTypeColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1206, 609</value>
   </data>
   <data name="Pitch.Location" type="System.Drawing.Point, System.Drawing">
     <value>839, 447</value>
   </data>
-  <data name="nfcButton1.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
+  <data name="Pitch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 20</value>
   </data>
-  <data name="comboLang.Location" type="System.Drawing.Point, System.Drawing">
-    <value>866, 46</value>
+  <data name="Pitch.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
-  <data name="toolStripMenuItemCopyAlias.Text" xml:space="preserve">
-    <value>Copy alias</value>
+  <data name="Pitch.Text" xml:space="preserve">
+    <value>Pitch</value>
   </data>
-  <data name="comboLang.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+  <data name="&gt;&gt;Pitch.Name" xml:space="preserve">
+    <value>Pitch</value>
   </data>
-  <data name="&gt;&gt;comboLang.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;Pitch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="comboLang.Items1" xml:space="preserve">
-    <value>繁體中文</value>
-  </data>
-  <data name="&gt;&gt;radioButtonCCVVC.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="radioButtonCCVVC.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 24</value>
-  </data>
-  <data name="checkHI2RO.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;textPitch.Parent" xml:space="preserve">
+  <data name="&gt;&gt;Pitch.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="checkRemoveL.Location" type="System.Drawing.Point, System.Drawing">
-    <value>837, 288</value>
-  </data>
-  <data name="&gt;&gt;checkHI2RO.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="comboLang.Items" xml:space="preserve">
-    <value>English</value>
-  </data>
-  <data name="&gt;&gt;contextMenuStrip1.Name" xml:space="preserve">
-    <value>contextMenuStrip1</value>
-  </data>
-  <data name="buttonGenerate.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="buttonGenerate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 38</value>
-  </data>
-  <data name="&gt;&gt;cutoffColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="checkRemoveL.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="checkFARpreview.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1093, 488</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
-    <value>groupBox1</value>
+  <data name="&gt;&gt;Pitch.ZOrder" xml:space="preserve">
+    <value>16</value>
   </data>
   <data name="textPitch.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft JhengHei, 12pt, style=Bold</value>
   </data>
-  <data name="checkFARpreview.Text" xml:space="preserve">
-    <value>Preview</value>
+  <data name="textPitch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1019, 447</value>
   </data>
-  <data name="&gt;&gt;buttonClose.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="textPitch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
-  <data name="columnFAR.Text" xml:space="preserve">
-    <value>FAR</value>
-  </data>
-  <data name="toolStripMenuItemDel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>316, 22</value>
-  </data>
-  <data name="&gt;&gt;nfcButton1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="Title.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;radioButtonDefault.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="checkHI2RO.Location" type="System.Drawing.Point, System.Drawing">
-    <value>837, 258</value>
-  </data>
-  <data name="&gt;&gt;contextMenuStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonGenerate.Name" xml:space="preserve">
-    <value>buttonGenerate</value>
-  </data>
-  <data name="textOTOpath.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="radioButtonCCVVC.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="checkHI2RO.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;consonantColumn.Name" xml:space="preserve">
-    <value>consonantColumn</value>
-  </data>
-  <data name="&gt;&gt;columnNo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="buttonGenerate.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Adobe Fan Heiti Std B, 12pt, style=Bold</value>
-  </data>
-  <data name="&gt;&gt;checkRemoveL.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;preutteranceColumn.Name" xml:space="preserve">
-    <value>preutteranceColumn</value>
-  </data>
-  <data name="radioButtonJCVVC.Text" xml:space="preserve">
-    <value>Japanese CVVC</value>
-  </data>
-  <data name="radioButtonDefault.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="checkRemoveL.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="overlapColumn.Width" type="System.Int32, mscorlib">
-    <value>85</value>
-  </data>
-  <data name="&gt;&gt;columnhi2ro.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="cutoffColumn.Text" xml:space="preserve">
-    <value>Cutoff</value>
-  </data>
-  <data name="buttonGenerate.Text" xml:space="preserve">
-    <value>Generate!!</value>
+  <data name="textPitch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 22</value>
   </data>
   <data name="textPitch.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
+  <data name="&gt;&gt;textPitch.Name" xml:space="preserve">
+    <value>textPitch</value>
+  </data>
+  <data name="&gt;&gt;textPitch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textPitch.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textPitch.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="Title.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft JhengHei, 18pt, style=Bold</value>
+  </data>
+  <data name="Title.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Title.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 9</value>
+  </data>
+  <data name="Title.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1206, 24</value>
+  </data>
+  <data name="Title.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="Title.Text" xml:space="preserve">
+    <value>UTAU Voicebank configuration to DeepVocal configuration converter</value>
+  </data>
+  <data name="Title.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;Title.Name" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="&gt;&gt;Title.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Title.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Title.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="buttonGenerate.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="buttonGenerate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Adobe Fan Heiti Std B, 12pt, style=Bold</value>
+  </data>
+  <data name="buttonGenerate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonGenerate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1022, 539</value>
+  </data>
+  <data name="buttonGenerate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 38</value>
+  </data>
+  <data name="buttonGenerate.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="buttonGenerate.Text" xml:space="preserve">
+    <value>Generate!!</value>
+  </data>
+  <data name="&gt;&gt;buttonGenerate.Name" xml:space="preserve">
+    <value>buttonGenerate</value>
+  </data>
+  <data name="&gt;&gt;buttonGenerate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonGenerate.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonGenerate.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="columnNo.Text" xml:space="preserve">
+    <value>No.</value>
+  </data>
+  <data name="columnNo.Width" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <data name="wavNameColumn.Text" xml:space="preserve">
+    <value>Wav Name</value>
+  </data>
+  <data name="wavNameColumn.Width" type="System.Int32, mscorlib">
+    <value>169</value>
+  </data>
   <data name="aliasColumn.Text" xml:space="preserve">
     <value>Alias</value>
   </data>
-  <data name="&gt;&gt;lableOTOLines.ZOrder" xml:space="preserve">
-    <value>10</value>
+  <data name="aliasColumn.Width" type="System.Int32, mscorlib">
+    <value>96</value>
+  </data>
+  <data name="offsetColumn.Text" xml:space="preserve">
+    <value>Offset</value>
+  </data>
+  <data name="offsetColumn.Width" type="System.Int32, mscorlib">
+    <value>101</value>
+  </data>
+  <data name="consonantColumn.Text" xml:space="preserve">
+    <value>Consonant</value>
+  </data>
+  <data name="consonantColumn.Width" type="System.Int32, mscorlib">
+    <value>106</value>
+  </data>
+  <data name="cutoffColumn.Text" xml:space="preserve">
+    <value>Cutoff</value>
+  </data>
+  <data name="cutoffColumn.Width" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="preutteranceColumn.Text" xml:space="preserve">
+    <value>Preutterance</value>
   </data>
   <data name="preutteranceColumn.Width" type="System.Int32, mscorlib">
     <value>123</value>
   </data>
+  <data name="overlapColumn.Text" xml:space="preserve">
+    <value>Overlap</value>
+  </data>
+  <data name="overlapColumn.Width" type="System.Int32, mscorlib">
+    <value>85</value>
+  </data>
+  <data name="aliasTypeColumn.Text" xml:space="preserve">
+    <value>Alias type</value>
+  </data>
+  <data name="aliasTypeColumn.Width" type="System.Int32, mscorlib">
+    <value>86</value>
+  </data>
+  <data name="columnhi2ro.Text" xml:space="preserve">
+    <value>hi2ro</value>
+  </data>
+  <data name="columnFAR.Text" xml:space="preserve">
+    <value>FAR</value>
+  </data>
+  <data name="columnhi2ron.Text" xml:space="preserve">
+    <value>hi2ro n'</value>
+  </data>
+  <data name="listView1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft JhengHei, 12pt</value>
+  </data>
+  <data name="listView1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 123</value>
+  </data>
+  <data name="listView1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>814, 473</value>
+  </data>
+  <data name="listView1.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;listView1.Name" xml:space="preserve">
+    <value>listView1</value>
+  </data>
+  <data name="&gt;&gt;listView1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listView1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;listView1.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="lableOTOLines.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lableOTOLines.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Adobe Fan Heiti Std B, 12pt, style=Bold</value>
+  </data>
+  <data name="lableOTOLines.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lableOTOLines.Location" type="System.Drawing.Point, System.Drawing">
+    <value>833, 107</value>
+  </data>
+  <data name="lableOTOLines.Size" type="System.Drawing.Size, System.Drawing">
+    <value>135, 20</value>
+  </data>
+  <data name="lableOTOLines.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="lableOTOLines.Text" xml:space="preserve">
+    <value>OTO lines count :</value>
+  </data>
+  <data name="lableOTOLines.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;lableOTOLines.Name" xml:space="preserve">
+    <value>lableOTOLines</value>
+  </data>
+  <data name="&gt;&gt;lableOTOLines.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lableOTOLines.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lableOTOLines.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="labelOTOint.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelOTOint.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Adobe Fan Heiti Std B, 12pt, style=Bold</value>
+  </data>
+  <data name="labelOTOint.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelOTOint.Location" type="System.Drawing.Point, System.Drawing">
+    <value>972, 107</value>
+  </data>
+  <data name="labelOTOint.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 20</value>
+  </data>
+  <data name="labelOTOint.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="labelOTOint.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;labelOTOint.Name" xml:space="preserve">
+    <value>labelOTOint</value>
+  </data>
+  <data name="&gt;&gt;labelOTOint.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelOTOint.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelOTOint.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="checkHI2RO.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkHI2RO.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="checkHI2RO.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="checkHI2RO.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Adobe Fan Heiti Std B, 12pt, style=Bold</value>
+  </data>
+  <data name="checkHI2RO.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="checkHI2RO.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkHI2RO.Location" type="System.Drawing.Point, System.Drawing">
+    <value>837, 258</value>
+  </data>
+  <data name="checkHI2RO.Size" type="System.Drawing.Size, System.Drawing">
+    <value>253, 24</value>
+  </data>
+  <data name="checkHI2RO.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="checkHI2RO.Text" xml:space="preserve">
+    <value>Hiragana alias to romaji(n to N)</value>
+  </data>
+  <data name="&gt;&gt;checkHI2RO.Name" xml:space="preserve">
+    <value>checkHI2RO</value>
+  </data>
+  <data name="&gt;&gt;checkHI2RO.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkHI2RO.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;checkHI2RO.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <metadata name="folderBrowserDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>164, 17</value>
+  </metadata>
+  <data name="comboLang.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Adobe Fan Heiti Std B, 12pt, style=Bold</value>
+  </data>
+  <data name="comboLang.Items" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="comboLang.Items1" xml:space="preserve">
+    <value>繁體中文</value>
+  </data>
+  <data name="comboLang.Location" type="System.Drawing.Point, System.Drawing">
+    <value>866, 46</value>
+  </data>
+  <data name="comboLang.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="comboLang.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 28</value>
+  </data>
+  <data name="comboLang.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;comboLang.Name" xml:space="preserve">
+    <value>comboLang</value>
+  </data>
+  <data name="&gt;&gt;comboLang.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboLang.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;comboLang.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="radioButtonJCVVC.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButtonJCVVC.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="radioButtonJCVVC.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="radioButtonJCVVC.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 58</value>
+  </data>
+  <data name="radioButtonJCVVC.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 24</value>
+  </data>
+  <data name="radioButtonJCVVC.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="radioButtonJCVVC.Text" xml:space="preserve">
+    <value>Japanese CVVC</value>
+  </data>
+  <data name="&gt;&gt;radioButtonJCVVC.Name" xml:space="preserve">
+    <value>radioButtonJCVVC</value>
+  </data>
+  <data name="&gt;&gt;radioButtonJCVVC.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButtonJCVVC.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;radioButtonJCVVC.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="radioButtonDefault.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButtonDefault.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="radioButtonDefault.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="radioButtonDefault.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 28</value>
+  </data>
+  <data name="radioButtonDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 24</value>
+  </data>
+  <data name="radioButtonDefault.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="radioButtonDefault.Text" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="&gt;&gt;radioButtonDefault.Name" xml:space="preserve">
+    <value>radioButtonDefault</value>
+  </data>
+  <data name="&gt;&gt;radioButtonDefault.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButtonDefault.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;radioButtonDefault.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="radioButtonCCVVC.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButtonCCVVC.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="radioButtonCCVVC.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="radioButtonCCVVC.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 88</value>
+  </data>
+  <data name="radioButtonCCVVC.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 24</value>
+  </data>
+  <data name="radioButtonCCVVC.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="radioButtonCCVVC.Text" xml:space="preserve">
+    <value>Chinese CVVC</value>
+  </data>
+  <data name="&gt;&gt;radioButtonCCVVC.Name" xml:space="preserve">
+    <value>radioButtonCCVVC</value>
+  </data>
+  <data name="&gt;&gt;radioButtonCCVVC.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButtonCCVVC.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;radioButtonCCVVC.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="groupBox1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Adobe Fan Heiti Std B, 12pt, style=Bold</value>
+  </data>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>837, 130</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>209, 122</value>
+  </data>
+  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>OTO calculation method</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>342, 17</value>
+  </metadata>
+  <data name="toolStripMenuItemDel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>316, 22</value>
+  </data>
+  <data name="toolStripMenuItemDel.Text" xml:space="preserve">
+    <value>Delete select settings</value>
+  </data>
+  <data name="toolStripMenuItemTurn2INDLE.Size" type="System.Drawing.Size, System.Drawing">
+    <value>316, 22</value>
+  </data>
+  <data name="toolStripMenuItemTurn2INDLE.Text" xml:space="preserve">
+    <value>Change select setting alias type to independent</value>
+  </data>
+  <data name="toolStripMenuItemTurn2CV.Size" type="System.Drawing.Size, System.Drawing">
+    <value>316, 22</value>
+  </data>
+  <data name="toolStripMenuItemTurn2CV.Text" xml:space="preserve">
+    <value>Change select setting alias type to CV</value>
+  </data>
+  <data name="toolStripMenuItemTurn2VX.Size" type="System.Drawing.Size, System.Drawing">
+    <value>316, 22</value>
+  </data>
+  <data name="toolStripMenuItemTurn2VX.Text" xml:space="preserve">
+    <value>Change select setting alias type to VX</value>
+  </data>
+  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>313, 6</value>
+  </data>
   <data name="toolStripMenuItemCopyAlias.Size" type="System.Drawing.Size, System.Drawing">
     <value>316, 22</value>
   </data>
-  <data name="&gt;&gt;cutoffColumn.Name" xml:space="preserve">
-    <value>cutoffColumn</value>
+  <data name="toolStripMenuItemCopyAlias.Text" xml:space="preserve">
+    <value>Copy alias</value>
+  </data>
+  <data name="contextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>317, 120</value>
+  </data>
+  <data name="&gt;&gt;contextMenuStrip1.Name" xml:space="preserve">
+    <value>contextMenuStrip1</value>
+  </data>
+  <data name="&gt;&gt;contextMenuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="textOTOpath.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Adobe Fan Heiti Std B, 12pt, style=Bold</value>
+  </data>
+  <data name="textOTOpath.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="textOTOpath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>222, 50</value>
+  </data>
+  <data name="textOTOpath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>625, 24</value>
+  </data>
+  <data name="textOTOpath.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="textOTOpath.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;textOTOpath.Name" xml:space="preserve">
+    <value>textOTOpath</value>
+  </data>
+  <data name="&gt;&gt;textOTOpath.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textOTOpath.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textOTOpath.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="checkFARpreview.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkFARpreview.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="checkFARpreview.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Adobe Fan Heiti Std B, 12pt, style=Bold</value>
+  </data>
+  <data name="checkFARpreview.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkFARpreview.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1093, 488</value>
+  </data>
+  <data name="checkFARpreview.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 24</value>
+  </data>
+  <data name="checkFARpreview.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="checkFARpreview.Text" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+  <data name="&gt;&gt;checkFARpreview.Name" xml:space="preserve">
+    <value>checkFARpreview</value>
+  </data>
+  <data name="&gt;&gt;checkFARpreview.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkFARpreview.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;checkFARpreview.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="checkHI2RON.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkHI2RON.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="checkHI2RON.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="checkHI2RON.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Adobe Fan Heiti Std B, 12pt, style=Bold</value>
+  </data>
+  <data name="checkHI2RON.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="checkHI2RON.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkHI2RON.Location" type="System.Drawing.Point, System.Drawing">
+    <value>837, 288</value>
+  </data>
+  <data name="checkHI2RON.Size" type="System.Drawing.Size, System.Drawing">
+    <value>337, 24</value>
+  </data>
+  <data name="checkHI2RON.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="checkHI2RON.Text" xml:space="preserve">
+    <value>Hiragana alias to romaji(consonant n to n')</value>
+  </data>
+  <data name="&gt;&gt;checkHI2RON.Name" xml:space="preserve">
+    <value>checkHI2RON</value>
+  </data>
+  <data name="&gt;&gt;checkHI2RON.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkHI2RON.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;checkHI2RON.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>891, 398</value>
+  </data>
+  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+    <value>34</value>
+  </data>
+  <data name="button1.Text" xml:space="preserve">
+    <value>button1</value>
+  </data>
+  <data name="&gt;&gt;button1.Name" xml:space="preserve">
+    <value>button1</value>
+  </data>
+  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="nfcButton1.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="nfcButton1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="nfcButton1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>834, 484</value>
+  </data>
+  <data name="nfcButton1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>253, 31</value>
+  </data>
+  <data name="nfcButton1.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="nfcButton1.Text" xml:space="preserve">
+    <value>Find and Replace rules</value>
+  </data>
+  <data name="&gt;&gt;nfcButton1.Name" xml:space="preserve">
+    <value>nfcButton1</value>
+  </data>
+  <data name="&gt;&gt;nfcButton1.Type" xml:space="preserve">
+    <value>oto2dvcfg.NFCButton, oto2dvcfg, Version=0.0.3.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;nfcButton1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;nfcButton1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="buttonClose.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="buttonClose.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="buttonClose.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonClose.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1111, 49</value>
+  </data>
+  <data name="buttonClose.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 24</value>
+  </data>
+  <data name="buttonClose.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="&gt;&gt;buttonClose.Name" xml:space="preserve">
+    <value>buttonClose</value>
+  </data>
+  <data name="&gt;&gt;buttonClose.Type" xml:space="preserve">
+    <value>oto2dvcfg.NFCButton, oto2dvcfg, Version=0.0.3.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;buttonClose.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonClose.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>58</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>10, 20</value>
+  </data>
+  <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1206, 609</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft JhengHei, 12pt</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -427,583 +910,142 @@
         RgCQRgCQRgCQRgCQRgCQRgCQ9i/FIco8cnWw6gAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="offsetColumn.Width" type="System.Int32, mscorlib">
-    <value>101</value>
-  </data>
-  <data name="&gt;&gt;buttonClose.Type" xml:space="preserve">
-    <value>oto2dvcfg.NFCButton, oto2dvcfg, Version=0.0.3.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;overlapColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="checkRemoveL.Text" xml:space="preserve">
-    <value>Remove _L (undone)</value>
-  </data>
-  <data name="checkFARpreview.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="&gt;&gt;checkRemoveL.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;radioButtonDefault.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;toolStripMenuItemTurn2INDLE.Name" xml:space="preserve">
-    <value>toolStripMenuItemTurn2INDLE</value>
-  </data>
-  <data name="&gt;&gt;columnhi2ro.Name" xml:space="preserve">
-    <value>columnhi2ro</value>
-  </data>
-  <data name="radioButtonDefault.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;listView1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;nfcButton1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;textOTOpath.Name" xml:space="preserve">
-    <value>textOTOpath</value>
-  </data>
-  <data name="lableOTOLines.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="checkFARpreview.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;checkFARpreview.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="checkHI2RO.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="&gt;&gt;toolStripMenuItemCopyAlias.Name" xml:space="preserve">
-    <value>toolStripMenuItemCopyAlias</value>
-  </data>
-  <data name="Title.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft JhengHei, 18pt, style=Bold</value>
-  </data>
-  <data name="&gt;&gt;toolStripMenuItemTurn2VX.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="groupBox1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Adobe Fan Heiti Std B, 12pt, style=Bold</value>
-  </data>
-  <data name="labelOTOint.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Adobe Fan Heiti Std B, 12pt, style=Bold</value>
-  </data>
-  <data name="nfcButton1.TabIndex" type="System.Int32, mscorlib">
-    <value>31</value>
-  </data>
-  <data name="&gt;&gt;Title.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;buttonGenerate.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="radioButtonCCVVC.Text" xml:space="preserve">
-    <value>Chinese CVVC</value>
-  </data>
-  <data name="toolStripMenuItemTurn2INDLE.Text" xml:space="preserve">
-    <value>Change select setting alias type to independent</value>
-  </data>
-  <data name="nfcButton1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>834, 484</value>
-  </data>
-  <data name="&gt;&gt;Title.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="labelOTOint.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;Pitch.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lableOTOLines.Text" xml:space="preserve">
-    <value>OTO lines count :</value>
-  </data>
-  <data name="&gt;&gt;checkHI2RO.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="radioButtonDefault.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="&gt;&gt;aliasColumn.Name" xml:space="preserve">
-    <value>aliasColumn</value>
-  </data>
-  <data name="&gt;&gt;checkFARpreview.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;textOTOpath.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="buttonClose.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="labelOTOint.Location" type="System.Drawing.Point, System.Drawing">
-    <value>972, 107</value>
-  </data>
-  <data name="listView1.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;Pitch.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;textPitch.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="toolStripMenuItemTurn2INDLE.Size" type="System.Drawing.Size, System.Drawing">
-    <value>316, 22</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Pitch.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;textPitch.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="checkRemoveL.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="columnFAR.Width" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="checkHI2RO.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="labelOTOint.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 20</value>
-  </data>
-  <data name="buttonClose.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="labelOTOint.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="radioButtonCCVVC.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 88</value>
-  </data>
-  <data name="&gt;&gt;labelOTOint.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;radioButtonCCVVC.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="nfcButton1.Text" xml:space="preserve">
-    <value>Find and Replace rules</value>
-  </data>
-  <data name="overlapColumn.Text" xml:space="preserve">
-    <value>Overlap</value>
-  </data>
-  <data name="textOTOpath.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Adobe Fan Heiti Std B, 12pt, style=Bold</value>
-  </data>
-  <data name="textOTOpath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>625, 24</value>
-  </data>
-  <data name="&gt;&gt;Title.Name" xml:space="preserve">
-    <value>Title</value>
-  </data>
-  <data name="&gt;&gt;listView1.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="radioButtonCCVVC.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 5, 5, 5</value>
   </data>
-  <data name="&gt;&gt;wavNameColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripMenuItemTurn2CV.Name" xml:space="preserve">
-    <value>toolStripMenuItemTurn2CV</value>
-  </data>
-  <data name="Title.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 9</value>
-  </data>
-  <data name="lableOTOLines.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>837, 130</value>
-  </data>
-  <data name="&gt;&gt;folderBrowserDialog1.Name" xml:space="preserve">
-    <value>folderBrowserDialog1</value>
-  </data>
-  <data name="consonantColumn.Text" xml:space="preserve">
-    <value>Consonant</value>
-  </data>
-  <data name="Pitch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 20</value>
-  </data>
-  <data name="&gt;&gt;offsetColumn.Name" xml:space="preserve">
-    <value>offsetColumn</value>
-  </data>
-  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft JhengHei, 12pt</value>
-  </data>
-  <data name="preutteranceColumn.Text" xml:space="preserve">
-    <value>Preutterance</value>
-  </data>
-  <data name="&gt;&gt;textOTOpath.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;nfcButton1.Type" xml:space="preserve">
-    <value>oto2dvcfg.NFCButton, oto2dvcfg, Version=0.0.3.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="columnNo.Text" xml:space="preserve">
-    <value>No.</value>
-  </data>
-  <data name="radioButtonDefault.Text" xml:space="preserve">
-    <value>Default</value>
-  </data>
-  <data name="radioButtonJCVVC.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Form1</value>
-  </data>
-  <data name="&gt;&gt;radioButtonDefault.Name" xml:space="preserve">
-    <value>radioButtonDefault</value>
-  </data>
-  <data name="&gt;&gt;columnFAR.Name" xml:space="preserve">
-    <value>columnFAR</value>
-  </data>
-  <data name="offsetColumn.Text" xml:space="preserve">
-    <value>Offset</value>
-  </data>
-  <data name="Title.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Pitch.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;folderBrowserDialog1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FolderBrowserDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;comboLang.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="toolStripMenuItemTurn2CV.Size" type="System.Drawing.Size, System.Drawing">
-    <value>316, 22</value>
-  </data>
-  <data name="&gt;&gt;toolStripMenuItemDel.Name" xml:space="preserve">
-    <value>toolStripMenuItemDel</value>
-  </data>
-  <data name="buttonClose.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 24</value>
-  </data>
-  <data name="aliasTypeColumn.Width" type="System.Int32, mscorlib">
-    <value>86</value>
-  </data>
-  <data name="&gt;&gt;buttonClose.Name" xml:space="preserve">
-    <value>buttonClose</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="textPitch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 22</value>
-  </data>
-  <data name="&gt;&gt;lableOTOLines.Name" xml:space="preserve">
-    <value>lableOTOLines</value>
-  </data>
-  <data name="wavNameColumn.Text" xml:space="preserve">
-    <value>Wav Name</value>
-  </data>
-  <data name="Title.Text" xml:space="preserve">
-    <value>UTAU Voicebank configuration to DeepVocal configuration converter</value>
-  </data>
-  <data name="radioButtonDefault.TabIndex" type="System.Int32, mscorlib">
-    <value>29</value>
-  </data>
-  <data name="checkHI2RO.Text" xml:space="preserve">
-    <value>Hiragana alias to romaji</value>
-  </data>
-  <data name="listView1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft JhengHei, 12pt</value>
-  </data>
-  <data name="&gt;&gt;checkHI2RO.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="buttonClose.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Zoom</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="columnhi2ro.Text" xml:space="preserve">
-    <value>hi2ro</value>
-  </data>
-  <data name="checkHI2RO.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="textPitch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="labelOTOint.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>313, 6</value>
-  </data>
-  <data name="checkHI2RO.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Adobe Fan Heiti Std B, 12pt, style=Bold</value>
-  </data>
-  <data name="&gt;&gt;lableOTOLines.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;columnFAR.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;consonantColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonGenerate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;aliasColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;nfcButton1.Name" xml:space="preserve">
-    <value>nfcButton1</value>
-  </data>
-  <data name="checkRemoveL.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 24</value>
-  </data>
-  <data name="&gt;&gt;lableOTOLines.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="lableOTOLines.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Adobe Fan Heiti Std B, 12pt, style=Bold</value>
-  </data>
-  <data name="comboLang.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Adobe Fan Heiti Std B, 12pt, style=Bold</value>
-  </data>
-  <data name="&gt;&gt;preutteranceColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lableOTOLines.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="textPitch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1019, 447</value>
-  </data>
-  <data name="checkFARpreview.Size" type="System.Drawing.Size, System.Drawing">
-    <value>83, 24</value>
-  </data>
-  <data name="&gt;&gt;toolStripMenuItemDel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="textOTOpath.TabIndex" type="System.Int32, mscorlib">
-    <value>30</value>
-  </data>
-  <data name="&gt;&gt;Title.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="cutoffColumn.Width" type="System.Int32, mscorlib">
-    <value>70</value>
-  </data>
-  <data name="buttonClose.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1111, 49</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>10, 20</value>
-  </data>
-  <data name="consonantColumn.Width" type="System.Int32, mscorlib">
-    <value>106</value>
-  </data>
-  <data name="&gt;&gt;checkRemoveL.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="checkHI2RO.Size" type="System.Drawing.Size, System.Drawing">
-    <value>199, 24</value>
-  </data>
-  <data name="radioButtonCCVVC.TabIndex" type="System.Int32, mscorlib">
-    <value>28</value>
-  </data>
-  <data name="nfcButton1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;checkFARpreview.Name" xml:space="preserve">
-    <value>checkFARpreview</value>
-  </data>
-  <data name="buttonGenerate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1022, 539</value>
-  </data>
-  <data name="openFileDialog1.Title" xml:space="preserve">
-    <value>Open OTO file...</value>
-  </data>
-  <data name="&gt;&gt;columnNo.Name" xml:space="preserve">
-    <value>columnNo</value>
-  </data>
-  <data name="listView1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 123</value>
-  </data>
-  <data name="&gt;&gt;checkFARpreview.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="checkRemoveL.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="&gt;&gt;aliasTypeColumn.Name" xml:space="preserve">
-    <value>aliasTypeColumn</value>
-  </data>
-  <data name="comboLang.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 28</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
-    <value>toolStripSeparator1</value>
-  </data>
-  <data name="&gt;&gt;radioButtonCCVVC.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="radioButtonJCVVC.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="&gt;&gt;openFileDialog1.Name" xml:space="preserve">
+    <value>openFileDialog1</value>
   </data>
   <data name="&gt;&gt;openFileDialog1.Type" xml:space="preserve">
     <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolStripMenuItemCopyAlias.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;columnNo.Name" xml:space="preserve">
+    <value>columnNo</value>
   </data>
-  <data name="checkFARpreview.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Adobe Fan Heiti Std B, 12pt, style=Bold</value>
-  </data>
-  <data name="aliasTypeColumn.Text" xml:space="preserve">
-    <value>Alias type</value>
-  </data>
-  <data name="&gt;&gt;radioButtonJCVVC.Name" xml:space="preserve">
-    <value>radioButtonJCVVC</value>
-  </data>
-  <data name="&gt;&gt;listView1.Name" xml:space="preserve">
-    <value>listView1</value>
-  </data>
-  <data name="columnNo.Width" type="System.Int32, mscorlib">
-    <value>65</value>
-  </data>
-  <data name="lableOTOLines.Size" type="System.Drawing.Size, System.Drawing">
-    <value>135, 20</value>
-  </data>
-  <data name="groupBox1.Text" xml:space="preserve">
-    <value>OTO calculation method</value>
-  </data>
-  <data name="&gt;&gt;checkHI2RO.Name" xml:space="preserve">
-    <value>checkHI2RO</value>
-  </data>
-  <data name="checkFARpreview.TabIndex" type="System.Int32, mscorlib">
-    <value>32</value>
-  </data>
-  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>209, 122</value>
-  </data>
-  <data name="radioButtonJCVVC.TabIndex" type="System.Int32, mscorlib">
-    <value>27</value>
-  </data>
-  <data name="buttonGenerate.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="&gt;&gt;comboLang.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="buttonGenerate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="wavNameColumn.Width" type="System.Int32, mscorlib">
-    <value>169</value>
-  </data>
-  <data name="aliasColumn.Width" type="System.Int32, mscorlib">
-    <value>96</value>
-  </data>
-  <data name="nfcButton1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>253, 31</value>
-  </data>
-  <data name="&gt;&gt;labelOTOint.Name" xml:space="preserve">
-    <value>labelOTOint</value>
-  </data>
-  <data name="checkRemoveL.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Adobe Fan Heiti Std B, 12pt, style=Bold</value>
-  </data>
-  <data name="&gt;&gt;buttonGenerate.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="labelOTOint.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;textPitch.Name" xml:space="preserve">
-    <value>textPitch</value>
-  </data>
-  <data name="&gt;&gt;labelOTOint.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="listView1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>814, 473</value>
-  </data>
-  <data name="toolStripMenuItemDel.Text" xml:space="preserve">
-    <value>Delete select settings</value>
-  </data>
-  <data name="radioButtonDefault.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 24</value>
+  <data name="&gt;&gt;columnNo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;wavNameColumn.Name" xml:space="preserve">
     <value>wavNameColumn</value>
   </data>
-  <data name="&gt;&gt;comboLang.Name" xml:space="preserve">
-    <value>comboLang</value>
+  <data name="&gt;&gt;wavNameColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Pitch.Name" xml:space="preserve">
-    <value>Pitch</value>
+  <data name="&gt;&gt;aliasColumn.Name" xml:space="preserve">
+    <value>aliasColumn</value>
   </data>
-  <data name="columnhi2ro.Width" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="&gt;&gt;aliasColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;labelOTOint.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;offsetColumn.Name" xml:space="preserve">
+    <value>offsetColumn</value>
   </data>
-  <data name="lableOTOLines.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;offsetColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="checkHI2RO.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;consonantColumn.Name" xml:space="preserve">
+    <value>consonantColumn</value>
   </data>
-  <data name="contextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>317, 120</value>
+  <data name="&gt;&gt;consonantColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;radioButtonDefault.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;cutoffColumn.Name" xml:space="preserve">
+    <value>cutoffColumn</value>
   </data>
-  <data name="buttonClose.TabIndex" type="System.Int32, mscorlib">
-    <value>29</value>
+  <data name="&gt;&gt;cutoffColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;preutteranceColumn.Name" xml:space="preserve">
+    <value>preutteranceColumn</value>
+  </data>
+  <data name="&gt;&gt;preutteranceColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;overlapColumn.Name" xml:space="preserve">
+    <value>overlapColumn</value>
+  </data>
+  <data name="&gt;&gt;overlapColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;aliasTypeColumn.Name" xml:space="preserve">
+    <value>aliasTypeColumn</value>
+  </data>
+  <data name="&gt;&gt;aliasTypeColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnhi2ro.Name" xml:space="preserve">
+    <value>columnhi2ro</value>
+  </data>
+  <data name="&gt;&gt;columnhi2ro.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnFAR.Name" xml:space="preserve">
+    <value>columnFAR</value>
+  </data>
+  <data name="&gt;&gt;columnFAR.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnhi2ron.Name" xml:space="preserve">
+    <value>columnhi2ron</value>
+  </data>
+  <data name="&gt;&gt;columnhi2ron.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnOriginal.Name" xml:space="preserve">
+    <value>columnOriginal</value>
+  </data>
+  <data name="&gt;&gt;columnOriginal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;folderBrowserDialog1.Name" xml:space="preserve">
+    <value>folderBrowserDialog1</value>
+  </data>
+  <data name="&gt;&gt;folderBrowserDialog1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FolderBrowserDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItemDel.Name" xml:space="preserve">
+    <value>toolStripMenuItemDel</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItemDel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItemTurn2INDLE.Name" xml:space="preserve">
+    <value>toolStripMenuItemTurn2INDLE</value>
   </data>
   <data name="&gt;&gt;toolStripMenuItemTurn2INDLE.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="comboLang.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
+  <data name="&gt;&gt;toolStripMenuItemTurn2CV.Name" xml:space="preserve">
+    <value>toolStripMenuItemTurn2CV</value>
   </data>
-  <data name="radioButtonJCVVC.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 58</value>
+  <data name="&gt;&gt;toolStripMenuItemTurn2CV.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>342, 17</value>
-  </metadata>
-  <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="folderBrowserDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>164, 17</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>64</value>
-  </metadata>
+  <data name="&gt;&gt;toolStripMenuItemTurn2VX.Name" xml:space="preserve">
+    <value>toolStripMenuItemTurn2VX</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItemTurn2VX.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
+    <value>toolStripSeparator1</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItemCopyAlias.Name" xml:space="preserve">
+    <value>toolStripMenuItemCopyAlias</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItemCopyAlias.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Form1</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

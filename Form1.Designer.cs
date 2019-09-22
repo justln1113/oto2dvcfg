@@ -47,12 +47,13 @@
             this.aliasTypeColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnhi2ro = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnFAR = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnhi2ron = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnOriginal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lableOTOLines = new System.Windows.Forms.Label();
             this.labelOTOint = new System.Windows.Forms.Label();
             this.checkHI2RO = new System.Windows.Forms.CheckBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.comboLang = new System.Windows.Forms.ComboBox();
-            this.checkRemoveL = new System.Windows.Forms.CheckBox();
             this.radioButtonJCVVC = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButtonDefault = new System.Windows.Forms.RadioButton();
@@ -66,6 +67,8 @@
             this.toolStripMenuItemCopyAlias = new System.Windows.Forms.ToolStripMenuItem();
             this.textOTOpath = new System.Windows.Forms.Label();
             this.checkFARpreview = new System.Windows.Forms.CheckBox();
+            this.checkHI2RON = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.nfcButton1 = new oto2dvcfg.NFCButton();
             this.buttonClose = new oto2dvcfg.NFCButton();
             this.groupBox1.SuspendLayout();
@@ -86,17 +89,17 @@
             // 
             // textPitch
             // 
-            resources.ApplyResources(this.textPitch, "textPitch");
             this.textPitch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.textPitch.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.textPitch, "textPitch");
             this.textPitch.ForeColor = System.Drawing.Color.White;
             this.textPitch.Name = "textPitch";
             // 
             // Title
             // 
-            resources.ApplyResources(this.Title, "Title");
             this.Title.BackColor = System.Drawing.Color.Transparent;
             this.Title.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            resources.ApplyResources(this.Title, "Title");
             this.Title.ForeColor = System.Drawing.Color.White;
             this.Title.Name = "Title";
             this.Title.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
@@ -113,7 +116,6 @@
             // 
             // listView1
             // 
-            resources.ApplyResources(this.listView1, "listView1");
             this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -127,12 +129,16 @@
             this.overlapColumn,
             this.aliasTypeColumn,
             this.columnhi2ro,
-            this.columnFAR});
+            this.columnFAR,
+            this.columnhi2ron,
+            this.columnOriginal});
+            resources.ApplyResources(this.listView1, "listView1");
             this.listView1.ForeColor = System.Drawing.Color.White;
             this.listView1.HideSelection = false;
             this.listView1.Name = "listView1";
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.DoubleClick += new System.EventHandler(this.ListView1_DoubleClick);
             this.listView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ListView1_KeyDown);
             this.listView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ListView1_MouseClick);
             // 
@@ -180,6 +186,10 @@
             // 
             resources.ApplyResources(this.columnFAR, "columnFAR");
             // 
+            // columnhi2ron
+            // 
+            resources.ApplyResources(this.columnhi2ron, "columnhi2ron");
+            // 
             // lableOTOLines
             // 
             resources.ApplyResources(this.lableOTOLines, "lableOTOLines");
@@ -205,15 +215,11 @@
             this.checkHI2RO.UseVisualStyleBackColor = false;
             this.checkHI2RO.CheckedChanged += new System.EventHandler(this.CheckHI2RO_CheckedChanged);
             // 
-            // folderBrowserDialog1
-            // 
-            resources.ApplyResources(this.folderBrowserDialog1, "folderBrowserDialog1");
-            // 
             // comboLang
             // 
-            resources.ApplyResources(this.comboLang, "comboLang");
             this.comboLang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(125)))), ((int)(((byte)(125)))));
             this.comboLang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.comboLang, "comboLang");
             this.comboLang.ForeColor = System.Drawing.Color.White;
             this.comboLang.FormattingEnabled = true;
             this.comboLang.Items.AddRange(new object[] {
@@ -221,15 +227,6 @@
             resources.GetString("comboLang.Items1")});
             this.comboLang.Name = "comboLang";
             this.comboLang.SelectedIndexChanged += new System.EventHandler(this.ComboLang_SelectedIndexChanged);
-            // 
-            // checkRemoveL
-            // 
-            resources.ApplyResources(this.checkRemoveL, "checkRemoveL");
-            this.checkRemoveL.BackColor = System.Drawing.Color.Transparent;
-            this.checkRemoveL.ForeColor = System.Drawing.Color.Black;
-            this.checkRemoveL.Name = "checkRemoveL";
-            this.checkRemoveL.UseVisualStyleBackColor = false;
-            this.checkRemoveL.CheckedChanged += new System.EventHandler(this.optionChanged);
             // 
             // radioButtonJCVVC
             // 
@@ -241,10 +238,10 @@
             // 
             // groupBox1
             // 
-            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Controls.Add(this.radioButtonDefault);
             this.groupBox1.Controls.Add(this.radioButtonCCVVC);
             this.groupBox1.Controls.Add(this.radioButtonJCVVC);
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
@@ -267,7 +264,6 @@
             // 
             // contextMenuStrip1
             // 
-            resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
             this.contextMenuStrip1.BackColor = System.Drawing.Color.White;
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItemDel,
@@ -278,46 +274,47 @@
             this.toolStripMenuItemCopyAlias});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.ShowImageMargin = false;
+            resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
             // 
             // toolStripMenuItemDel
             // 
-            resources.ApplyResources(this.toolStripMenuItemDel, "toolStripMenuItemDel");
             this.toolStripMenuItemDel.Name = "toolStripMenuItemDel";
+            resources.ApplyResources(this.toolStripMenuItemDel, "toolStripMenuItemDel");
             this.toolStripMenuItemDel.Click += new System.EventHandler(this.ToolStripMenuItemDel_Click);
             // 
             // toolStripMenuItemTurn2INDLE
             // 
-            resources.ApplyResources(this.toolStripMenuItemTurn2INDLE, "toolStripMenuItemTurn2INDLE");
             this.toolStripMenuItemTurn2INDLE.Name = "toolStripMenuItemTurn2INDLE";
+            resources.ApplyResources(this.toolStripMenuItemTurn2INDLE, "toolStripMenuItemTurn2INDLE");
             this.toolStripMenuItemTurn2INDLE.Click += new System.EventHandler(this.ToolStripMenuItemTurn2INDLE_Click);
             // 
             // toolStripMenuItemTurn2CV
             // 
-            resources.ApplyResources(this.toolStripMenuItemTurn2CV, "toolStripMenuItemTurn2CV");
             this.toolStripMenuItemTurn2CV.Name = "toolStripMenuItemTurn2CV";
+            resources.ApplyResources(this.toolStripMenuItemTurn2CV, "toolStripMenuItemTurn2CV");
             this.toolStripMenuItemTurn2CV.Click += new System.EventHandler(this.ToolStripMenuItemTurn2CV_Click);
             // 
             // toolStripMenuItemTurn2VX
             // 
-            resources.ApplyResources(this.toolStripMenuItemTurn2VX, "toolStripMenuItemTurn2VX");
             this.toolStripMenuItemTurn2VX.Name = "toolStripMenuItemTurn2VX";
+            resources.ApplyResources(this.toolStripMenuItemTurn2VX, "toolStripMenuItemTurn2VX");
             this.toolStripMenuItemTurn2VX.Click += new System.EventHandler(this.ToolStripMenuItemTurn2VX_Click);
             // 
             // toolStripSeparator1
             // 
-            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
             this.toolStripSeparator1.Name = "toolStripSeparator1";
+            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
             // 
             // toolStripMenuItemCopyAlias
             // 
-            resources.ApplyResources(this.toolStripMenuItemCopyAlias, "toolStripMenuItemCopyAlias");
             this.toolStripMenuItemCopyAlias.Name = "toolStripMenuItemCopyAlias";
+            resources.ApplyResources(this.toolStripMenuItemCopyAlias, "toolStripMenuItemCopyAlias");
             this.toolStripMenuItemCopyAlias.Click += new System.EventHandler(this.ToolStripMenuItemCopyAlias_Click);
             // 
             // textOTOpath
             // 
-            resources.ApplyResources(this.textOTOpath, "textOTOpath");
             this.textOTOpath.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.textOTOpath, "textOTOpath");
             this.textOTOpath.ForeColor = System.Drawing.Color.White;
             this.textOTOpath.Name = "textOTOpath";
             // 
@@ -329,10 +326,26 @@
             this.checkFARpreview.UseVisualStyleBackColor = false;
             this.checkFARpreview.CheckedChanged += new System.EventHandler(this.CheckFARpreview_CheckedChanged);
             // 
+            // checkHI2RON
+            // 
+            resources.ApplyResources(this.checkHI2RON, "checkHI2RON");
+            this.checkHI2RON.BackColor = System.Drawing.Color.Transparent;
+            this.checkHI2RON.ForeColor = System.Drawing.Color.Black;
+            this.checkHI2RON.Name = "checkHI2RON";
+            this.checkHI2RON.UseVisualStyleBackColor = false;
+            this.checkHI2RON.CheckedChanged += new System.EventHandler(this.CheckHI2ROn_CheckedChanged);
+            // 
+            // button1
+            // 
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
             // nfcButton1
             // 
-            resources.ApplyResources(this.nfcButton1, "nfcButton1");
             this.nfcButton1.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.nfcButton1, "nfcButton1");
             this.nfcButton1.ForeColor = System.Drawing.Color.Transparent;
             this.nfcButton1.Name = "nfcButton1";
             this.nfcButton1.UseVisualStyleBackColor = false;
@@ -340,9 +353,9 @@
             // 
             // buttonClose
             // 
-            resources.ApplyResources(this.buttonClose, "buttonClose");
             this.buttonClose.BackColor = System.Drawing.Color.Transparent;
             this.buttonClose.BackgroundImage = global::oto2dvcfg.Properties.Resources.buttonCloseNormal;
+            resources.ApplyResources(this.buttonClose, "buttonClose");
             this.buttonClose.FlatAppearance.BorderSize = 0;
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.UseVisualStyleBackColor = false;
@@ -352,17 +365,18 @@
             // 
             // Form1
             // 
-            resources.ApplyResources(this, "$this");
             this.AllowDrop = true;
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(62)))), ((int)(((byte)(63)))));
             this.BackgroundImage = global::oto2dvcfg.Properties.Resources.formBack;
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.checkHI2RON);
             this.Controls.Add(this.checkFARpreview);
             this.Controls.Add(this.nfcButton1);
             this.Controls.Add(this.textOTOpath);
             this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.checkRemoveL);
             this.Controls.Add(this.comboLang);
             this.Controls.Add(this.checkHI2RO);
             this.Controls.Add(this.labelOTOint);
@@ -409,7 +423,6 @@
         private System.Windows.Forms.CheckBox checkHI2RO;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.ComboBox comboLang;
-        private System.Windows.Forms.CheckBox checkRemoveL;
         private System.Windows.Forms.RadioButton radioButtonJCVVC;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton radioButtonCCVVC;
@@ -427,6 +440,10 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemDel;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemCopyAlias;
+        private System.Windows.Forms.CheckBox checkHI2RON;
+        private System.Windows.Forms.ColumnHeader columnhi2ron;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ColumnHeader columnOriginal;
     }
 }
 
