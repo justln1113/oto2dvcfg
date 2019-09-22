@@ -252,6 +252,30 @@
   <data name="&gt;&gt;buttonGenerate.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
+  <data name="listView1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft JhengHei, 12pt</value>
+  </data>
+  <data name="listView1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 123</value>
+  </data>
+  <data name="listView1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>814, 473</value>
+  </data>
+  <data name="listView1.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;listView1.Name" xml:space="preserve">
+    <value>listView1</value>
+  </data>
+  <data name="&gt;&gt;listView1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listView1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;listView1.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
   <data name="columnNo.Text" xml:space="preserve">
     <value>No.</value>
   </data>
@@ -314,30 +338,6 @@
   </data>
   <data name="columnhi2ron.Text" xml:space="preserve">
     <value>hi2ro n'</value>
-  </data>
-  <data name="listView1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft JhengHei, 12pt</value>
-  </data>
-  <data name="listView1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 123</value>
-  </data>
-  <data name="listView1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>814, 473</value>
-  </data>
-  <data name="listView1.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;listView1.Name" xml:space="preserve">
-    <value>listView1</value>
-  </data>
-  <data name="&gt;&gt;listView1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;listView1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;listView1.ZOrder" xml:space="preserve">
-    <value>12</value>
   </data>
   <data name="lableOTOLines.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -427,7 +427,7 @@
     <value>NoControl</value>
   </data>
   <data name="checkHI2RO.Location" type="System.Drawing.Point, System.Drawing">
-    <value>837, 258</value>
+    <value>837, 252</value>
   </data>
   <data name="checkHI2RO.Size" type="System.Drawing.Size, System.Drawing">
     <value>253, 24</value>
@@ -499,13 +499,14 @@
     <value>6, 58</value>
   </data>
   <data name="radioButtonJCVVC.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 24</value>
+    <value>308, 44</value>
   </data>
   <data name="radioButtonJCVVC.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
   </data>
   <data name="radioButtonJCVVC.Text" xml:space="preserve">
-    <value>Japanese CVVC</value>
+    <value>If Overlap and preutterance are at the
+same point, you need to select this</value>
   </data>
   <data name="&gt;&gt;radioButtonJCVVC.Name" xml:space="preserve">
     <value>radioButtonJCVVC</value>
@@ -562,7 +563,7 @@
     <value>NoControl</value>
   </data>
   <data name="radioButtonCCVVC.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 88</value>
+    <value>6, 108</value>
   </data>
   <data name="radioButtonCCVVC.Size" type="System.Drawing.Size, System.Drawing">
     <value>129, 24</value>
@@ -572,6 +573,9 @@
   </data>
   <data name="radioButtonCCVVC.Text" xml:space="preserve">
     <value>Chinese CVVC</value>
+  </data>
+  <data name="radioButtonCCVVC.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;radioButtonCCVVC.Name" xml:space="preserve">
     <value>radioButtonCCVVC</value>
@@ -592,7 +596,7 @@
     <value>837, 130</value>
   </data>
   <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>209, 122</value>
+    <value>357, 110</value>
   </data>
   <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
@@ -615,6 +619,15 @@
   <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>342, 17</value>
   </metadata>
+  <data name="contextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>317, 120</value>
+  </data>
+  <data name="&gt;&gt;contextMenuStrip1.Name" xml:space="preserve">
+    <value>contextMenuStrip1</value>
+  </data>
+  <data name="&gt;&gt;contextMenuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="toolStripMenuItemDel.Size" type="System.Drawing.Size, System.Drawing">
     <value>316, 22</value>
   </data>
@@ -647,15 +660,6 @@
   </data>
   <data name="toolStripMenuItemCopyAlias.Text" xml:space="preserve">
     <value>Copy alias</value>
-  </data>
-  <data name="contextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>317, 120</value>
-  </data>
-  <data name="&gt;&gt;contextMenuStrip1.Name" xml:space="preserve">
-    <value>contextMenuStrip1</value>
-  </data>
-  <data name="&gt;&gt;contextMenuStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="textOTOpath.Font" type="System.Drawing.Font, System.Drawing">
     <value>Adobe Fan Heiti Std B, 12pt, style=Bold</value>
@@ -742,7 +746,7 @@
     <value>NoControl</value>
   </data>
   <data name="checkHI2RON.Location" type="System.Drawing.Point, System.Drawing">
-    <value>837, 288</value>
+    <value>837, 282</value>
   </data>
   <data name="checkHI2RON.Size" type="System.Drawing.Size, System.Drawing">
     <value>337, 24</value>
@@ -779,6 +783,9 @@
   </data>
   <data name="button1.Text" xml:space="preserve">
     <value>button1</value>
+  </data>
+  <data name="button1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;button1.Name" xml:space="preserve">
     <value>button1</value>
