@@ -331,6 +331,7 @@ namespace oto2dvcfg
         public string StartNoteDetact(string input)
         {
             if (input.Contains(" ") && input.IndexOf("-") == 0) return input.Replace(" ", "");
+            if (input.Contains(" ") && input.IndexOf("・") == 0) return input.Replace(" ", "");
             else return input;
         }
         /// <summary>
