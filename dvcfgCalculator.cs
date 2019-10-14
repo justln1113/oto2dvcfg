@@ -264,7 +264,16 @@ namespace oto2dvcfg
                     case "VX":
                         throw new Exception("VowelEnd is not avilable in VX");
                     case "INDIE":
-                        throw new Exception("VowelEnd is not avilable in INDIE");
+                        if (cutoff < 0)
+                        {
+                            if (utauPreutterance == overlap) return -cutoff / 1000 - Overlap / 1000 + 0.06 + connectPoint;
+                            else return -cutoff / 1000 - overlap / 1000 + 0.06;
+                        }
+                        else
+                        {
+                            if (utauPreutterance == overlap) return wavTime / 1000 - offset / 1000 - cutoff / 1000 + 0.06 + connectPoint;
+                            else return wavTime / 1000 - offset / 1000 - cutoff / 1000 + 0.06;
+                        }
                     default:
                         throw new Exception("Unable to parse src type");
                 }

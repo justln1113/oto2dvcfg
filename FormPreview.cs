@@ -83,7 +83,7 @@ namespace oto2dvcfg
             )
         {
             List<string> settings = new List<string>();
-            for (int i = 0; i < otoLinesCount; i++)
+            for (int i = 0; i < otoLinesCount+1; i++)
             {
                 if (!File.Exists(wavPath + wavName[i])) continue;
                 NAudio.Wave.WaveFileReader waveFileReader = new NAudio.Wave.WaveFileReader(wavPath + wavName[i]);
@@ -136,9 +136,22 @@ namespace oto2dvcfg
                             );
                         break;
                     case "INDIE":
+                        settings.Add(
+                            $"   \"{pitch}->{symbol[i]}\" : {{\n" +
+                            $"      \"endPoint\" : {DC.ToString(DC.VowelEnd + DC.ConnectPoint)},\n" +
+                            $"      \"endTime\" : {DC.ToString(DC.EndTime)},\n" +
+                            $"      \"pitch\" : \"{pitch}\",\n" +
+                            $"      \"srcType\" : \"INDIE\",\n" +
+                            $"      \"startPoint\" : {DC.ToString(DC.ConnectPoint)},\n" +
+                            $"      \"startTime\" : {DC.ToString(DC.StartTime)},\n" +
+                            $"      \"symbol\" : \"{symbol[i]}\",\n" +
+                            $"      \"updateTime\" : \"{DC.UpdateTime}\",\n" +
+                            $"      \"wavName\" : \"{wavName[i]}\"\n" +
+                            $"   }},\n"
+                            );
                         break;
                     default:
-                        break;
+                        throw new Exception("Unable to parse src type");
                 }
 
                 DC.Clear();
