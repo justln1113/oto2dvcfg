@@ -28,7 +28,7 @@ namespace oto2dvcfg
         {
             //461
             
-            Console.WriteLine(Form1.LoadingPerCentSend);
+            //Console.WriteLine(Form1.LoadingPerCentSend);
         }
     }
 }

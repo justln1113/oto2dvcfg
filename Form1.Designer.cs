@@ -54,10 +54,6 @@
             this.checkHI2RO = new System.Windows.Forms.CheckBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.comboLang = new System.Windows.Forms.ComboBox();
-            this.radioButtonJCVVC = new System.Windows.Forms.RadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButtonDefault = new System.Windows.Forms.RadioButton();
-            this.radioButtonCCVVC = new System.Windows.Forms.RadioButton();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItemDel = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemTurn2INDLE = new System.Windows.Forms.ToolStripMenuItem();
@@ -69,9 +65,8 @@
             this.checkFARpreview = new System.Windows.Forms.CheckBox();
             this.checkHI2RON = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.nfcButton1 = new oto2dvcfg.NFCButton();
+            this.buttonFindAndReplace = new oto2dvcfg.NFCButton();
             this.buttonClose = new oto2dvcfg.NFCButton();
-            this.groupBox1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -190,6 +185,10 @@
             // 
             resources.ApplyResources(this.columnhi2ron, "columnhi2ron");
             // 
+            // columnOriginal
+            // 
+            resources.ApplyResources(this.columnOriginal, "columnOriginal");
+            // 
             // lableOTOLines
             // 
             resources.ApplyResources(this.lableOTOLines, "lableOTOLines");
@@ -227,40 +226,6 @@
             resources.GetString("comboLang.Items1")});
             this.comboLang.Name = "comboLang";
             this.comboLang.SelectedIndexChanged += new System.EventHandler(this.ComboLang_SelectedIndexChanged);
-            // 
-            // radioButtonJCVVC
-            // 
-            resources.ApplyResources(this.radioButtonJCVVC, "radioButtonJCVVC");
-            this.radioButtonJCVVC.ForeColor = System.Drawing.Color.White;
-            this.radioButtonJCVVC.Name = "radioButtonJCVVC";
-            this.radioButtonJCVVC.TabStop = true;
-            this.radioButtonJCVVC.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.radioButtonDefault);
-            this.groupBox1.Controls.Add(this.radioButtonCCVVC);
-            this.groupBox1.Controls.Add(this.radioButtonJCVVC);
-            resources.ApplyResources(this.groupBox1, "groupBox1");
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.TabStop = false;
-            // 
-            // radioButtonDefault
-            // 
-            resources.ApplyResources(this.radioButtonDefault, "radioButtonDefault");
-            this.radioButtonDefault.ForeColor = System.Drawing.Color.White;
-            this.radioButtonDefault.Name = "radioButtonDefault";
-            this.radioButtonDefault.TabStop = true;
-            this.radioButtonDefault.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonCCVVC
-            // 
-            resources.ApplyResources(this.radioButtonCCVVC, "radioButtonCCVVC");
-            this.radioButtonCCVVC.ForeColor = System.Drawing.Color.White;
-            this.radioButtonCCVVC.Name = "radioButtonCCVVC";
-            this.radioButtonCCVVC.TabStop = true;
-            this.radioButtonCCVVC.UseVisualStyleBackColor = true;
             // 
             // contextMenuStrip1
             // 
@@ -342,14 +307,14 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // nfcButton1
+            // buttonFindAndReplace
             // 
-            this.nfcButton1.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.nfcButton1, "nfcButton1");
-            this.nfcButton1.ForeColor = System.Drawing.Color.Transparent;
-            this.nfcButton1.Name = "nfcButton1";
-            this.nfcButton1.UseVisualStyleBackColor = false;
-            this.nfcButton1.Click += new System.EventHandler(this.NfcButton1_Click);
+            this.buttonFindAndReplace.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.buttonFindAndReplace, "buttonFindAndReplace");
+            this.buttonFindAndReplace.ForeColor = System.Drawing.Color.Transparent;
+            this.buttonFindAndReplace.Name = "buttonFindAndReplace";
+            this.buttonFindAndReplace.UseVisualStyleBackColor = false;
+            this.buttonFindAndReplace.Click += new System.EventHandler(this.buttonFindAndReplace_Click);
             // 
             // buttonClose
             // 
@@ -373,10 +338,9 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.checkHI2RON);
             this.Controls.Add(this.checkFARpreview);
-            this.Controls.Add(this.nfcButton1);
+            this.Controls.Add(this.buttonFindAndReplace);
             this.Controls.Add(this.textOTOpath);
             this.Controls.Add(this.buttonClose);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.comboLang);
             this.Controls.Add(this.checkHI2RO);
             this.Controls.Add(this.labelOTOint);
@@ -394,8 +358,6 @@
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseUp);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -423,10 +385,6 @@
         private System.Windows.Forms.CheckBox checkHI2RO;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.ComboBox comboLang;
-        private System.Windows.Forms.RadioButton radioButtonJCVVC;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButtonCCVVC;
-        private System.Windows.Forms.RadioButton radioButtonDefault;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemTurn2INDLE;
         private NFCButton buttonClose;
@@ -434,7 +392,7 @@
         private System.Windows.Forms.ColumnHeader columnhi2ro;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemTurn2CV;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemTurn2VX;
-        private NFCButton nfcButton1;
+        private NFCButton buttonFindAndReplace;
         private System.Windows.Forms.CheckBox checkFARpreview;
         private System.Windows.Forms.ColumnHeader columnFAR;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;

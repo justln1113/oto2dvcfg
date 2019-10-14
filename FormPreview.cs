@@ -28,7 +28,7 @@ namespace oto2dvcfg
             string settings = String.Empty;
             if (Form1.sendtext.Length > 0)
             {
-                settings = Form1.sendtext.Remove(Form1.sendtext.Length - 1);
+                settings = Form1.sendtext.Remove(Form1.sendtext.Length - 2);
             }
             else
             {
@@ -36,7 +36,7 @@ namespace oto2dvcfg
                 this.Close();
                 return;
             } 
-            richTextBox1.Text = "{" + settings + "\n" + "}";
+            richTextBox1.Text = "{\n" + settings + "\n" + "}";
             Form1.formLoading.Hide();
         }
 
@@ -70,7 +70,6 @@ namespace oto2dvcfg
         public static string[] dvcfgWriter
             (
             string wavPath,
-            string calcType,
             string[] srcType,
             string[] wavName,
             string[] symbol,
@@ -83,300 +82,68 @@ namespace oto2dvcfg
             string pitch
             )
         {
-            CultureInfo TheCulture = new CultureInfo("en-US", false);
-            NumberFormatInfo NumFmtInf = TheCulture.NumberFormat;
-            NumFmtInf.NumberDecimalSeparator = ".";
-            int counter;
-            string tailPoint;
-            string vowelEnd;
             List<string> settings = new List<string>();
-            if (calcType == "JPN")
+            for (int i = 0; i < otoLinesCount; i++)
             {
-                for (counter = 0; counter < otoLinesCount; counter++)
-                {
-                    if (File.Exists(wavPath + wavName[counter]))
-                    {
+                if (!File.Exists(wavPath + wavName[i])) continue;
+                NAudio.Wave.WaveFileReader waveFileReader = new NAudio.Wave.WaveFileReader(wavPath + wavName[i]);
+                TimeSpan wavTimeSpan = waveFileReader.TotalTime;
 
-                    }
-                    else
-                    {
+                dvcfgCalculator DC = new dvcfgCalculator
+                {
+                    SrcType = srcType[i],
+                    Offset = Convert.ToDouble(offset[i]),
+                    Consonant = Convert.ToDouble(consonant[i]),
+                    Cutoff = Convert.ToDouble(cutoff[i]),
+                    UTAUPreutterance = Convert.ToDouble(Upreutterance[i]),
+                    Overlap = Convert.ToDouble(Overlap[i]),
+                    WavTime = Convert.ToDouble(wavTimeSpan.TotalSeconds) * 1000
+                };
+
+                switch (srcType[i])
+                {
+                    case "CV":
+                        settings.Add(
+                            $"   \"{pitch}->{DC.StartNoteDetact(symbol[i])}\" : {{\n" +
+                            $"      \"connectPoint\" : {DC.ToString(DC.ConnectPoint)},\n" +
+                            $"      \"endTime\" : {DC.ToString(DC.EndTime)},\n" +
+                            $"      \"pitch\" : \"{pitch}\",\n" +
+                            $"      \"preutterance\" : {DC.ToString(DC.DVPreuttrance)},\n" +
+                            $"      \"srcType\" : \"CV\",\n" +
+                            $"      \"startTime\" : {DC.ToString(DC.StartTime)},\n" +
+                            $"      \"symbol\" : \"{DC.StartNoteDetact(symbol[i])}\",\n" +
+                            $"      \"tailPoint\" : {DC.ToString(DC.TailPoint)},\n" +
+                            $"      \"updateTime\" : \"{DC.UpdateTime}\",\n" +
+                            $"      \"vowelEnd\" : {DC.ToString(DC.VowelEnd)},\n" +
+                            $"      \"vowelStart\" : {DC.ToString(DC.VowelStart)},\n" +
+                            $"      \"wavName\" : \"{wavName[i]}\"\n" +
+                            $"   }},\n"
+                            );
                         break;
-                    }
-                    NAudio.Wave.WaveFileReader waveFileReader = new NAudio.Wave.WaveFileReader(wavPath + wavName[counter]);
-                    TimeSpan wavTimeSpan = waveFileReader.TotalTime;
-                    double wavTime = Convert.ToDouble(wavTimeSpan.TotalSeconds) * 1000;
-                    if (srcType[counter] == "CV")
-                    {
-                        if (Convert.ToDouble(cutoff[counter]) < 0)
-                        {
-                            tailPoint = cfgProcess.AddDigit(-Convert.ToDouble(cutoff[counter]) / 1000 - Convert.ToDouble(Overlap[counter]) / 1000 + 0.115);
-                            vowelEnd = cfgProcess.AddDigit(-Convert.ToDouble(cutoff[counter]) / 1000 - Convert.ToDouble(Overlap[counter]) / 1000 + 0.06);
-                        }
-                        else
-                        {
-                            tailPoint = cfgProcess.AddDigit(wavTime / 1000 - Convert.ToDouble(offset[counter]) / 1000 - Convert.ToDouble(cutoff[counter]) / 1000 + 0.115);
-                            vowelEnd = cfgProcess.AddDigit(wavTime / 1000 - Convert.ToDouble(offset[counter]) / 1000 - Convert.ToDouble(cutoff[counter]) / 1000 + 0.06);
-                        }
-                        double connectPoint = 0.05999999865889549;
-                        string endTime = cfgProcess.AddDigit(Convert.ToDouble(offset[counter]) / 1000 + Convert.ToDouble(cutoff[counter]) / 1000 + 0.06);
-                        //pitch
-                        string preutterance = cfgProcess.AddDigit(Convert.ToDouble(Upreutterance[counter]) / 1000 + 0.06);
-                        //srcType
-                        string startTime = cfgProcess.AddDigit(Convert.ToDouble(offset[counter]) / 1000 - 0.06);
-                        //symbol
-                        //tailPoint
-                        DateTime updateTime = DateTime.Now;
-                        //vowelEnd
-                        string vowelStart = cfgProcess.AddDigit(Convert.ToDouble(consonant[counter]) / 1000 + 0.06);
-                        //wavName
-                        settings.Add
-                            (
-                                "\n" +
-                                "   \"" + pitch + "->" + symbol[counter].Replace("\n", "").Replace("\t", "").Replace("\r", "") + "\" : {\n" +
-                                "      \"connectPoint\" : " + Convert.ToString(connectPoint).Replace(",", ".") + ",\n" +
-                                "      \"endTime\" : " + String.Format(TheCulture, endTime).Replace(",", ".") + ",\n" +
-                                "      \"pitch\" : \"" + pitch + "\",\n" +
-                                "      \"preutterance\" : " + preutterance.Replace(",", ".") + ",\n" +
-                                "      \"srcType\" : \"" + srcType[counter].Replace("\n", "").Replace("\t", "").Replace("\r", "") + "\",\n" +
-                                "      \"startTime\" : " + startTime.Replace(",", ".") + ",\n" +
-                                "      \"symbol\" : \"" + symbol[counter] + "\",\n" +
-                                "      \"tailPoint\" : " + tailPoint.Replace(",", ".") + ",\n" +
-                                "      \"updateTime\" : \"" + updateTime.ToString("yyyy-MM-dd HH:mm:ss") + "\",\n" +
-                                "      \"vowelEnd\" : " + vowelEnd.Replace(",", ".") + ",\n" +
-                                "      \"vowelStart\" : " + vowelStart.Replace(",", ".") + ",\n" +
-                                "      \"wavName\" : \"" + wavName[counter] + "\"\n" +
-                                "   },"
+                    case "VX":
+                        settings.Add(
+                            $"   \"{pitch}->{symbol[i].Replace(" ", "_")}\" : {{\n" +
+                            $"      \"connectPoint\" : {DC.ToString(DC.ConnectPoint)},\n" +
+                            $"      \"endTime\" : {DC.ToString(DC.EndTime)},\n" +
+                            $"      \"pitch\" : \"{pitch}\",\n" +
+                            $"      \"srcType\" : \"VX\",\n" +
+                            $"      \"startTime\" : {DC.ToString(DC.StartTime)},\n" +
+                            $"      \"symbol\" : \"{symbol[i].Replace(" ", "_")}\",\n" +
+                            $"      \"tailPoint\" : {DC.ToString(DC.TailPoint)},\n" +
+                            $"      \"updateTime\" : \"{DC.UpdateTime}\",\n" +
+                            $"      \"wavName\" : \"{wavName[i]}\"\n" +
+                            $"   }},\n"
                             );
-                    }
-                    else if (srcType[counter] == "-CV")
-                    {
-                        double connectPoint = 0.05999999865889549;
-                        if (Convert.ToDouble(cutoff[counter]) < 0)
-                        {
-                            tailPoint = cfgProcess.AddDigit(-Convert.ToDouble(cutoff[counter]) / 1000 - Convert.ToDouble(Overlap[counter]) / 1000 + 0.115 + connectPoint);
-                            vowelEnd = cfgProcess.AddDigit(-Convert.ToDouble(cutoff[counter]) / 1000 - Convert.ToDouble(Overlap[counter]) / 1000 + 0.06 + connectPoint);
-                        }
-                        else
-                        {
-                            tailPoint = cfgProcess.AddDigit(wavTime / 1000 - Convert.ToDouble(offset[counter]) / 1000 - Convert.ToDouble(cutoff[counter]) / 1000 + 0.115 + connectPoint);
-                            vowelEnd = cfgProcess.AddDigit(wavTime / 1000 - Convert.ToDouble(offset[counter]) / 1000 - Convert.ToDouble(cutoff[counter]) / 1000 + 0.06 + connectPoint);
-                        }
-                        string endTime = cfgProcess.AddDigit(Convert.ToDouble(offset[counter]) / 1000 + Convert.ToDouble(cutoff[counter]) / 1000 + 0.06 + connectPoint);
-                        //pitch
-                        string preutterance = cfgProcess.AddDigit(Convert.ToDouble(Upreutterance[counter]) / 1000 + 0.06 + connectPoint);
-                        //srcType
-                        string startTime = cfgProcess.AddDigit(Convert.ToDouble(offset[counter]) / 1000 - 0.06 - connectPoint);
-                        //symbol
-                        //tailPoint
-                        DateTime updateTime = DateTime.Now;
-                        //vowelEnd
-                        string vowelStart = cfgProcess.AddDigit(Convert.ToDouble(consonant[counter]) / 1000 + 0.06);
-                        //wavName
-                        settings.Add
-                            (
-                                "\n" +
-                                "   \"" + pitch + "->" + symbol[counter].Replace(" ", "").Replace("\n", "").Replace("\t", "").Replace("\r", "") + "\" : {\n" +
-                                "      \"connectPoint\" : " + Convert.ToString(connectPoint).Replace(",", ".") + ",\n" +
-                                "      \"endTime\" : " + endTime.Replace(",", ".") + ",\n" +
-                                "      \"pitch\" : \"" + pitch + "\",\n" +
-                                "      \"preutterance\" : " + preutterance.Replace(",", ".") + ",\n" +
-                                "      \"srcType\" : \"" + srcType[counter].Replace("-", "") + "\",\n" +
-                                "      \"startTime\" : " + startTime.Replace(",", ".") + ",\n" +
-                                "      \"symbol\" : \"" + symbol[counter].Replace(" ", "").Replace("\n", "").Replace("\t", "").Replace("\r", "") + "\",\n" +
-                                "      \"tailPoint\" : " + tailPoint.Replace(",", ".") + ",\n" +
-                                "      \"updateTime\" : \"" + updateTime.ToString("yyyy-MM-dd HH:mm:ss") + "\",\n" +
-                                "      \"vowelEnd\" : " + vowelEnd.Replace(",", ".") + ",\n" +
-                                "      \"vowelStart\" : " + vowelStart.Replace(",", ".") + ",\n" +
-                                "      \"wavName\" : \"" + wavName[counter] + "\"\n" +
-                                "   },"
-                            );
-                    }
-                    else if (srcType[counter] == "VX")
-                    {
-                        if (File.Exists(wavPath + wavName[counter]))
-                        {
-
-                        }
-                        else
-                        {
-                            continue;
-                        }
-                        double connectPoint = 0.05999999865889549;
-                        string endTime = String.Empty;
-                        if (Convert.ToDouble(cutoff[counter]) < 0)
-                        {
-                            endTime = cfgProcess.AddDigit(Convert.ToDouble(offset[counter]) / 1000 - Convert.ToDouble(cutoff[counter]) / 1000 + connectPoint);
-                        }
-                        else
-                        {
-                            endTime = cfgProcess.AddDigit(wavTime / 1000 - Convert.ToDouble(offset[counter]) / 1000 - Convert.ToDouble(cutoff[counter]) / 1000 + connectPoint);
-                        }
-                        string startTime = cfgProcess.AddDigit(Convert.ToDouble(offset[counter]) / 1000 + Convert.ToDouble(Overlap[counter]) / 1000 - 0.06);
-                        tailPoint = cfgProcess.AddDigit(Convert.ToDouble(consonant[counter]) / 1000 - Convert.ToDouble(Overlap[counter]) / 1000 + 0.06);
-                        DateTime updateTime = DateTime.Now;
-                        settings.Add
-                            (
-                                "\n" +
-                                "   \"" + pitch + "->" + symbol[counter].Replace(" ", "_").Replace("\n", "").Replace("\t", "").Replace("\r", "").Replace("_R", "_-") + "\" : {\n" +
-                                "      \"connectPoint\" : " + Convert.ToString(connectPoint).Replace(",", ".") + ",\n" +
-                                "      \"endTime\" : " + endTime.Replace(",", ".") + ",\n" +
-                                "      \"pitch\" : \"" + pitch + "\",\n" +
-                                "      \"srcType\" : \"" + srcType[counter] + "\",\n" +
-                                "      \"startTime\" : " + startTime.Replace(",", ".") + ",\n" +
-                                "      \"symbol\" : \"" + symbol[counter].Replace(" ", "_").Replace("\n", "").Replace("\t", "").Replace("\r", "").Replace("_R", "_-") + "\",\n" +
-                                "      \"tailPoint\" : " + tailPoint.Replace(",", ".") + ",\n" +
-                                "      \"updateTime\" : \"" + updateTime.ToString("yyyy-MM-dd HH:mm:ss") + "\",\n" +
-                                "      \"wavName\" : \"" + wavName[counter] + "\"\n" +
-                                "   },"
-                            );
-                    }
-                    else
-                    {
-                        //這裡是INDLE
-                        continue;
-                    }
+                        break;
+                    case "INDIE":
+                        break;
+                    default:
+                        break;
                 }
-            }
-            else
-            {
-                for (counter = 0; counter < otoLinesCount; counter++)
-                {
-                    if (File.Exists(wavPath + wavName[counter]))
-                    {
 
-                    }
-                    else
-                    {
-                        continue;
-                    }
-                    NAudio.Wave.WaveFileReader waveFileReader = new NAudio.Wave.WaveFileReader(wavPath + wavName[counter]);
-                    TimeSpan wavTimeSpan = waveFileReader.TotalTime;
-                    double wavTime = Convert.ToDouble(wavTimeSpan.TotalSeconds) * 1000;
-                    if (srcType[counter] == "CV")
-                    {
-                        if (Convert.ToDouble(cutoff[counter]) < 0)
-                        {
-                            tailPoint = cfgProcess.AddDigit(-Convert.ToDouble(cutoff[counter]) / 1000 - Convert.ToDouble(Overlap[counter]) / 1000 + 0.115);
-                            vowelEnd = cfgProcess.AddDigit(-Convert.ToDouble(cutoff[counter]) / 1000 - Convert.ToDouble(Overlap[counter]) / 1000 + 0.06);
-                        }
-                        else
-                        {
-                            tailPoint = cfgProcess.AddDigit(wavTime / 1000 - Convert.ToDouble(offset[counter]) / 1000 - Convert.ToDouble(cutoff[counter]) / 1000 + 0.115);
-                            vowelEnd = cfgProcess.AddDigit(wavTime / 1000 - Convert.ToDouble(offset[counter]) / 1000 - Convert.ToDouble(cutoff[counter]) / 1000 + 0.06);
-                        }
-                        double connectPoint = 0.05999999865889549;
-                        string endTime = cfgProcess.AddDigit(Convert.ToDouble(offset[counter]) / 1000 + Convert.ToDouble(cutoff[counter]) / 1000 + 0.06);
-                        //pitch
-                        string preutterance = cfgProcess.AddDigit(Convert.ToDouble(Upreutterance[counter]) / 1000 + 0.06);
-                        //srcType
-                        string startTime = cfgProcess.AddDigit(Convert.ToDouble(offset[counter]) / 1000 - 0.06);
-                        //symbol
-                        //tailPoint
-                        DateTime updateTime = DateTime.Now;
-                        //vowelEnd
-                        string vowelStart = cfgProcess.AddDigit(Convert.ToDouble(consonant[counter]) / 1000 + 0.06);
-                        //wavName
-                        settings.Add
-                            (
-                                "\n" +
-                                "   \"" + pitch + "->" + symbol[counter].Replace("\n", "").Replace("\t", "").Replace("\r", "") + "\" : {\n" +
-                                "      \"connectPoint\" : " + Convert.ToString(connectPoint).Replace(",", ".") + ",\n" +
-                                "      \"endTime\" : " + endTime.Replace(",", ".") + ",\n" +
-                                "      \"pitch\" : \"" + pitch + "\",\n" +
-                                "      \"preutterance\" : " + preutterance.Replace(",", ".") + ",\n" +
-                                "      \"srcType\" : \"" + srcType[counter].Replace("\n", "").Replace("\t", "").Replace("\r", "") + "\",\n" +
-                                "      \"startTime\" : " + startTime.Replace(",", ".") + ",\n" +
-                                "      \"symbol\" : \"" + symbol[counter] + "\",\n" +
-                                "      \"tailPoint\" : " + tailPoint.Replace(",", ".") + ",\n" +
-                                "      \"updateTime\" : \"" + updateTime.ToString("yyyy-MM-dd HH:mm:ss") + "\",\n" +
-                                "      \"vowelEnd\" : " + vowelEnd.Replace(",", ".") + ",\n" +
-                                "      \"vowelStart\" : " + vowelStart.Replace(",", ".") + ",\n" +
-                                "      \"wavName\" : \"" + wavName[counter] + "\"\n" +
-                                "   },"
-                            );
-                    }
-                    else if (srcType[counter] == "-CV")
-                    {
-                        if (Convert.ToDouble(cutoff[counter]) < 0)
-                        {
-                            tailPoint = cfgProcess.AddDigit(-Convert.ToDouble(cutoff[counter]) / 1000 - Convert.ToDouble(Overlap[counter]) / 1000 + 0.115);
-                            vowelEnd = cfgProcess.AddDigit(-Convert.ToDouble(cutoff[counter]) / 1000 - Convert.ToDouble(Overlap[counter]) / 1000 + 0.06);
-                        }
-                        else
-                        {
-                            tailPoint = cfgProcess.AddDigit(wavTime / 1000 - Convert.ToDouble(offset[counter]) / 1000 - Convert.ToDouble(cutoff[counter]) / 1000 + 0.115);
-                            vowelEnd = cfgProcess.AddDigit(wavTime / 1000 - Convert.ToDouble(offset[counter]) / 1000 - Convert.ToDouble(cutoff[counter]) / 1000 + 0.06);
-                        }
-                        double connectPoint = 0.05999999865889549;
-                        string endTime = cfgProcess.AddDigit(Convert.ToDouble(offset[counter]) / 1000 + Convert.ToDouble(cutoff[counter]) / 1000 + 0.06);
-                        //pitch
-                        string preutterance = cfgProcess.AddDigit(Convert.ToDouble(Upreutterance[counter]) / 1000 + 0.06);
-                        //srcType
-                        string startTime = cfgProcess.AddDigit(Convert.ToDouble(offset[counter]) / 1000 - 0.06);
-                        //symbol
-                        //tailPoint
-                        DateTime updateTime = DateTime.Now;
-                        //vowelEnd
-                        string vowelStart = cfgProcess.AddDigit(Convert.ToDouble(consonant[counter]) / 1000 + 0.06);
-                        //wavName
-                        settings.Add
-                            (
-                                "\n" +
-                                "   \"" + pitch + "->" + symbol[counter].Replace(" ", "").Replace("\n", "").Replace("\t", "").Replace("\r", "") + "\" : {\n" +
-                                "      \"connectPoint\" : " + Convert.ToString(connectPoint).Replace(",", ".") + ",\n" +
-                                "      \"endTime\" : " + endTime.Replace(",", ".") + ",\n" +
-                                "      \"pitch\" : \"" + pitch + "\",\n" +
-                                "      \"preutterance\" : " + preutterance.Replace(",", ".") + ",\n" +
-                                "      \"srcType\" : \"" + srcType[counter].Replace("-", "") + "\",\n" +
-                                "      \"startTime\" : " + startTime.Replace(",", ".") + ",\n" +
-                                "      \"symbol\" : \"" + symbol[counter].Replace(" ", "").Replace("\n", "").Replace("\t", "").Replace("\r", "") + "\",\n" +
-                                "      \"tailPoint\" : " + tailPoint.Replace(",", ".") + ",\n" +
-                                "      \"updateTime\" : \"" + updateTime.ToString("yyyy-MM-dd HH:mm:ss") + "\",\n" +
-                                "      \"vowelEnd\" : " + vowelEnd.Replace(",", ".") + ",\n" +
-                                "      \"vowelStart\" : " + vowelStart.Replace(",", ".") + ",\n" +
-                                "      \"wavName\" : \"" + wavName[counter] + "\"\n" +
-                                "   },"
-                            );
-                    }
-                    else if (srcType[counter] == "VX")
-                    {
-                        double connectPoint = 0.05999999865889549;
-                        string endTime = String.Empty;
-                        if (Convert.ToDouble(cutoff[counter]) < 0)
-                        {
-                            endTime = cfgProcess.AddDigit(Convert.ToDouble(offset[counter]) / 1000 - Convert.ToDouble(cutoff[counter]) / 1000 + connectPoint);
-                        }
-                        else
-                        {
-                            endTime = cfgProcess.AddDigit(wavTime / 1000 - Convert.ToDouble(offset[counter]) / 1000 - Convert.ToDouble(cutoff[counter]) / 1000 + connectPoint);
-                        }
-                        string startTime = cfgProcess.AddDigit(Convert.ToDouble(offset[counter]) / 1000 + Convert.ToDouble(Overlap[counter]) / 1000 - 0.06);
-                        tailPoint = cfgProcess.AddDigit(Convert.ToDouble(consonant[counter]) / 1000 - Convert.ToDouble(Overlap[counter]) / 1000 + 0.06);
-                        DateTime updateTime = DateTime.Now;
-                        settings.Add
-                            (
-                                "\n" +
-                                "   \"" + pitch + "->" + symbol[counter].Replace(" ", "_").Replace("\n", "").Replace("\t", "").Replace("\r", "").Replace("_R", "_-") + "\" : {\n" +
-                                "      \"connectPoint\" : " + Convert.ToString(connectPoint).Replace(",", ".") + ",\n" +
-                                "      \"endTime\" : " + endTime.Replace(",", ".") + ",\n" +
-                                "      \"pitch\" : \"" + pitch + "\",\n" +
-                                "      \"srcType\" : \"" + srcType[counter] + "\",\n" +
-                                "      \"startTime\" : " + startTime.Replace(",", ".") + ",\n" +
-                                "      \"symbol\" : \"" + symbol[counter].Replace(" ", "_").Replace("\n", "").Replace("\t", "").Replace("\r", "").Replace("_R", "_-") + "\",\n" +
-                                "      \"tailPoint\" : " + tailPoint.Replace(",", ".") + ",\n" +
-                                "      \"updateTime\" : \"" + updateTime.ToString("yyyy-MM-dd HH:mm:ss") + "\",\n" +
-                                "      \"wavName\" : \"" + wavName[counter] + "\"\n" +
-                                "   },"
-                            );
-                    }
-                    else
-                    {
-                        //這裡是INDLE
-                        continue;
-                    }
-                }
+                DC.Clear();
             }
-
+            
             return settings.ToArray();
         }
 

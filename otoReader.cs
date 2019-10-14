@@ -11,32 +11,24 @@ namespace oto2dvcfg
     {
         public static string get_aliasType(string input)
         {
-            bool AliasHasSpace;
             string aliasType = String.Empty;
-            if (input.IndexOf(" ") < 0)
+            if (input.Contains(" "))
             {
-                AliasHasSpace = false;
-            }
-            else
-            {
-                AliasHasSpace = true;
-            }
-            if (AliasHasSpace == true)
-            {
-                if (input.IndexOf("-") < 0)
+                if (input.Contains("-") || input.Contains("・"))
                 {
-                    aliasType = "VX";
-                }
-                else
-                {
-                    if (input.IndexOf("-") > 1)
+                    if ((input.IndexOf("-") > 1) || (input.IndexOf("・") > 1))
                     {
                         aliasType = "VX";
                     }
                     else
                     {
-                        aliasType = "-CV";
+                        aliasType = "CV";
                     }
+                    
+                }
+                else
+                {
+                    aliasType = "VX";
                 }
             }
             else
@@ -105,29 +97,22 @@ namespace oto2dvcfg
 
         public static string hi2ron(string input, string aliasType)
         {
+            List<string> replaceN = new List<string>();
+            replaceN.Add("ん");
+            replaceN.Add("n");
             foreach (string lineDict in ReadDict_n())
             {
-                if (aliasType == "VX" && input.IndexOf(" ") >= 1 && input.IndexOf("y", input.IndexOf(" ")) < 1)
-                {
-                    string[] D = lineDict.Split('=');
-                    input = input.Replace(D[0], D[1]);
-                }
-                else if (aliasType == "CV" && input.IndexOf(" ") >= 1 && input.IndexOf("y", input.IndexOf(" ")) >= 1)
-                {
-                    string[] D = lineDict.Split('=');
-                    input = input.Replace(D[0], D[1].Replace("'", ""));
-                }
-                else if (aliasType == "VX" && input.IndexOf(" ") >= 1 && input.IndexOf("y", input.IndexOf(" ")) >= 1)
-                {
-
-                }
-                else
-                {
-                    string[] D = lineDict.Split('=');
-                    input = input.Replace(D[0], D[1]);
-                }
+                if (input.Contains(" ") && input.IndexOf("y", input.IndexOf(" ")) >= 1) continue;
+                string[] D = lineDict.Split('=');
+                input = input.Replace(D[0], D[1]);
+            }
+            foreach (string lineDict in ReadDict())
+            {
+                string[] D = lineDict.Split('=');
+                input = input.Replace(D[0], D[1].Replace("N", "n"));
             }
                 return input;
         }
+
     }
 }

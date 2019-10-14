@@ -13,6 +13,7 @@ using System.Globalization;
 using System.Drawing.Drawing2D;
 using NAudio;
 using NAudio.Wave;
+using UTAUVoiceBankConfig;
 
 namespace oto2dvcfg
 {
@@ -90,6 +91,8 @@ namespace oto2dvcfg
             buttonClose.FlatAppearance.MouseOverBackColor = Color.Transparent;
             buttonClose.FlatAppearance.MouseDownBackColor = Color.Transparent;
             #endregion
+
+            dvcfgCalculator DC = new dvcfgCalculator();
         }
 
         private void ComboLang_SelectedIndexChanged(object sender, EventArgs e)
@@ -124,10 +127,6 @@ namespace oto2dvcfg
             else if(e.KeyCode == Keys.Delete)
             {
                 ToolStripMenuItemDel_Click(null, null);
-            }
-            else
-            {
-                    
             }
         }
 
@@ -190,7 +189,7 @@ namespace oto2dvcfg
         {
             foreach (ListViewItem selectItem in listView1.SelectedItems)
             {
-                selectItem.SubItems[8].Text = "INDLE";
+                selectItem.SubItems[8].Text = "INDIE";
                 if (checkHI2RON.Checked == true)
                 {
                     selectItem.SubItems[11].Text = otoReader.hi2ron(otoReader.FindAndReplace(selectItem.SubItems[12].Text), selectItem.SubItems[8].Text);
@@ -234,17 +233,6 @@ namespace oto2dvcfg
             }
         }
         #endregion
-
-        private void NfcButton1_Click(object sender, EventArgs e)
-        {
-            FormFAR formFAR = new FormFAR();
-            formFAR.ShowDialog(this);
-            foreach (ListViewItem eachItem in listView1.Items)
-            {
-                eachItem.SubItems[10].Text = otoReader.FindAndReplace(eachItem.SubItems[2].Text);
-                eachItem.SubItems[9].Text = otoReader.FindAndReplace(eachItem.SubItems[9].Text);
-            }
-        }
 
         private void CheckHI2RO_CheckedChanged(object sender, EventArgs e)
         {
@@ -451,6 +439,13 @@ namespace oto2dvcfg
             else
             {
                 MessageBox.Show("OTO path is empty!", "ヽ(*。>Д<)o゜", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                formLoading.Hide();
+                return;
+            }
+            if (string.IsNullOrEmpty(textPitch.Text))
+            {
+                MessageBox.Show("Pitch is empty!", "ヽ(*。>Д<)o゜", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                formLoading.Hide();
                 return;
             }
             string wavPath = String.Empty; //For send text
@@ -458,21 +453,6 @@ namespace oto2dvcfg
             {
                 StreamReader otoSRE = new StreamReader(textOTOpath.Text, System.Text.Encoding.Default);
                 string calcType = String.Empty;
-
-                #region Calculation method detection
-                if (radioButtonJCVVC.Checked)
-                {
-                    calcType = "JPN";
-                }
-                else if (radioButtonCCVVC.Checked)
-                {
-                    calcType = "Default";
-                }
-                else
-                {
-                    calcType = "Default";
-                }
-                #endregion
 
                 #region List registration
                 List<string> aliasList = new List<string>();
@@ -527,7 +507,6 @@ namespace oto2dvcfg
                 string[] output = FormPreview.dvcfgWriter
                     (
                         wavPath, 
-                        calcType, 
                         aliasType, 
                         wavName, 
                         alias, 
@@ -550,6 +529,7 @@ namespace oto2dvcfg
             else
             {
                 MessageBox.Show("OTO path is empty!", "(╯°□°）╯︵ ┻━┻", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                formLoading.Hide();
                 return;
             }
         }
@@ -581,6 +561,7 @@ namespace oto2dvcfg
                         if (otoReader.lineCount(otoPath) - 2 < 0)
                         {
                             MessageBox.Show("oto file is empty.", "(╯°□°）╯︵ ┻━┻", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                            formLoading.Hide();
                         }
                         else
                         {
@@ -588,54 +569,85 @@ namespace oto2dvcfg
                             List<string> wavNameList = new List<string>();
                             string line;
                             int counter = 0;
-                            string aliasType;
                             float LoadingLine = 0;
                             float LoadingPerCent = 0;
 
                             labelOTOint.Text = Convert.ToString(otoReader.lineCount(otoPath));
-                            StreamReader otoSR = new StreamReader(textOTOpath.Text, System.Text.Encoding.Default); //給ReadLine使用的Reader
-                            while ((line = otoSR.ReadLine()) != null)
+                            
+                            OTO oto = new OTO();
+                            oto.Load(textOTOpath.Text);
+
+                            for (int i = 0; i < oto.lineCount; i++)
                             {
-                                string[] otoInputer = OtoInput(line); //輸入一條oto設定進otoSpliter方法
-                                if (otoInputer.Length < 7)
-                                {
-                                    MessageBox.Show("Wrong oto format.", "(╯°□°）╯︵ ┻━┻", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
-                                    return;
-                                }
-                                else
-                                {
-                                    LoadingPerCent = LoadingLine / (otoReader.lineCount(otoPath));
-                                    string hi2ro = string.Empty;
-                                    aliasType = otoReader.get_aliasType(otoInputer[1]);
-                                    ListViewItem[] lvs = new ListViewItem[1];
-                                    lvs[0] = new ListViewItem(new string[]
+                                ListViewItem[] lvs = new ListViewItem[1];
+                                string hi2ro = string.Empty;
+                                string aliasType = otoReader.get_aliasType(oto.otoMap[i].Alias);
+                                lvs[0] = new ListViewItem(new string[]
                                     {
-                                        Convert.ToString(counter + 1) , //行數
-                                        otoInputer[0], //Wav Name
-                                        otoInputer[1], //Alias
-                                        otoInputer[2], //Offsest
-                                        otoInputer[3], //Consonant
-                                        otoInputer[4], //Cutoff
-                                        otoInputer[5], //Preutterance
-                                        otoInputer[6], //Overlap
-                                        aliasType, //DV需要設定種類
-                                        otoReader.hi2ro(otoInputer[1]),
-                                        otoReader.FindAndReplace(otoInputer[1]),
-                                        otoReader.hi2ron(otoInputer[1], aliasType),
-                                        otoInputer[1]
+                                        (i + 1).ToString(),
+                                        oto.otoMap[i].File,
+                                        oto.otoMap[i].Alias,
+                                        oto.otoMap[i].Offset.ToString(),
+                                        oto.otoMap[i].Consonant.ToString(),
+                                        oto.otoMap[i].Cutoff.ToString(),
+                                        oto.otoMap[i].Preutter.ToString(),
+                                        oto.otoMap[i].Overlap.ToString(),
+                                        aliasType,
+                                        otoReader.hi2ro(oto.otoMap[i].Alias),
+                                        otoReader.FindAndReplace(oto.otoMap[i].Alias),
+                                        otoReader.hi2ron(oto.otoMap[i].Alias, aliasType),
+                                        oto.otoMap[i].Alias
                                     }
                                     );
-                                    listView1.Items.AddRange(lvs);
-                                    counter++;
-                                    LoadingLine++;
-                                    Console.WriteLine(System.Math.Round(LoadingPerCent, 2, MidpointRounding.AwayFromZero) * 100 + "%");
-                                    LoadingPerCentSend = Math.Round(LoadingPerCent, 2, MidpointRounding.AwayFromZero);
-                                    FormLoading.PCrefresh();
-                                    formLoading.Refresh();
-                                    formLoading.Update();
-                                }
+                                listView1.Items.AddRange(lvs);
                             }
-                            otoSR.Close();
+
+                            #region old
+                            //StreamReader otoSR = new StreamReader(textOTOpath.Text, System.Text.Encoding.Default); //給ReadLine使用的Reader
+                            //while ((line = otoSR.ReadLine()) != null)
+                            //{
+                            //    string[] otoInputer = OtoInput(line); //輸入一條oto設定進otoSpliter方法
+                            //    if (otoInputer.Length < 7)
+                            //    {
+                            //        MessageBox.Show("Wrong oto format.", "(╯°□°）╯︵ ┻━┻", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                            //        formLoading.Hide();
+                            //        return;
+                            //    }
+                            //    else
+                            //    {
+                            //        LoadingPerCent = LoadingLine / (otoReader.lineCount(otoPath));
+                            //        string hi2ro = string.Empty;
+                            //        aliasType = otoReader.get_aliasType(otoInputer[1]);
+                            //        ListViewItem[] lvs = new ListViewItem[1];
+                            //        lvs[0] = new ListViewItem(new string[]
+                            //        {
+                            //            Convert.ToString(counter + 1) , //行數
+                            //            otoInputer[0], //Wav Name
+                            //            otoInputer[1], //Alias
+                            //            otoInputer[2], //Offsest
+                            //            otoInputer[3], //Consonant
+                            //            otoInputer[4], //Cutoff
+                            //            otoInputer[5], //Preutterance
+                            //            otoInputer[6], //Overlap
+                            //            aliasType, //DV需要設定種類
+                            //            otoReader.hi2ro(otoInputer[1]),
+                            //            otoReader.FindAndReplace(otoInputer[1]),
+                            //            otoReader.hi2ron(otoInputer[1], aliasType),
+                            //            otoInputer[1]
+                            //        }
+                            //        );
+                            //        listView1.Items.AddRange(lvs);
+                            //        counter++;
+                            //        LoadingLine++;
+                            //        //Console.WriteLine(Math.Round(LoadingPerCent, 3, MidpointRounding.AwayFromZero) * 100 + "%");
+                            //        LoadingPerCentSend = Math.Round(LoadingPerCent, 3, MidpointRounding.AwayFromZero);
+                            //        FormLoading.PCrefresh();
+                            //        formLoading.Refresh();
+                            //        formLoading.Update();
+                            //    }
+                            //}
+                            //otoSR.Close();
+                            #endregion
 
                             for (counter = 0; counter < listView1.Items.Count; counter++)
                             {
@@ -683,6 +695,7 @@ namespace oto2dvcfg
                 else
                 {
                     MessageBox.Show("OTO file not exists.", "(╯°□°）╯︵ ┻━┻", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                    formLoading.Hide();
                     errorMessageInListView();
                 }
             }
@@ -747,16 +760,26 @@ namespace oto2dvcfg
         }
         private void errorMessageInListView()
         {
-            ListViewItem[] lvs = new ListViewItem[5];
-            lvs[0] = new ListViewItem(new string[] { "", "放棄啦！" });
-            lvs[1] = new ListViewItem(new string[] { "", "不幹啦！ " });
-            lvs[2] = new ListViewItem(new string[] { "", "讀個oto累死啦～" });
-            lvs[3] = new ListViewItem(new string[] { "", "跟你要了檔案你又不給" });
-            lvs[4] = new ListViewItem(new string[] { "", "是要列個啥(╯°□°）╯︵ ┻━┻" });
+            //ListViewItem[] lvs = new ListViewItem[5];
+            //lvs[0] = new ListViewItem(new string[] { "", "放棄啦！" });
+            //lvs[1] = new ListViewItem(new string[] { "", "不幹啦！ " });
+            //lvs[2] = new ListViewItem(new string[] { "", "讀個oto累死啦～" });
+            //lvs[3] = new ListViewItem(new string[] { "", "跟你要了檔案你又不給" });
+            //lvs[4] = new ListViewItem(new string[] { "", "是要列個啥(╯°□°）╯︵ ┻━┻" });
 
-            this.listView1.Items.AddRange(lvs);
+            //this.listView1.Items.AddRange(lvs);
         }
 
+        private void buttonFindAndReplace_Click(object sender, EventArgs e)
+        {
+            FormFAR formFAR = new FormFAR();
+            formFAR.ShowDialog(this);
+            foreach (ListViewItem eachItem in listView1.Items)
+            {
+                eachItem.SubItems[10].Text = otoReader.FindAndReplace(eachItem.SubItems[2].Text);
+                eachItem.SubItems[9].Text = otoReader.FindAndReplace(eachItem.SubItems[9].Text);
+            }
+        }
 
         public void optionChanged(object sender, EventArgs e)
         {

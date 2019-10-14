@@ -43,7 +43,7 @@
             this.label1.Size = new System.Drawing.Size(326, 48);
             this.label1.TabIndex = 0;
             this.label1.Text = "The following wav files do not exist. \r\nPlease ensure that all wav files required" +
-    " by the oto file\r\n are stored in the same folder as the oto file.";
+    " by the oto file\r\nare stored in the same folder as the oto file.";
             // 
             // listBox1
             // 

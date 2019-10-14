@@ -157,7 +157,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Pitch.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>15</value>
   </data>
   <data name="textPitch.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft JhengHei, 12pt, style=Bold</value>
@@ -184,7 +184,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textPitch.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>14</value>
   </data>
   <data name="Title.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft JhengHei, 18pt, style=Bold</value>
@@ -217,7 +217,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Title.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>13</value>
   </data>
   <data name="buttonGenerate.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -250,30 +250,6 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;buttonGenerate.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="listView1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft JhengHei, 12pt</value>
-  </data>
-  <data name="listView1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 123</value>
-  </data>
-  <data name="listView1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>814, 473</value>
-  </data>
-  <data name="listView1.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;listView1.Name" xml:space="preserve">
-    <value>listView1</value>
-  </data>
-  <data name="&gt;&gt;listView1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;listView1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;listView1.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
   <data name="columnNo.Text" xml:space="preserve">
@@ -333,11 +309,47 @@
   <data name="columnhi2ro.Text" xml:space="preserve">
     <value>hi2ro</value>
   </data>
+  <data name="columnhi2ro.Width" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="columnFAR.Text" xml:space="preserve">
     <value>FAR</value>
   </data>
+  <data name="columnFAR.Width" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="columnhi2ron.Text" xml:space="preserve">
     <value>hi2ro n'</value>
+  </data>
+  <data name="columnhi2ron.Width" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="columnOriginal.Width" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="listView1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft JhengHei, 12pt</value>
+  </data>
+  <data name="listView1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 123</value>
+  </data>
+  <data name="listView1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>814, 473</value>
+  </data>
+  <data name="listView1.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;listView1.Name" xml:space="preserve">
+    <value>listView1</value>
+  </data>
+  <data name="&gt;&gt;listView1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listView1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;listView1.ZOrder" xml:space="preserve">
+    <value>11</value>
   </data>
   <data name="lableOTOLines.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -373,7 +385,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lableOTOLines.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>10</value>
   </data>
   <data name="labelOTOint.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -406,7 +418,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;labelOTOint.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>9</value>
   </data>
   <data name="checkHI2RO.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -427,7 +439,7 @@
     <value>NoControl</value>
   </data>
   <data name="checkHI2RO.Location" type="System.Drawing.Point, System.Drawing">
-    <value>837, 252</value>
+    <value>837, 381</value>
   </data>
   <data name="checkHI2RO.Size" type="System.Drawing.Size, System.Drawing">
     <value>253, 24</value>
@@ -448,7 +460,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;checkHI2RO.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>8</value>
   </data>
   <metadata name="folderBrowserDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>164, 17</value>
@@ -474,6 +486,9 @@
   <data name="comboLang.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
   </data>
+  <data name="comboLang.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="&gt;&gt;comboLang.Name" xml:space="preserve">
     <value>comboLang</value>
   </data>
@@ -484,150 +499,11 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;comboLang.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="radioButtonJCVVC.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="radioButtonJCVVC.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="radioButtonJCVVC.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="radioButtonJCVVC.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 58</value>
-  </data>
-  <data name="radioButtonJCVVC.Size" type="System.Drawing.Size, System.Drawing">
-    <value>308, 44</value>
-  </data>
-  <data name="radioButtonJCVVC.TabIndex" type="System.Int32, mscorlib">
-    <value>27</value>
-  </data>
-  <data name="radioButtonJCVVC.Text" xml:space="preserve">
-    <value>If Overlap and preutterance are at the
-same point, you need to select this</value>
-  </data>
-  <data name="&gt;&gt;radioButtonJCVVC.Name" xml:space="preserve">
-    <value>radioButtonJCVVC</value>
-  </data>
-  <data name="&gt;&gt;radioButtonJCVVC.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;radioButtonJCVVC.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;radioButtonJCVVC.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="radioButtonDefault.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="radioButtonDefault.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="radioButtonDefault.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="radioButtonDefault.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 28</value>
-  </data>
-  <data name="radioButtonDefault.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 24</value>
-  </data>
-  <data name="radioButtonDefault.TabIndex" type="System.Int32, mscorlib">
-    <value>29</value>
-  </data>
-  <data name="radioButtonDefault.Text" xml:space="preserve">
-    <value>Default</value>
-  </data>
-  <data name="&gt;&gt;radioButtonDefault.Name" xml:space="preserve">
-    <value>radioButtonDefault</value>
-  </data>
-  <data name="&gt;&gt;radioButtonDefault.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;radioButtonDefault.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;radioButtonDefault.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="radioButtonCCVVC.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="radioButtonCCVVC.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="radioButtonCCVVC.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="radioButtonCCVVC.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 108</value>
-  </data>
-  <data name="radioButtonCCVVC.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 24</value>
-  </data>
-  <data name="radioButtonCCVVC.TabIndex" type="System.Int32, mscorlib">
-    <value>28</value>
-  </data>
-  <data name="radioButtonCCVVC.Text" xml:space="preserve">
-    <value>Chinese CVVC</value>
-  </data>
-  <data name="radioButtonCCVVC.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;radioButtonCCVVC.Name" xml:space="preserve">
-    <value>radioButtonCCVVC</value>
-  </data>
-  <data name="&gt;&gt;radioButtonCCVVC.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;radioButtonCCVVC.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;radioButtonCCVVC.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="groupBox1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Adobe Fan Heiti Std B, 12pt, style=Bold</value>
-  </data>
-  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>837, 130</value>
-  </data>
-  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>357, 110</value>
-  </data>
-  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>28</value>
-  </data>
-  <data name="groupBox1.Text" xml:space="preserve">
-    <value>OTO calculation method</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
   <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>342, 17</value>
   </metadata>
-  <data name="contextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>317, 120</value>
-  </data>
-  <data name="&gt;&gt;contextMenuStrip1.Name" xml:space="preserve">
-    <value>contextMenuStrip1</value>
-  </data>
-  <data name="&gt;&gt;contextMenuStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="toolStripMenuItemDel.Size" type="System.Drawing.Size, System.Drawing">
     <value>316, 22</value>
   </data>
@@ -660,6 +536,15 @@ same point, you need to select this</value>
   </data>
   <data name="toolStripMenuItemCopyAlias.Text" xml:space="preserve">
     <value>Copy alias</value>
+  </data>
+  <data name="contextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>317, 120</value>
+  </data>
+  <data name="&gt;&gt;contextMenuStrip1.Name" xml:space="preserve">
+    <value>contextMenuStrip1</value>
+  </data>
+  <data name="&gt;&gt;contextMenuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="textOTOpath.Font" type="System.Drawing.Font, System.Drawing">
     <value>Adobe Fan Heiti Std B, 12pt, style=Bold</value>
@@ -746,7 +631,7 @@ same point, you need to select this</value>
     <value>NoControl</value>
   </data>
   <data name="checkHI2RON.Location" type="System.Drawing.Point, System.Drawing">
-    <value>837, 282</value>
+    <value>837, 411</value>
   </data>
   <data name="checkHI2RON.Size" type="System.Drawing.Size, System.Drawing">
     <value>337, 24</value>
@@ -773,7 +658,7 @@ same point, you need to select this</value>
     <value>NoControl</value>
   </data>
   <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>891, 398</value>
+    <value>1101, 382</value>
   </data>
   <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -799,34 +684,34 @@ same point, you need to select this</value>
   <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="nfcButton1.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="buttonFindAndReplace.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="nfcButton1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="buttonFindAndReplace.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="nfcButton1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="buttonFindAndReplace.Location" type="System.Drawing.Point, System.Drawing">
     <value>834, 484</value>
   </data>
-  <data name="nfcButton1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="buttonFindAndReplace.Size" type="System.Drawing.Size, System.Drawing">
     <value>253, 31</value>
   </data>
-  <data name="nfcButton1.TabIndex" type="System.Int32, mscorlib">
+  <data name="buttonFindAndReplace.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
   </data>
-  <data name="nfcButton1.Text" xml:space="preserve">
+  <data name="buttonFindAndReplace.Text" xml:space="preserve">
     <value>Find and Replace rules</value>
   </data>
-  <data name="&gt;&gt;nfcButton1.Name" xml:space="preserve">
-    <value>nfcButton1</value>
+  <data name="&gt;&gt;buttonFindAndReplace.Name" xml:space="preserve">
+    <value>buttonFindAndReplace</value>
   </data>
-  <data name="&gt;&gt;nfcButton1.Type" xml:space="preserve">
+  <data name="&gt;&gt;buttonFindAndReplace.Type" xml:space="preserve">
     <value>oto2dvcfg.NFCButton, oto2dvcfg, Version=0.0.3.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;nfcButton1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;buttonFindAndReplace.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;nfcButton1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;buttonFindAndReplace.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
   <data name="buttonClose.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
