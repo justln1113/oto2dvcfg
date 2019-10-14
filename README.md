@@ -15,6 +15,8 @@
      * 其他
 * [English](#English)
   * [User's guide](#User-guide)
+    * [Preparation](#Preparation)
+    * [Start convertion](#Start-convertion)
 ## 中文
 ### 使用教學
 #### 前置準備
@@ -23,7 +25,11 @@
 ![image](https://github.com/justln1113/oto2dvcfg/blob/master/Resource/wav_and_oto_in_same_dir.png)  
 
 #### 開始轉換
+程式主畫面  
+![image](https://github.com/justln1113/oto2dvcfg/blob/master/Resource/oto2dvcfg_main_form.png)  
 
+按下加號按鈕開啟oto.ini  
+![image](https://github.com/justln1113/oto2dvcfg/blob/master/Resource/add_button.png)
 
 
 ## English
@@ -32,4 +38,6 @@
 Ensure that all the wav files and oto.ini are under the same folder.
 Don't direct convert voice bank under ```Program files(x86)\UTAU\Voice``` to avoid permission errors.  
 ![image](https://github.com/justln1113/oto2dvcfg/blob/master/Resource/wav_and_oto_in_same_dir.png)  
+
+#### Start convertion
 
