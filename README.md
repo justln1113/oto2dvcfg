@@ -36,7 +36,7 @@
 這裡使用```句音コノ。弱CVVC```A3音階的oto作為範例  
 ![image](https://github.com/justln1113/oto2dvcfg/blob/master/Resource/oto_opened.png)  
 選取後按右鍵可呼叫選單，有刪除和轉換格式等功能，這裡使用Delete select settings來刪除不必要的設定(也可直接按下鍵盤上的Delete按鍵)  
-![image](https://github.com/justln1113/oto2dvcfg/blob/master/Resource/right_click_menu.png.png)  
+![image](https://github.com/justln1113/oto2dvcfg/blob/master/Resource/right_click_menu.png)  
 
 ## English
 
