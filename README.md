@@ -29,18 +29,35 @@
 
 #### 開始轉換
 
-程式主畫面  
+>程式主畫面  
+
 ![image](https://github.com/justln1113/oto2dvcfg/blob/master/Resource/oto2dvcfg_main_form.png)  
-按下加號按鈕開啟oto.ini  
+
+>按下加號按鈕開啟oto.ini  
+
 ![image](https://github.com/justln1113/oto2dvcfg/blob/master/Resource/add_button.png)  
-這裡使用```句音コノ。弱CVVC```A3音階的oto作為範例  
+>這裡使用```句音コノ。弱CVVC```A3音階的oto作為範例  
+
 ![image](https://github.com/justln1113/oto2dvcfg/blob/master/Resource/oto_opened.png)  
+##### 列表編輯  
 選取後按右鍵可呼叫選單，有刪除和轉換格式等功能，這裡使用Delete select settings來刪除不必要的設定(也可直接按下鍵盤上的Delete按鍵)  
 ![image](https://github.com/justln1113/oto2dvcfg/blob/master/Resource/right_click_menu.png)  
-功能介紹：假名轉羅馬  
-可用此功能將假名音源轉換成羅馬拼音音源，DeepVocal用起來比較方便  
-有兩種方案，```n to N```是將元音```ん```轉換為拼音```N```；```consonant n to n'```則是將連接音中的子音```n```(VC，如```a_na.....ra.wav```錄音的```a n```)轉換為```n'```(如```a n'```)  
+
+##### 尋找與取代  
+此功能可以對設定名稱(alias)尋找與取代，可利用此功能代換文字或移除掉前綴後綴等  
+![image]()  
+```注意```
+
+
+
+##### 假名轉羅馬拼音  
+可用此功能將oto內帶假名的設定名稱轉換成羅馬拼音，在DeepVocal設定上會較為方便。  
+轉換器0提供了兩種方案如下：
+* ```n to N```：將元音```ん```轉換為拼音```N```  
+* ```consonant n to n'```:將連接音中的子音```n```(VC，如```a_na.....ra.wav```錄音的```a n```)轉換為```n'```(如```a n'```)  
+
 ![image](https://github.com/justln1113/oto2dvcfg/blob/master/Resource/Two_hira2roma.png)
+
 
 ## English
 
