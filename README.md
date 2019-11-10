@@ -23,7 +23,7 @@
 
 #### 前置準備
 
-請確保音源所有(單音階或單音色)wav檔和oto.ini在同一個資料夾下。  
+請確保音源所有(單音階或單音色)wav檔和oto.ini在同一個資料夾下，且輸出的voice.dvcfg檔案也必須在同一個資料夾(因為voice.dvcfg的位置對應到了DeepVocal ToolBox的wav location)。  
 請勿直接轉換```Program files(x86)\UTAU\Voice```資料夾下的音源，避免權限錯誤。   
 ![image](https://github.com/justln1113/oto2dvcfg/blob/master/Resource/wav_and_oto_in_same_dir.png)  
 
@@ -37,6 +37,8 @@
 ![image](https://github.com/justln1113/oto2dvcfg/blob/master/Resource/oto_opened.png)  
 選取後按右鍵可呼叫選單，有刪除和轉換格式等功能，這裡使用Delete select settings來刪除不必要的設定(也可直接按下鍵盤上的Delete按鍵)  
 ![image](https://github.com/justln1113/oto2dvcfg/blob/master/Resource/right_click_menu.png)  
+
+
 
 ## English
 
