@@ -37,8 +37,10 @@
 ![image](https://github.com/justln1113/oto2dvcfg/blob/master/Resource/oto_opened.png)  
 選取後按右鍵可呼叫選單，有刪除和轉換格式等功能，這裡使用Delete select settings來刪除不必要的設定(也可直接按下鍵盤上的Delete按鍵)  
 ![image](https://github.com/justln1113/oto2dvcfg/blob/master/Resource/right_click_menu.png)  
-
-
+功能介紹：假名轉羅馬  
+可用此功能將假名音源轉換成羅馬拼音音源，DeepVocal用起來比較方便  
+有兩種方案，```n to N```是將元音```ん```轉換為拼音```N```；```consonant n to n'```則是將連接音中的子音```n```(VC，如```a_na.....ra.wav```錄音的```a n```)轉換為```n'```(如```a n'```)  
+![image](https://github.com/justln1113/oto2dvcfg/blob/master/Resource/Two_hira2roma.png)
 
 ## English
 
