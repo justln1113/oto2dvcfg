@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("oto2dvcfg")]
 [assembly: AssemblyDescription("utau voicebank config to deepvocal voicebank config converter")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("justln1113")]
+[assembly: AssemblyCompany("Taiwan VUS Team")]
 [assembly: AssemblyProduct("oto2dvcfg")]
-[assembly: AssemblyCopyright("Copyright © 2019 justln1113")]
+[assembly: AssemblyCopyright("Copyright © 2020 justln1113")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // 您可以指定所有的值，也可以使用 '*' 將組建和修訂編號
 // 設為預設，如下所示:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("0.0.3.0")]
-[assembly: AssemblyFileVersion("0.0.3.0")]
+[assembly: AssemblyVersion("1.3.1.0")]
+[assembly: AssemblyFileVersion("1.3.1.0")]

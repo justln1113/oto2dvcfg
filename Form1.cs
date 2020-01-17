@@ -694,9 +694,11 @@ namespace oto2dvcfg
                 }
                 else
                 {
+                    /*
                     MessageBox.Show("OTO file not exists.", "(╯°□°）╯︵ ┻━┻", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
                     formLoading.Hide();
                     errorMessageInListView();
+                    */
                 }
             }
 
