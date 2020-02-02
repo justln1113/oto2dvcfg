@@ -112,7 +112,7 @@ Converter has two plans：
 
 ![image](https://github.com/justln1113/oto2dvcfg/blob/master/Resource/Two_hira2roma.png)
 
-##### 音高定義
+##### Pitch identification
 Because this program can't detect prefixes or suffixes to definite the pitch automatically, before you start to create dvcfg, please enter pitch in the Pitch textbox no matter if you removed suffixes  
 ![image](https://github.com/justln1113/oto2dvcfg/blob/master/Resource/Pitch_def.png)
 
