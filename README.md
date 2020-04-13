@@ -49,7 +49,7 @@
 >**注意**：目前此功能有尚未解決的bug，新增取代規則時一定要輸入名稱，否則無法取代。  
 >**提示**：不同順序會有不同效果喔，程式進行取代的順序為由上往下，請注意新增規則的順序。  
 
-![image](https://github.com/justln1113/oto2dvcfg/blob/master/Resource/Find_and_Replace.png)  
+![image](https://github.com/justln1113/oto2dvcfg/blob/master/Resource/Find_and_replace.png)  
 
 ##### 假名轉羅馬拼音
 可用此功能將oto內帶假名的設定名稱轉換成羅馬拼音，在DeepVocal設定上會較為方便。  
