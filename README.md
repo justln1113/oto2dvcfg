@@ -58,6 +58,7 @@
 - ```consonant n to n'```：將連接音中的子音```n```(VC，如```a_na.....ra.wav```錄音的```a n```)轉換為```n'```(如```a n'```)  
 
 ![image](https://github.com/justln1113/oto2dvcfg/blob/master/Resource/Two_hira2roma.png)
+![image](https://github.com/justln1113/oto2dvcfg/blob/master/Resource/Two_hira2roma_1.png)
 
 ##### 音高定義
 因為目前程式並無自動偵測前後綴來定義音高的功能，因此無論先前是否有移除前後綴，在生成dvcfg前請記得在Pitch文字框中輸入音高  
@@ -111,6 +112,7 @@ Converter has two plans：
 - ```Consonant n to n'```: Convert consonant ```n``` in VC part into ```n'```. (e.g. Convert ```a n``` alias in```a_na_ha_ma_ba_pa_ra.wav``` into  ```a n'```)   
 
 ![image](https://github.com/justln1113/oto2dvcfg/blob/master/Resource/Two_hira2roma.png)
+![image](https://github.com/justln1113/oto2dvcfg/blob/master/Resource/Two_hira2roma_1.png)
 
 ##### Pitch definition
 Because this program can't detect prefixes or suffixes to definite the pitch automatically, before you start to create dvcfg, please enter pitch in the Pitch textbox no matter if you removed suffixes  
